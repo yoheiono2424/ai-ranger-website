@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   company: string;
@@ -88,22 +89,68 @@ const ContactFormSection = () => {
 
     setIsSubmitting(true);
 
-    // TODO: 実際のフォーム送信処理を実装
-    // 現在はダミーの遅延処理
-    setTimeout(() => {
+    // EmailJSの設定値（一時的にハードコード - 後で環境変数に移行）
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_example';
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_example';
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'public_key_example';
+
+    // EmailJS初期化とメール送信
+    try {
+      // EmailJSに送信するデータを準備
+      const templateParams = {
+        company: formData.company || '未記入',
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || '未記入',
+        inquiryType: inquiryTypes.find(t => t.value === formData.inquiryType)?.label || '',
+        message: formData.message,
+      };
+
+      // 環境変数が設定されていない場合はダミー処理
+      if (SERVICE_ID === 'service_example') {
+        console.log('EmailJS設定が必要です。.env.localファイルを作成してください。');
+        console.log('送信データ:', templateParams);
+        // ダミーの遅延処理
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+          setFormData({
+            company: '',
+            name: '',
+            email: '',
+            phone: '',
+            inquiryType: '',
+            message: '',
+            privacyPolicy: false,
+          });
+        }, 1000);
+      } else {
+        // 実際のEmailJS送信
+        await emailjs.send(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          templateParams,
+          PUBLIC_KEY
+        );
+        
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        // フォームリセット
+        setFormData({
+          company: '',
+          name: '',
+          email: '',
+          phone: '',
+          inquiryType: '',
+          message: '',
+          privacyPolicy: false,
+        });
+      }
+    } catch (error) {
+      console.error('メール送信エラー:', error);
+      alert('送信に失敗しました。もう一度お試しください。');
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      // フォームリセット
-      setFormData({
-        company: '',
-        name: '',
-        email: '',
-        phone: '',
-        inquiryType: '',
-        message: '',
-        privacyPolicy: false,
-      });
-    }, 2000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

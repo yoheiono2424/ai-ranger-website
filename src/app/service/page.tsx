@@ -28,13 +28,13 @@ const FAQSection = dynamic(() => import('@/components/sections/service/FAQSectio
 });
 
 export const metadata: Metadata = {
-  title: 'サービス詳細 | AIレンジャー・5レンジャー - 株式会社Re.haru',
+  title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
   description: 'AIレンジャーの詳細情報。開発実績、料金プラン、5レンジャー（ノーコード開発）まで。300万円から始められる革新的なシステム開発サービス。',
   keywords: 'AIレンジャー, 5レンジャー, ノーコード開発, 料金プラン, 開発実績, システム開発, DX',
   openGraph: {
-    title: 'AIレンジャー サービス詳細',
+    title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
     description: '300万円から始められる革新的なシステム開発。開発費用1/5、期間1/3を実現。',
-    images: ['/ai-ranger-logo.png'],
+    images: ['/①Re.haru青ロゴ.png'],
   },
 };
 

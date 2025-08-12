@@ -6,7 +6,7 @@ const CompanyInfoSection = dynamic(() => import('@/components/sections/about/Com
 });
 
 export const metadata: Metadata = {
-  title: '会社概要 | 株式会社Re.haru - Return青春の実現',
+  title: '会社概要 | 株式会社Re.haru',
   description: '株式会社Re.haruは「Return青春」を企業理念に、AIレンジャーを通じて企業の挑戦を支援。熊本から全国へ、高額な開発費用を成敗し、すべての企業に青春を取り戻します。',
   keywords: '株式会社Re.haru, 会社概要, Return青春, 企業理念, 熊本, システム開発会社, AIレンジャー',
   openGraph: {

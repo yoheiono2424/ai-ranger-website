@@ -5,10 +5,17 @@ import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/common/JsonLd";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://re-haru.com'),
-  title: "株式会社Re.haru | Return青春 - もう一度、青春を取り戻す",
-  description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。AIレンジャーで開発費用1/5、開発期間1/3を実現。",
+  metadataBase: new URL('https://reharu.com'),
+  title: {
+    default: "株式会社Re.haru | AIレンジャー - 高額な開発相場を成敗する",
+    template: "%s | 株式会社Re.haru"
+  },
+  description: "AIレンジャーが高額な開発相場を成敗！開発費用1/5、開発期間1/3を実現。テクノロジーの力で企業に「挑戦」「成長」「希望」を取り戻します。",
   keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, AIレンジャー, 株式会社Re.haru",
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: "株式会社Re.haru | Return青春 - もう一度、青春を取り戻す",
     description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",

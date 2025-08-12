@@ -3,6 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'プライバシーポリシー | 株式会社Re.haru',
   description: '株式会社Re.haruのプライバシーポリシー。個人情報の取り扱いについて説明しています。',
+  openGraph: {
+    title: 'プライバシーポリシー | 株式会社Re.haru',
+    description: '個人情報の取り扱いについて',
+    images: ['/①Re.haru青ロゴ.png'],
+  },
 };
 
 const PrivacyPolicyPage = () => {
