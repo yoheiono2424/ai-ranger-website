@@ -83,6 +83,11 @@ const ContactFormSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // 既に送信中の場合は何もしない（重複送信防止）
+    if (isSubmitting) {
+      return;
+    }
+    
     if (!validateForm()) {
       return;
     }
