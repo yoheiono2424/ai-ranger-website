@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://re-haru.com/sitemap.xml',
+    sitemap: 'https://reharu.com/sitemap.xml',
   }
 }
