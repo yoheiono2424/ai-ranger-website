@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/HeroSection';
+import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
   title: '株式会社Re.haru | AIレンジャー - 高額な開発相場を成敗する',
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <NewsSection />
       <ProblemSection />
       <ReturnSeishunVisionSection />
       <ReturnSeishunSolutionSection />

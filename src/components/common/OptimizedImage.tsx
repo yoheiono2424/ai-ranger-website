@@ -13,6 +13,7 @@ interface OptimizedImageProps {
   fill?: boolean;
   sizes?: string;
   quality?: number;
+  style?: React.CSSProperties;
 }
 
 export default function OptimizedImage({
@@ -25,6 +26,7 @@ export default function OptimizedImage({
   fill = false,
   sizes,
   quality = 85,
+  style,
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,6 +60,7 @@ export default function OptimizedImage({
             duration-700 ease-in-out
             ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'}
           `}
+          style={style}
           onLoad={() => setIsLoading(false)}
         />
       )}

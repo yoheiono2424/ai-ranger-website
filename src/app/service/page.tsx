@@ -44,7 +44,9 @@ export default function ServicePage() {
       <ServiceHeroSection />
       <ProblemSolutionSection />
       <ServiceOverviewSection />
-      <AIRangerDetailSection />
+      <div id="airanger-detail">
+        <AIRangerDetailSection />
+      </div>
       <div id="results">
         <ProjectResultsSection />
       </div>

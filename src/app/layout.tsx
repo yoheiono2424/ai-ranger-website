@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",
     type: "website",
     locale: "ja_JP",
-    url: "https://re-haru.com",
+    url: "https://reharu.com",
     siteName: "株式会社Re.haru",
   },
 };
@@ -31,8 +31,8 @@ const organizationSchema = {
   "@type": "Organization",
   name: "株式会社Re.haru",
   alternateName: "Re.haru",
-  url: "https://re-haru.com",
-  logo: "https://re-haru.com/①Re.haru青ロゴ.png",
+  url: "https://reharu.com",
+  logo: "https://reharu.com/①Re.haru青ロゴ.png",
   description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",
   foundingDate: "2024-01-01",
   address: {
