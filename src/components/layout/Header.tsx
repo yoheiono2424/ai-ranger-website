@@ -47,7 +47,7 @@ const Header = () => {
                   <div className="absolute top-full left-0 pt-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden min-w-[200px] mt-2">
                       <Link
-                        href="/service#airanger-detail"
+                        href="/service"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-ai-blue transition-colors"
                       >
                         AIレンジャー
