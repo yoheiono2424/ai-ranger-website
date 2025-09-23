@@ -182,7 +182,7 @@ const ReturnSeishunVisionSection = () => {
                 <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-gray-600">最短1ヶ月で変化を実感</span>
+                <span className="text-gray-600">最短2ヶ月で変化を実感</span>
               </div>
             </div>
           </div>

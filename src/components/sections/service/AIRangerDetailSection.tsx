@@ -6,28 +6,28 @@ const AIRangerDetailSection = () => {
   const developmentSteps = [
     {
       number: '01',
-      title: 'ヒアリング',
-      duration: '30分〜1時間',
+      title: 'ヒアリング＆プロトタイプ開発',
+      duration: null,
       description: 'やりたいことを話すだけでOK',
-      details: 'まずは『やりたいこと』『解決したい課題』を、普段の言葉でお聞かせください。技術的な知識は一切不要です。AIが自動で技術仕様に変換します。',
+      details: 'まずは『やりたいこと』『解決したい課題』を、普段の言葉でお聞かせください。ヒアリングを基にAIが即座にプロトタイプを開発。実際の画面を見ながら、お客様と一緒にイメージを具体化していきます。技術的な知識は一切不要です。',
       icon: '💬',
       color: 'from-ai-blue to-sky-blue',
     },
     {
       number: '02',
-      title: 'カウント＆プラン提示',
-      duration: '即日〜2営業日',
-      description: '最適なプラン料金をご提示',
-      details: 'お伺いした内容を『大分類・小分類』に分解・カウント。機能数に応じて最適なプランと明確な料金をご提示いたします。追加費用の心配もありません。',
+      title: '機能数カウント＆お見積もり',
+      duration: null,
+      description: '透明性の高い料金をご提示',
+      details: 'お伺いした内容から必要な機能を洗い出し、機能数をカウント。基本料金300万円（30機能まで）に追加機能分を加えた、明確で透明性の高いお見積もりをご提示します。',
       icon: '📊',
       color: 'from-hope-green to-emerald-400',
     },
     {
       number: '03',
       title: 'ご契約・開発',
-      duration: '1〜3ヶ月（プランによる）',
+      duration: '2〜6ヶ月',
       description: 'AIが猛スピードで開発',
-      details: 'ご提示したプランにご納得いただければ、ご契約。スコープが明確なので、AIが猛スピードで開発を進めます。従来の開発期間の1/3程度で完了します。',
+      details: 'ご提示したお見積もりにご納得いただければ、ご契約。スコープが明確なので、AIが猛スピードで開発を進めます。従来の開発期間の1/3程度で完了します。',
       icon: '⚡',
       color: 'from-challenge-orange to-amber-400',
     },
@@ -89,9 +89,11 @@ const AIRangerDetailSection = () => {
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-0">
                       {step.title}
                     </h3>
-                    <div className="inline-block bg-ai-blue/10 text-ai-blue px-4 py-2 rounded-full text-sm font-medium">
-                      ⏱️ {step.duration}
-                    </div>
+                    {step.duration && (
+                      <div className="inline-block bg-ai-blue/10 text-ai-blue px-4 py-2 rounded-full text-sm font-medium">
+                        ⏱️ {step.duration}
+                      </div>
+                    )}
                   </div>
                   
                   <h4 className="text-xl font-bold text-ai-blue mb-4">
@@ -106,12 +108,13 @@ const AIRangerDetailSection = () => {
                   {index === 0 && (
                     <div className="bg-gradient-to-r from-ai-blue/5 to-sky-blue/5 border-l-4 border-ai-blue rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">💡</div>
+                        <div className="text-xl">🖥️</div>
                         <div>
-                          <p className="font-medium text-ai-blue mb-2">ヒアリングのコツ</p>
+                          <p className="font-medium text-ai-blue mb-2">プロトタイプで理想を形に</p>
                           <p className="text-sm text-gray-600">
-                            「Amazonみたいなサイト」「社内の書類管理を楽にしたい」など、<br />
-                            具体的なイメージや困りごとをお聞かせください。技術知識は不要です！
+                            実際のプロトタイプ画面を見ながら「ここはこうしたい」<br />
+                            「この機能も欲しい」など、具体的なイメージを一緒に作り上げていきましょう。<br />
+                            言葉では伝えにくいことも、画面を見れば一目瞭然です！
                           </p>
                         </div>
                       </div>
@@ -125,8 +128,8 @@ const AIRangerDetailSection = () => {
                         <div>
                           <p className="font-medium text-hope-green mb-2">明確な料金体系</p>
                           <p className="text-sm text-gray-600">
-                            機能を大分類・小分類で明確にカウント。「人月計算」「管理費一式」などの<br />
-                            曖昧な見積もりではなく、透明性の高い料金をご提示します。
+                            必要な機能数を明確にカウントし、基本料金＋追加料金のシンプルな計算式で算出。<br />
+                            「人月計算」「管理費一式」などの曖昧な見積もりではなく、透明性の高い料金をご提示します。
                           </p>
                         </div>
                       </div>

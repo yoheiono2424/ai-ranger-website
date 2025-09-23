@@ -119,7 +119,7 @@ const ProblemSolutionSection = () => {
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
                     <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">最短1ヶ月で完成</p>
+                      <p className="font-bold text-gray-800 text-sm mb-1">最短2ヶ月で完成</p>
                       <p className="text-gray-600 text-xs">AI開発で超高速実現</p>
                     </div>
                   </div>

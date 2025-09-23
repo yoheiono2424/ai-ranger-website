@@ -20,17 +20,14 @@ const PricingDetailSection = dynamic(() => import('@/components/sections/service
 const FunctionCountSection = dynamic(() => import('@/components/sections/service/FunctionCountSection'), {
   loading: () => <div className="h-64" />,
 });
-const FiveRangerSection = dynamic(() => import('@/components/sections/service/FiveRangerSection'), {
-  loading: () => <div className="h-96" />,
-});
 const FAQSection = dynamic(() => import('@/components/sections/service/FAQSection'), {
   loading: () => <div className="h-96" />,
 });
 
 export const metadata: Metadata = {
   title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
-  description: 'AIレンジャーの詳細情報。開発実績、料金プラン、5レンジャー（ノーコード開発）まで。300万円から始められる革新的なシステム開発サービス。',
-  keywords: 'AIレンジャー, 5レンジャー, ノーコード開発, 料金プラン, 開発実績, システム開発, DX',
+  description: 'AIレンジャーの詳細情報。開発実績、料金プランまで。300万円から始められる革新的なシステム開発サービス。',
+  keywords: 'AIレンジャー, 料金プラン, 開発実績, システム開発, DX',
   openGraph: {
     title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
     description: '300万円から始められる革新的なシステム開発。開発費用1/5、期間1/3を実現。',
@@ -54,9 +51,6 @@ export default function ServicePage() {
         <PricingDetailSection />
       </div>
       <FunctionCountSection />
-      <div id="5ranger">
-        <FiveRangerSection />
-      </div>
       <FAQSection />
     </>
   );

@@ -12,7 +12,7 @@ const ServiceOverviewSection = () => {
       details: [
         '独自のAIによる開発技術の確立',
         '従来の常識を覆す開発スピード',
-        '最短1ヶ月での納品を実現'
+        '最短2ヶ月での納品を実現'
       ],
       color: 'from-ai-blue to-sky-blue',
     },
@@ -23,7 +23,7 @@ const ServiceOverviewSection = () => {
       icon: '💰',
       details: [
         '開発相場の価格破壊を起こす',
-        '3つの明確な料金プランで不透明な見積もりを撤廃',
+        '機能数ベースの明確な料金体系で不透明な見積もりを撤廃',
         'オプション機能も明確な価格設定'
       ],
       color: 'from-hope-green to-emerald-400',
@@ -34,7 +34,7 @@ const ServiceOverviewSection = () => {
       description: 'お客様は「やりたいこと」を伝えるだけ',
       icon: '🎯',
       details: [
-        '複雑な要件定義はAIが最適なプランへ落とし込みます',
+        '複雑な要件定義はAIが機能数として明確化します',
         '専門知識不要で即座に開発開始',
         '柔軟な変更対応も可能'
       ],
