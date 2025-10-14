@@ -29,6 +29,12 @@ export const metadata: Metadata = {
 
 async function getArticles(): Promise<Article[]> {
   try {
+    // ビルド時やSupabase未設定時は空配列を返す
+    if (!supabase) {
+      console.log('Supabase client not initialized, returning empty array');
+      return [];
+    }
+
     const isDevelopment = process.env.NODE_ENV === 'development';
     const now = new Date().toISOString();
     const maxDate = '9999-12-31T23:59:59.999Z'; // ISO 8601形式で最大日時

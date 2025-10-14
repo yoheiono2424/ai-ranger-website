@@ -44,19 +44,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   // 動的なブログ記事ページ（Supabaseから取得）
-  const { createClient } = require('@supabase/supabase-js')
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
-  const { data: articles } = await supabase
-    .from('articles')
-    .select('slug, updated_at')
-    .lte('scheduled_at', new Date().toISOString())
+  let articlePages: MetadataRoute.Sitemap = []
 
-  const articlePages: MetadataRoute.Sitemap = articles?.map((article: any) => ({
-    url: `${baseUrl}/blog/${article.slug}`,
-    lastModified: new Date(article.updated_at),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  })) || []
+  // ビルド時に環境変数がない場合はスキップ
+  if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    try {
+      const { createClient } = require('@supabase/supabase-js')
+      const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+      )
+      const { data: articles } = await supabase
+        .from('articles')
+        .select('slug, updated_at')
+        .lte('scheduled_at', new Date().toISOString())
+
+      articlePages = articles?.map((article: any) => ({
+        url: `${baseUrl}/blog/${article.slug}`,
+        lastModified: new Date(article.updated_at),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      })) || []
+    } catch (error) {
+      console.log('Failed to fetch articles for sitemap, using static pages only')
+    }
+  }
 
   return [...staticPages, ...articlePages]
 }

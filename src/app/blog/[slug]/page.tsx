@@ -14,6 +14,12 @@ interface PageProps {
 
 async function getArticle(slug: string): Promise<Article | null> {
   try {
+    // ビルド時やSupabase未設定時はnullを返す
+    if (!supabase) {
+      console.log('Supabase client not initialized, returning null');
+      return null;
+    }
+
     const isDevelopment = process.env.NODE_ENV === 'development';
     const now = new Date().toISOString();
     const maxDate = '9999-12-31T23:59:59.999Z'; // ISO 8601形式で最大日時
@@ -49,6 +55,12 @@ async function getArticle(slug: string): Promise<Article | null> {
 
 async function getRelatedArticles(article: Article): Promise<Article[]> {
   try {
+    // ビルド時やSupabase未設定時は空配列を返す
+    if (!supabase) {
+      console.log('Supabase client not initialized, returning empty array');
+      return [];
+    }
+
     const isDevelopment = process.env.NODE_ENV === 'development';
     const now = new Date().toISOString();
     const maxDate = '9999-12-31T23:59:59.999Z'; // ISO 8601形式で最大日時
