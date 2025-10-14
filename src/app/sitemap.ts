@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://reharu.com'
-  
-  return [
+
+  // 静的ページ
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -14,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/service`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
       priority: 0.9,
     },
     {
@@ -35,4 +42,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
   ]
+
+  // 動的なブログ記事ページ（Supabaseから取得）
+  const { createClient } = require('@supabase/supabase-js')
+  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+  const { data: articles } = await supabase
+    .from('articles')
+    .select('slug, updated_at')
+    .lte('scheduled_at', new Date().toISOString())
+
+  const articlePages: MetadataRoute.Sitemap = articles?.map((article: any) => ({
+    url: `${baseUrl}/blog/${article.slug}`,
+    lastModified: new Date(article.updated_at),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  })) || []
+
+  return [...staticPages, ...articlePages]
 }

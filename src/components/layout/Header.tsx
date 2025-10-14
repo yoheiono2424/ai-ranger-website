@@ -10,7 +10,8 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'トップ' },
     { href: '/news', label: 'お知らせ' },
-    { href: '/service', label: 'サービス詳細', hasDropdown: true },
+    { href: '/service', label: 'サービス詳細' },
+    { href: '/blog', label: '開発事例' },
     { href: '/about', label: '会社概要' },
     { href: '/contact', label: 'お問い合わせ' },
   ];
@@ -33,50 +34,13 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.hasDropdown ? (
-                <div 
-                  key={item.href}
-                  className="relative group"
-                >
-                  <Link
-                    href={item.href}
-                    className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium py-2 inline-block"
-                  >
-                    {item.label}
-                  </Link>
-                  <div className="absolute top-full left-0 pt-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
-                    <div className="bg-white shadow-lg rounded-lg overflow-hidden min-w-[200px] mt-2">
-                      <Link
-                        href="/service"
-                        className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-ai-blue transition-colors"
-                      >
-                        AIレンジャー
-                      </Link>
-                      <a
-                        href="https://drive.google.com/file/d/1r15trpXX_Xk_5zaK3cZlrqoh1krydEJg/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-ai-blue transition-colors"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span>AIレンジャーTEAMS</span>
-                          <span className="ml-2 px-2.5 py-1 bg-red-500 text-white text-xs font-bold rounded-full shadow-sm animate-pulse">
-                            先着5社限定
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
-                >
-                  {item.label}
-                </Link>
-              )
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </Link>
             ))}
             <Link
               href="/contact"
