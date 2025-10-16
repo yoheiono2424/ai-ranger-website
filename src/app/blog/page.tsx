@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
 };
 
+// ISR: 1時間ごとに再検証（3600秒）
+export const revalidate = 3600;
+
 async function getArticles(): Promise<Article[]> {
   try {
     // ビルド時やSupabase未設定時は空配列を返す

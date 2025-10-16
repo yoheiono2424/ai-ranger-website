@@ -97,6 +97,9 @@ async function getRelatedArticles(article: Article): Promise<Article[]> {
   }
 }
 
+// ISR: 1時間ごとに再検証（3600秒）
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const article = await getArticle(resolvedParams.slug);
