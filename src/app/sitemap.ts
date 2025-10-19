@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// ISR設定: 1時間ごとにsitemapを再検証し、新しい記事を自動追加
+export const revalidate = 3600
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://reharu.com'
 
