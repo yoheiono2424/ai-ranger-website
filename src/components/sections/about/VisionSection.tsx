@@ -106,7 +106,7 @@ const VisionSection = () => {
                   高額な開発費用という「大人の事情」を打破
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  「システム開発は高額だから無理」という常識を、AIレンジャーが覆します。
+                  「システム開発は高額だから無理」という常識を、5レンジャーが覆します。
                   予算を理由に夢を諦める必要は、もうありません。
                 </p>
               </div>
@@ -158,9 +158,9 @@ const VisionSection = () => {
                   viewport={{ once: true }}
                   className="text-4xl md:text-5xl font-black text-hope-green mb-2"
                 >
-                  1/5<span className="text-2xl">の価格</span>
+                  500万円
                 </motion.div>
-                <p className="text-gray-700 font-bold">従来比の開発費用</p>
+                <p className="text-gray-700 font-bold">一律料金</p>
                 <p className="text-sm text-gray-600 mt-2">
                   誰もが手の届く価格で
                 </p>

@@ -4,12 +4,12 @@ import HeroSection from '@/components/sections/HeroSection';
 import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
-  title: '株式会社Re.haru | AIレンジャー - 高額な開発相場を成敗する',
-  description: 'AIレンジャーが高額な開発相場を成敗！開発費用1/5、開発期間1/3を実現。スマホアプリから社内DXシステムまで、超速・低価格でシステム開発を提供します。',
-  keywords: 'AIレンジャー, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
+  title: '株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する',
+  description: '5レンジャーが高額な開発相場を成敗！最速2ヶ月〜の開発スピード、一律500万円のシンプル料金。スマホアプリから社内DXシステムまで、超速・低価格でシステム開発を提供します。',
+  keywords: '5レンジャー, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
   openGraph: {
-    title: '株式会社Re.haru | AIレンジャー - 高額な開発相場を成敗する',
-    description: 'AIレンジャーが高額な開発相場を成敗！開発費用1/5、開発期間1/3を実現。',
+    title: '株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する',
+    description: '5レンジャーが高額な開発相場を成敗！最速2ヶ月〜の開発スピード、一律500万円のシンプル料金。',
     images: ['/①Re.haru青ロゴ.png'],
     type: 'website',
   },

@@ -9,7 +9,7 @@ const CompanyInfoSection = () => {
     { label: '代表取締役', value: '小野 陽平' },
     { label: '住所', value: '〒860-0047 熊本県熊本市西区春日1-14-3 ザ・熊本タワー2901' },
     { label: '電話番号', value: '096-327-9339' },
-    { label: '事業内容', value: '独自AI開発技術による超低コストシステム開発「AIレンジャー」' },
+    { label: '事業内容', value: '日本初の安心百均価格設計による一律料金システム開発「5レンジャー」' },
   ];
 
   return (
@@ -191,13 +191,13 @@ const CompanyInfoSection = () => {
               <div className="grid grid-cols-3 gap-3 md:gap-6">
                 <div className="text-center">
                   <div className="bg-gradient-to-br from-ai-blue/10 to-sky-blue/10 rounded-xl p-4 md:p-6 border-2 border-ai-blue/30">
-                    <p className="text-2xl md:text-4xl font-black text-ai-blue mb-1 md:mb-2">1/5</p>
-                    <p className="text-xs md:text-sm font-bold text-gray-700">従来の開発費用</p>
+                    <p className="text-2xl md:text-4xl font-black text-ai-blue mb-1 md:mb-2">500万円</p>
+                    <p className="text-xs md:text-sm font-bold text-gray-700">一律料金</p>
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="bg-gradient-to-br from-hope-green/10 to-green-100 rounded-xl p-4 md:p-6 border-2 border-hope-green/30">
-                    <p className="text-2xl md:text-4xl font-black text-hope-green mb-1 md:mb-2">1/3</p>
+                    <p className="text-2xl md:text-4xl font-black text-hope-green mb-1 md:mb-2">2〜6ヶ月</p>
                     <p className="text-xs md:text-sm font-bold text-gray-700">開発期間</p>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const CompanyInfoSection = () => {
               
               <div className="mt-6 md:mt-8 bg-gray-50 rounded-xl p-4 md:p-6">
                 <p className="text-center text-sm md:text-lg font-bold text-gray-800">
-                  独自のAI開発技術<br className="md:hidden" />「<span className="text-ai-blue">AIレンジャー</span>」で、<br className="hidden md:block" />
+                  日本初の安心百均価格設計<br className="md:hidden" />「<span className="text-ai-blue">5レンジャー</span>」で、<br className="hidden md:block" />
                   すべての企業が<br className="md:hidden" />新しいチャレンジをできる世界へ
                 </p>
               </div>

@@ -8,7 +8,7 @@ const SolutionSection = () => {
     {
       number: '01',
       title: '開発費用',
-      value: '1/5',
+      value: '500万円',
       description: 'AIの力で開発コストを大幅削減',
       icon: '💰',
       color: 'text-ai-blue',
@@ -17,7 +17,7 @@ const SolutionSection = () => {
     {
       number: '02',
       title: '開発期間',
-      value: '1/3',
+      value: '2〜6ヶ月',
       description: '超高速開発で素早く実現',
       icon: '⚡',
       color: 'text-hope-green',
@@ -26,7 +26,7 @@ const SolutionSection = () => {
     {
       number: '03',
       title: '要件定義',
-      value: '1/10',
+      value: '対話のみ',
       description: '対話だけで要件が明確に',
       icon: '🎯',
       color: 'text-challenge-orange',
@@ -51,7 +51,7 @@ const SolutionSection = () => {
             <span className="text-ai-blue">ソリューション</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            AIレンジャーで、あなたの会社に
+            5レンジャーで、あなたの会社に
             <span className="text-hope-green font-bold">「Return青春」</span>
             を
           </p>
@@ -101,7 +101,7 @@ const SolutionSection = () => {
             href="/service"
             className="inline-flex items-center justify-center px-8 py-4 bg-ai-blue text-white font-bold rounded-full hover:bg-sky-blue transition-all duration-300 transform hover:scale-105"
           >
-            AIレンジャーの詳細を見る
+            5レンジャーの詳細を見る
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

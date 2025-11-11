@@ -15,19 +15,19 @@ const AIRangerDetailSection = () => {
     },
     {
       number: '02',
-      title: '機能数カウント＆お見積もり',
+      title: '開発内容の確定＆ご契約',
       duration: null,
-      description: '透明性の高い料金をご提示',
-      details: 'お伺いした内容から必要な機能を洗い出し、機能数をカウント。基本料金300万円（30機能まで）に追加機能分を加えた、明確で透明性の高いお見積もりをご提示します。',
-      icon: '📊',
+      description: '一律500万円のシンプル料金',
+      details: 'プロトタイプで確認したシステムをもとに、開発する機能や範囲を明確化します。一律500万円（機能数制限なし）のシンプルな料金体系で、追加費用の心配もありません。内容にご納得いただければ、すぐにご契約へ進めます。',
+      icon: '📝',
       color: 'from-hope-green to-emerald-400',
     },
     {
       number: '03',
-      title: 'ご契約・開発',
+      title: '開発・テスト',
       duration: '2〜6ヶ月',
       description: 'AIが猛スピードで開発',
-      details: 'ご提示したお見積もりにご納得いただければ、ご契約。スコープが明確なので、AIが猛スピードで開発を進めます。従来の開発期間の1/3程度で完了します。',
+      details: 'スコープが明確なので、AIが迷うことなく猛スピードで開発を進めます。開発完了後は、実際にお客様に操作していただきながら動作確認を実施。対話を通じて改善点をフィードバックいただき、完璧な状態に仕上げます。',
       icon: '⚡',
       color: 'from-challenge-orange to-amber-400',
     },
@@ -36,7 +36,7 @@ const AIRangerDetailSection = () => {
       title: '納品・保守',
       duration: '継続サポート',
       description: '安心の保守運用付き',
-      details: '合意したスコープ通りのシステムを納品及び保守を行います。月額3万円〜の安心プランで、機能追加や修正にも迅速に対応いたします。',
+      details: '合意したスコープ通りのシステムを納品及び保守を行います。月額3万円（固定）の安心プランで、機能追加や修正にも迅速に対応いたします。',
       icon: '✨',
       color: 'from-purple-500 to-pink-500',
     },
@@ -49,7 +49,7 @@ const AIRangerDetailSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-4">
-            AIレンジャーの開発プロセス
+            5レンジャーの開発プロセス
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             たった4ステップで、あなたの理想のシステムが完成します
@@ -124,12 +124,12 @@ const AIRangerDetailSection = () => {
                   {index === 1 && (
                     <div className="bg-gradient-to-r from-hope-green/5 to-emerald-100/5 border-l-4 border-hope-green rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">📋</div>
+                        <div className="text-xl">💰</div>
                         <div>
-                          <p className="font-medium text-hope-green mb-2">明確な料金体系</p>
+                          <p className="font-medium text-hope-green mb-2">日本発の百均的価格設計</p>
                           <p className="text-sm text-gray-600">
-                            必要な機能数を明確にカウントし、基本料金＋追加料金のシンプルな計算式で算出。<br />
-                            「人月計算」「管理費一式」などの曖昧な見積もりではなく、透明性の高い料金をご提示します。
+                            一律500万円のシンプルな料金体系で、機能数に制限はありません。<br />
+                            「人月計算」「管理費一式」などの曖昧な見積もりは一切なし。プロトタイプで確認した内容を、そのまま開発できます。
                           </p>
                         </div>
                       </div>
@@ -141,10 +141,10 @@ const AIRangerDetailSection = () => {
                       <div className="flex items-start gap-3">
                         <div className="text-xl">🚀</div>
                         <div>
-                          <p className="font-medium text-challenge-orange mb-2">スコープ明確で高速開発</p>
+                          <p className="font-medium text-challenge-orange mb-2">AIによる高速開発とユーザーテスト</p>
                           <p className="text-sm text-gray-600">
                             事前に機能が明確になっているため、AIが迷うことなく開発を進行。<br />
-                            従来の開発期間の<strong>1/3程度</strong>で高品質なシステムを完成させます。
+                            完成後はお客様に実際の画面を操作していただき、使いやすさを徹底的に磨き上げます。
                           </p>
                         </div>
                       </div>
@@ -158,7 +158,7 @@ const AIRangerDetailSection = () => {
                         <div>
                           <p className="font-medium text-purple-700 mb-2">安心の継続サポート</p>
                           <p className="text-sm text-gray-600">
-                            月額3万円〜の保守プランで機能追加・修正が可能。<br />
+                            月額3万円（固定）の保守プランで機能追加・修正が可能。<br />
                             迅速な対応で安心してご利用いただけます。
                           </p>
                         </div>

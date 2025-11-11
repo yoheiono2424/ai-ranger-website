@@ -79,7 +79,7 @@ const ProblemSolutionSection = () => {
               </div>
             </div>
 
-            {/* After（AIレンジャーの解決策）*/}
+            {/* After（5レンジャーの解決策）*/}
             <div
               className="relative"
             >
@@ -89,18 +89,18 @@ const ProblemSolutionSection = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-ai-blue to-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl text-white">⚡</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-ai-blue mb-2">AIレンジャー</h3>
+                  <h3 className="text-2xl font-bold text-ai-blue mb-2">5レンジャー</h3>
                   <p className="text-gray-700 font-medium">夢を現実に変える力</p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg">
                     <div className="w-8 h-8 bg-ai-blue rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
                     <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">300万円〜の明確料金</p>
-                      <p className="text-gray-600 text-xs">従来の1/5のコストを実現</p>
+                      <p className="font-bold text-gray-800 text-sm mb-1">一律500万円で何でも開発</p>
+                      <p className="text-gray-600 text-xs">機能数制限なしのシンプル料金</p>
                     </div>
                   </div>
                   
@@ -140,18 +140,18 @@ const ProblemSolutionSection = () => {
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-ai-blue">
                 <div className="flex justify-center" style={{ marginTop: '-80px', marginBottom: '-80px' }}>
-                  <div style={{ 
-                    width: '500px', 
+                  <div style={{
+                    width: '500px',
                     maxWidth: '90%'
                   }}>
                     <Image
-                      src="/ai-ranger-logo.png"
-                      alt="AIレンジャー"
+                      src="/5-ranger-logo.png"
+                      alt="5レンジャー"
                       width={500}
                       height={140}
                       className="object-contain"
-                      style={{ 
-                        width: '100%', 
+                      style={{
+                        width: '100%',
                         height: 'auto'
                       }}
                     />

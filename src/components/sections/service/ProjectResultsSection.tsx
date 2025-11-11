@@ -13,9 +13,9 @@ const ProjectResultsSection = () => {
       title: 'カタログギフト自動連携システム',
       description: '複数システムを一元化、収益計算を自動化',
       beforeCost: '2,500万円',
-      afterCost: '300万円',
-      savings: '88%削減',
-      savedAmount: '2,200万円',
+      afterCost: '500万円',
+      savings: '80%削減',
+      savedAmount: '2,000万円',
       features: ['自動収支計算機能', 'クロネコヤマト連携機能', 'ギフト自動発送機能', 'EC連携機能など'],
     },
     {
@@ -25,9 +25,9 @@ const ProjectResultsSection = () => {
       title: '現場向け勤怠管理システム',
       description: '直行直帰の正確な勤怠情報管理と社内共有',
       beforeCost: '3,500万円',
-      afterCost: '300万円',
-      savings: '91.4%削減',
-      savedAmount: '3,200万円',
+      afterCost: '500万円',
+      savings: '85.7%削減',
+      savedAmount: '3,000万円',
       features: ['勤怠管理機能', '社内共有機能', '日報投稿機能', 'データ蓄積機能など'],
     },
     {
@@ -37,9 +37,9 @@ const ProjectResultsSection = () => {
       title: '在庫管理システム',
       description: '複数拠点の在庫を一元管理し、発注を自動化',
       beforeCost: '2,800万円',
-      afterCost: '450万円',
-      savings: '83.9%削減',
-      savedAmount: '2,350万円',
+      afterCost: '500万円',
+      savings: '82.1%削減',
+      savedAmount: '2,300万円',
       features: ['在庫一元管理機能', '自動発注機能', 'バーコード管理', '売上分析機能など'],
     },
     // AI社内システム
@@ -50,9 +50,9 @@ const ProjectResultsSection = () => {
       title: 'AI自動会計管理システム',
       description: '領収書画像をAIが自動解析し、自動仕分け',
       beforeCost: '4,500万円',
-      afterCost: '400万円',
-      savings: '91.1%削減',
-      savedAmount: '4,100万円',
+      afterCost: '750万円',
+      savings: '83.3%削減',
+      savedAmount: '3,750万円',
       features: ['AIOCR機能', '顧客管理機能', 'AIデータ解析機能', '会計ソフト連携機能など'],
     },
     {
@@ -62,9 +62,9 @@ const ProjectResultsSection = () => {
       title: '人材派遣スタッフAI管理システム',
       description: 'AIで人材マッチングを最適化、31社が導入',
       beforeCost: '7,500万円',
-      afterCost: '800万円',
-      savings: '89.3%削減',
-      savedAmount: '6,700万円',
+      afterCost: '750万円',
+      savings: '90%削減',
+      savedAmount: '6,750万円',
       features: ['AI自動マッチング', '自動請求書作成', 'スタッフ管理機能', '収益管理機能など'],
     },
     {
@@ -74,9 +74,9 @@ const ProjectResultsSection = () => {
       title: 'AIチャットボット業務支援',
       description: '社内業務の問い合わせを24時間自動対応',
       beforeCost: '5,200万円',
-      afterCost: '600万円',
-      savings: '88.5%削減',
-      savedAmount: '4,600万円',
+      afterCost: '750万円',
+      savings: '85.6%削減',
+      savedAmount: '4,450万円',
       features: ['AI自動応答機能', '学習機能', 'エスカレーション機能', '分析レポート機能など'],
     },
     // スマホアプリ
@@ -87,9 +87,9 @@ const ProjectResultsSection = () => {
       title: 'タレント農家コミュニティアプリ',
       description: '地図から商品購入、チャット機能まで全て込み',
       beforeCost: '4,000万円',
-      afterCost: '500万円',
-      savings: '87.5%削減',
-      savedAmount: '3,500万円',
+      afterCost: '600万円',
+      savings: '85%削減',
+      savedAmount: '3,400万円',
       features: ['会員登録機能', '地図から商品購入機能', '商品登録機能（農家）', 'プッシュ通知機能など'],
     },
     {
@@ -99,9 +99,9 @@ const ProjectResultsSection = () => {
       title: 'キャンプフリマアプリ',
       description: 'キャンプ用品専門のフリマアプリ',
       beforeCost: '3,500万円',
-      afterCost: '500万円',
-      savings: '85.7%削減',
-      savedAmount: '3,000万円',
+      afterCost: '600万円',
+      savings: '82.9%削減',
+      savedAmount: '2,900万円',
       features: ['会員登録機能', '商品購入機能', '商品掲載機能', 'プッシュ通知機能など'],
     },
     {
@@ -123,7 +123,7 @@ const ProjectResultsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-4">
-            AIレンジャーの開発実績
+            5レンジャーの開発実績
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             様々な業界で、革命的なコスト削減を実現しています
@@ -170,7 +170,7 @@ const ProjectResultsSection = () => {
                       </svg>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs text-ai-blue block mb-1">AIレンジャー価格</span>
+                      <span className="text-xs text-ai-blue block mb-1">5レンジャー価格</span>
                       <span className="text-xl font-black text-ai-blue">{project.afterCost}</span>
                     </div>
                   </div>
@@ -205,56 +205,20 @@ const ProjectResultsSection = () => {
           ))}
         </div>
 
-        {/* 開発実績100件以上 */}
-        <div className="mt-16 text-center">
-          <div className="inline-block">
-            {/* メインコンテンツ */}
-            <div className="bg-gradient-to-br from-ai-blue via-blue-600 to-sky-blue text-white rounded-3xl p-10 transform hover:scale-105 transition-all duration-300">
-              <p className="text-3xl md:text-4xl font-black mb-6 relative">
-                <span className="inline-block transform hover:scale-110 transition-transform">開発実績は</span>
-                <span className="inline-block text-yellow-300 text-4xl md:text-5xl mx-2 transform hover:scale-110 transition-transform">100件</span>
-                <span className="inline-block transform hover:scale-110 transition-transform">以上</span>
-              </p>
-
-              <div className="grid grid-cols-2 gap-8 mt-6 pt-6 border-t-2 border-white/40">
-                <div className="transform hover:scale-105 transition-all">
-                  <p className="text-sm opacity-90 mb-2 font-medium">平均削減額</p>
-                  <p className="text-2xl md:text-3xl font-black text-yellow-300">4,144万円</p>
-                </div>
-                <div className="transform hover:scale-105 transition-all">
-                  <p className="text-sm opacity-90 mb-2 font-medium">平均削減率</p>
-                  <p className="text-2xl md:text-3xl font-black text-yellow-300">88.4%</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-8">
-            あなたの開発案件も、AIレンジャーなら大幅なコスト削減が可能です
+            あなたの開発案件も、5レンジャーなら大幅なコスト削減が可能です
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-ai-blue text-white font-bold rounded-full hover:bg-sky-blue transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              無料相談を申し込む
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link
-              href="#price"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-ai-blue text-ai-blue font-bold rounded-full hover:bg-ai-blue hover:text-white transition-all duration-300"
-            >
-              今すぐ料金を確認する
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
-              </svg>
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-ai-blue text-white font-bold rounded-full hover:bg-sky-blue transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            無料相談を申し込む
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

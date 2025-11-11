@@ -7,7 +7,7 @@ const ReturnSeishunVisionSection = () => {
     {
       title: '挑戦できる企業',
       subtitle: '新しいことに踏み出せる',
-      description: '予算の壁に阻まれていた新規事業やDXプロジェクト。AIレンジャーなら、その夢を現実にできます。',
+      description: '予算の壁に阻まれていた新規事業やDXプロジェクト。5レンジャーなら、その夢を現実にできます。',
       points: [
         '新規事業への投資が可能に',
         'アイデアを即座に形にできる',
@@ -170,20 +170,11 @@ const ReturnSeishunVisionSection = () => {
           className="mt-16 text-center"
         >
           <div className="inline-block">
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center">
-                <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                <span className="text-gray-600">すでに100社以上が実現</span>
-              </div>
-              <div className="h-8 w-px bg-gray-300"></div>
-              <div className="flex items-center">
-                <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-gray-600">最短2ヶ月で変化を実感</span>
-              </div>
+            <div className="flex items-center">
+              <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-gray-600">最短2ヶ月で変化を実感</span>
             </div>
           </div>
         </motion.div>

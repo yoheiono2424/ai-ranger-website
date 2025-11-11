@@ -16,8 +16,8 @@ const ServiceHeroSection = () => {
             <div className="flex justify-center lg:justify-end order-first lg:order-last mb-2 md:mb-0">
               <div className="relative">
                 <OptimizedImage
-                  src="/ai-ranger-logo.png"
-                  alt="AIレンジャー"
+                  src="/5-ranger-logo.png"
+                  alt="5レンジャー"
                   width={450}
                   height={130}
                   className="object-contain w-auto h-auto max-w-full"
@@ -29,13 +29,13 @@ const ServiceHeroSection = () => {
             {/* テキストコンテンツ：モバイルでは2番目に表示 */}
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
-                <span className="text-ai-blue inline-block">AIレンジャー</span><span className="inline-block">で実現する</span>
+                <span className="text-ai-blue inline-block">5レンジャー</span><span className="inline-block">で実現する</span>
                 <span className="block mt-2">次世代のシステム開発</span>
               </h1>
-              
+
               <p className="text-base md:text-xl text-gray-700 mb-8 leading-relaxed">
-                <span className="inline-block">「無理だ」と諦めていたシステムも、</span><span className="inline-block">AIレンジャーなら</span>
-                <span className="text-hope-green font-bold inline-block">1/5のコスト、1/3の期間</span><span className="inline-block">で実現可能です</span>
+                <span className="inline-block">日本発の</span><span className="text-hope-green font-bold inline-block">百均的価格設計</span><span className="inline-block">で、</span>
+                <span className="inline-block">夢のシステムを手の届く価格に</span>
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

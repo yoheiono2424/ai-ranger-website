@@ -7,8 +7,8 @@ const ReturnSeishunSolutionSection = () => {
   const solutions = [
     {
       title: 'AI技術で開発を革新',
-      subtitle: '従来の1/5の価格を実現',
-      description: 'AIレンジャーが、高額な開発費用という悪を成敗。最新のAI技術により、従来の開発工数を大幅削減し、驚きの低価格を実現します。',
+      subtitle: '一律500万円のシンプル料金',
+      description: '5レンジャーが、高額な開発費用という悪を成敗。最新のAI技術により、一律500万円で機能数制限なく開発できる革命的な価格を実現します。',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none">
           <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" opacity="0.2"/>
@@ -21,9 +21,9 @@ const ReturnSeishunSolutionSection = () => {
         </svg>
       ),
       metrics: [
-        { label: '開発費用', value: '1/5', highlight: true },
-        { label: '開発期間', value: '1/3' },
-        { label: '要件定義', value: '1/10' }
+        { label: '基本料金', value: '500万円', highlight: true },
+        { label: '開発期間', value: '2〜6ヶ月' },
+        { label: '機能制限', value: 'なし' }
       ],
       color: 'ai-blue',
       gradient: 'from-ai-blue to-sky-blue'
@@ -31,7 +31,7 @@ const ReturnSeishunSolutionSection = () => {
     {
       title: '対話だけで要件定義',
       subtitle: '専門知識不要で即座に形に',
-      description: '難しい仕様書は不要。あなたの「こんなシステムが欲しい」という想いを、AIレンジャーが対話を通じて理解し、最適な形に仕上げます。',
+      description: '難しい仕様書は不要。あなたの「こんなシステムが欲しい」という想いを、5レンジャーが対話を通じて理解し、最適な形に仕上げます。',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none">
           <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" opacity="0.2"/>
@@ -56,7 +56,7 @@ const ReturnSeishunSolutionSection = () => {
     {
       title: '妥協なき全機能実装',
       subtitle: '夢をすべて形にする',
-      description: '「予算の都合で機能を削る」という妥協は過去のもの。AIレンジャーなら、あなたが本当に欲しかった機能をすべて実装できます。',
+      description: '「予算の都合で機能を削る」という妥協は過去のもの。5レンジャーなら、あなたが本当に欲しかった機能をすべて実装できます。',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none">
           <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" opacity="0.2"/>
@@ -98,7 +98,7 @@ const ReturnSeishunSolutionSection = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-ai-blue to-hope-green bg-clip-text text-transparent inline-block">
-              AIレンジャー
+              5レンジャー
             </span>
             <span className="inline-block">が実現する</span>
             <br />
@@ -171,12 +171,12 @@ const ReturnSeishunSolutionSection = () => {
                     
                     <div className="relative z-10 h-full flex flex-col justify-center text-white">
                       <div className="text-6xl md:text-7xl font-black mb-4 opacity-90">
-                        {index === 0 && '1/5'}
+                        {index === 0 && '500'}
                         {index === 1 && '対話'}
                         {index === 2 && '100%'}
                       </div>
                       <p className="text-xl md:text-2xl font-bold opacity-90">
-                        {index === 0 && 'のコストで実現'}
+                        {index === 0 && '万円で実現'}
                         {index === 1 && 'だけで完成'}
                         {index === 2 && '機能を実装'}
                       </p>
@@ -204,7 +204,7 @@ const ReturnSeishunSolutionSection = () => {
               href="/service"
               className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-ai-blue to-hope-green text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
             >
-              AIレンジャーの詳細を見る
+              5レンジャーの詳細を見る
               <svg className="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

@@ -6,7 +6,7 @@ const ServiceOverviewSection = () => {
   const features = [
     {
       title: '開発スピードの革命',
-      value: '従来の 1/3',
+      value: '最速 2ヶ月〜',
       description: '独自のAI開発技術で常識を覆す開発スピード',
       icon: '⚡',
       details: [
@@ -18,19 +18,19 @@ const ServiceOverviewSection = () => {
     },
     {
       title: '価格の革命',
-      value: '従来の 1/5',
-      description: '開発相場の価格破壊を起こす透明な料金体系',
+      value: '日本発 百均的',
+      description: '誰もが手の届く明確でシンプルな価格設計',
       icon: '💰',
       details: [
-        '開発相場の価格破壊を起こす',
-        '機能数ベースの明確な料金体系で不透明な見積もりを撤廃',
+        '一律500万円のシンプルな料金体系',
+        '機能数制限なし、何でも開発可能',
         'オプション機能も明確な価格設定'
       ],
       color: 'from-hope-green to-emerald-400',
     },
     {
       title: 'プロセスの革命',
-      value: '従来の 1/10',
+      value: '即座に 開始',
       description: 'お客様は「やりたいこと」を伝えるだけ',
       icon: '🎯',
       details: [
@@ -49,7 +49,7 @@ const ServiceOverviewSection = () => {
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
             <h2 className="relative text-3xl md:text-5xl font-black text-gray-900">
-              <span className="inline-block">なぜ<span className="text-ai-blue">AIレンジャー</span>が</span>
+              <span className="inline-block">なぜ<span className="text-ai-blue">5レンジャー</span>が</span>
               <span className="block md:inline">選ばれるのか</span>
             </h2>
           </div>
@@ -160,7 +160,7 @@ const ServiceOverviewSection = () => {
               </h3>
               
               <p className="text-lg md:text-xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-                従来の1/5の費用、1/3の期間で、
+                一律500万円のシンプル料金で、
                 理想のシステムを開発します
               </p>
               

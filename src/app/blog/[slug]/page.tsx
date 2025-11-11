@@ -106,12 +106,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!article) {
     return {
-      title: '記事が見つかりません | AIレンジャー',
+      title: '記事が見つかりません | 5レンジャー',
     };
   }
 
   return {
-    title: `${article.title} | AIレンジャー - 株式会社Re.haru`,
+    title: `${article.title} | 5レンジャー - 株式会社Re.haru`,
     description: article.summary,
     keywords: article.seo_keywords || [],
     openGraph: {
@@ -262,7 +262,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             <div className="relative w-full h-96 mb-12 rounded-lg overflow-hidden">
               <Image
                 src={article.thumbnail_url}
-                alt={`${article.industries.join('・')}のDXシステム開発事例 - ${article.title.replace(/【.*?】/, '').trim()} | AIレンジャー導入による業務効率化・コスト削減の実績`}
+                alt={`${article.industries.join('・')}のDXシステム開発事例 - ${article.title.replace(/【.*?】/, '').trim()} | 5レンジャー導入による業務効率化・コスト削減の実績`}
                 fill
                 className="object-cover"
                 priority
@@ -499,7 +499,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                   </h4>
                 </div>
                 <p className="text-sm text-gray-600">
-                  AIレンジャーの開発プロセスや開発実績をご紹介
+                  5レンジャーの開発プロセスや開発実績をご紹介
                 </p>
               </Link>
 

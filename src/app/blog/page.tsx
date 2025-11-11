@@ -5,7 +5,7 @@ import BlogListSection from '@/components/sections/blog/BlogListSection';
 import type { Article } from '@/types/blog';
 
 export const metadata: Metadata = {
-  title: 'DX開発事例 | AIレンジャー - 株式会社Re.haru',
+  title: 'DX開発事例 | 5レンジャー - 株式会社Re.haru',
   description:
     'AI技術を活用した社内DXシステム開発の事例をご紹介。製造業、建設業、飲食業など、業種別の課題解決ストーリーから御社に最適なソリューションを見つけてください。',
   keywords: [
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'システム開発',
     '業務効率化',
     '社内DX',
-    'AIレンジャー',
+    '5レンジャー',
     '製造業DX',
     '建設業DX',
   ],
   openGraph: {
-    title: 'DX開発事例 | AIレンジャー',
+    title: 'DX開発事例 | 5レンジャー',
     description: 'AI技術を活用した社内DXシステム開発の事例をご紹介',
     type: 'website',
     url: 'https://reharu.com/blog',

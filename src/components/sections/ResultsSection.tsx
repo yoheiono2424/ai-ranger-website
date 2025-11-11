@@ -109,7 +109,7 @@ const ResultsSection = () => {
             <span className="text-ai-blue block mt-2">企業たちの成功事例</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            AIレンジャーで夢を実現し、
+            5レンジャーで夢を実現し、
             <span className="text-hope-green font-bold">新たな挑戦</span>
             を始めた企業様たち
           </p>

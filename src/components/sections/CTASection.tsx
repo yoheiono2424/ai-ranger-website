@@ -41,7 +41,7 @@ const CTASection = () => {
             <span className="block mt-2">青春を取り戻す時</span>
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -49,7 +49,7 @@ const CTASection = () => {
             viewport={{ once: true }}
           >
             高額な開発費用に悩む日々は、もう終わりです。
-            AIレンジャーと一緒に、新しい挑戦を始めましょう。
+            5レンジャーと一緒に、新しい挑戦を始めましょう。
           </motion.p>
 
           <motion.div
@@ -71,7 +71,7 @@ const CTASection = () => {
               <div className="flex flex-col items-center">
                 <div className="text-4xl mb-3">📅</div>
                 <p className="font-bold">開発期間</p>
-                <p className="text-sm opacity-90">通常の1/3で完成</p>
+                <p className="text-sm opacity-90">2〜6ヶ月で完成</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="text-4xl mb-3">🎯</div>

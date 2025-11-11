@@ -1,25 +1,14 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 
 const PricingDetailSection = () => {
-  const [showCalculation, setShowCalculation] = useState(false);
-
-  // 基本料金体系
-  const basePricing = {
-    basePrice: 300,
-    includeCount: 30,
-    additionalPrice: 10,
-  };
-
-
   const additionalOptions = [
     {
       title: 'AI機能開発',
-      price: '50万円/機能',
-      maintenance: '+1万円/月',
-      description: 'チャットボット、画像認識、データ分析などの高度なAI機能',
+      price: '250万円',
+      maintenance: 'なし',
+      description: 'チャットボット、画像認識、データ分析などの高度なAI機能（固定料金）',
       icon: '🤖',
     },
     {
@@ -31,9 +20,9 @@ const PricingDetailSection = () => {
     },
     {
       title: '外部システム連携',
-      price: '30万円/連携',
+      price: '50万円/連携',
       maintenance: 'なし',
-      description: '外部API連携、既存システムとのデータ連携などを実装します',
+      description: 'APIキー接続系が対象。CSV連携は無償で対応します',
       icon: '🔗',
     },
   ];
@@ -42,8 +31,9 @@ const PricingDetailSection = () => {
     {
       category: '保守費用',
       items: [
-        { name: '基本保守費用', price: '開発費用の1%/月', note: '例：300万円の開発→3万円/月' },
-        { name: 'AI保守費用', price: '1万円/月・機能', note: 'AI機能利用時のみ' },
+        { name: '基本保守費用', price: '月3万円', note: '固定料金' },
+        { name: 'AI機能オプション', price: '+月2万円', note: 'AI機能利用時' },
+        { name: 'ネイティブアプリオプション', price: '+月2万円', note: 'ネイティブアプリ時' },
       ]
     },
     {
@@ -61,10 +51,10 @@ const PricingDetailSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-4">
-            革命的な料金体系
+            シンプルでわかりやすい料金体系
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            必要な機能数に応じた透明性の高い料金設定
+            一律料金で機能数制限なし、何でも開発できる5レンジャープラン
           </p>
         </div>
 
@@ -72,36 +62,30 @@ const PricingDetailSection = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="bg-gradient-to-r from-ai-blue to-sky-blue p-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">AIレンジャー 基本料金体系</h3>
-              <p className="text-white/90">機能数ベースの明確な料金設定</p>
+              <h3 className="text-2xl font-bold mb-2">5レンジャー 基本料金体系</h3>
+              <p className="text-white/90">機能数制限なし、何でも開発できるシンプルプラン</p>
             </div>
             <div className="p-8">
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="bg-ai-blue/10 rounded-xl p-6">
+              <div className="flex justify-center mb-8">
+                <div className="text-center max-w-md w-full">
+                  <div className="bg-ai-blue/10 rounded-xl p-8">
                     <p className="text-sm text-gray-600 mb-2">基本料金</p>
-                    <p className="text-4xl font-black text-ai-blue mb-2">300万円</p>
-                    <p className="text-sm text-gray-700">機能数30個まで含む</p>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="bg-hope-green/10 rounded-xl p-6">
-                    <p className="text-sm text-gray-600 mb-2">追加料金</p>
-                    <p className="text-4xl font-black text-hope-green mb-2">10万円</p>
-                    <p className="text-sm text-gray-700">31個目以降（1個あたり）</p>
+                    <p className="text-5xl font-black text-ai-blue mb-3">一律500万円</p>
+                    <p className="text-base text-gray-700 font-semibold mb-2">機能数制限なし</p>
+                    <p className="text-sm text-gray-600">何でも開発できる一律料金</p>
                   </div>
                 </div>
               </div>
 
-              {/* 料金計算式 */}
+              {/* 開発期間 */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">料金計算式</h4>
+                <h4 className="font-bold text-gray-900 mb-3">開発期間</h4>
                 <div className="bg-white rounded-lg p-4 border border-gray-200">
-                  <p className="font-mono text-sm text-gray-700">
-                    総額 = 300万円 + (機能数 - 30) × 10万円
+                  <p className="text-gray-700">
+                    2〜6ヶ月（プロジェクト規模による）
                   </p>
                   <p className="text-xs text-gray-500 mt-2">
-                    ※機能数が30個以下の場合は一律300万円
+                    ※詳細なスケジュールはヒアリング後にご提示いたします
                   </p>
                 </div>
               </div>

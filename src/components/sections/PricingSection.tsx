@@ -81,9 +81,8 @@ const PricingSection = () => {
             <span className="text-ai-blue block mt-2">青春を取り戻す</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            従来の
-            <span className="text-challenge-orange font-bold">1/5の価格</span>
-            で、夢のシステムを実現
+            <span className="text-challenge-orange font-bold">一律500万円</span>
+            のシンプル料金で、夢のシステムを実現
           </p>
         </motion.div>
 

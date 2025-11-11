@@ -81,7 +81,7 @@ const CEOMessageSection = () => {
                 </div>
 
                 <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                  AIレンジャーが実現する「新しいチャレンジ」
+                  5レンジャーが実現する「新しいチャレンジ」
                 </h4>
 
                 <div className="bg-gray-50 rounded-2xl p-6">
@@ -91,7 +91,7 @@ const CEOMessageSection = () => {
                     「スモールスタートなんて夢のまた夢」
                   </p>
                   <p className="font-bold text-gray-900">
-                    そんな「大人の常識」を、AIレンジャーが成敗します。
+                    そんな「大人の常識」を、5レンジャーが成敗します。
                   </p>
                 </div>
 
@@ -100,15 +100,15 @@ const CEOMessageSection = () => {
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-ai-blue mb-2">1/5</div>
-                    <p className="text-sm font-bold text-gray-700">開発費用</p>
+                    <div className="text-3xl font-black text-ai-blue mb-2">500万円</div>
+                    <p className="text-sm font-bold text-gray-700">一律料金</p>
                     <p className="text-xs text-gray-600 mt-1">もう予算を理由に諦める必要はありません</p>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-hope-green mb-2">1/3</div>
+                    <div className="text-3xl font-black text-hope-green mb-2">2〜6ヶ月</div>
                     <p className="text-sm font-bold text-gray-700">開発期間</p>
                     <p className="text-xs text-gray-600 mt-1">アイデアをすぐに形にできます</p>
                   </motion.div>
@@ -116,7 +116,7 @@ const CEOMessageSection = () => {
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-challenge-orange mb-2">1/10</div>
+                    <div className="text-3xl font-black text-challenge-orange mb-2">対話のみ</div>
                     <p className="text-sm font-bold text-gray-700">要件定義</p>
                     <p className="text-xs text-gray-600 mt-1">「やりたいこと」を話すだけで始められます</p>
                   </motion.div>
@@ -148,7 +148,7 @@ const CEOMessageSection = () => {
                   </motion.p>
                   <p className="text-lg">
                     新しいチャレンジへの一歩を、今こそ踏み出しましょう。<br />
-                    AIレンジャーが、皆様の挑戦を全力で応援します。
+                    5レンジャーが、皆様の挑戦を全力で応援します。
                   </p>
                 </div>
 

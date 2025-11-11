@@ -17,20 +17,20 @@ const ProjectResultsSection = dynamic(() => import('@/components/sections/servic
 const PricingDetailSection = dynamic(() => import('@/components/sections/service/PricingDetailSection'), {
   loading: () => <div className="h-96" />,
 });
-const FunctionCountSection = dynamic(() => import('@/components/sections/service/FunctionCountSection'), {
-  loading: () => <div className="h-64" />,
-});
+// const FunctionCountSection = dynamic(() => import('@/components/sections/service/FunctionCountSection'), {
+//   loading: () => <div className="h-64" />,
+// });
 const FAQSection = dynamic(() => import('@/components/sections/service/FAQSection'), {
   loading: () => <div className="h-96" />,
 });
 
 export const metadata: Metadata = {
-  title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
-  description: 'AIレンジャーの詳細情報。開発実績、料金プランまで。300万円から始められる革新的なシステム開発サービス。',
-  keywords: 'AIレンジャー, 料金プラン, 開発実績, システム開発, DX',
+  title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
+  description: '5レンジャーの詳細情報。開発実績、料金プランまで。一律500万円で機能数制限なし、何でも開発できる革新的なシステム開発サービス。',
+  keywords: '5レンジャー, 料金プラン, 開発実績, システム開発, DX, 一律料金',
   openGraph: {
-    title: 'サービス詳細 | 株式会社Re.haru - AIレンジャー',
-    description: '300万円から始められる革新的なシステム開発。開発費用1/5、期間1/3を実現。',
+    title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
+    description: '一律500万円で機能数制限なし。何でも開発できる革新的なシステム開発。2〜6ヶ月の開発期間を実現。',
     images: ['/①Re.haru青ロゴ.png'],
   },
 };
@@ -50,7 +50,6 @@ export default function ServicePage() {
       <div id="price">
         <PricingDetailSection />
       </div>
-      <FunctionCountSection />
       <FAQSection />
     </>
   );

@@ -7,11 +7,11 @@ import JsonLd from "@/components/common/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL('https://reharu.com'),
   title: {
-    default: "株式会社Re.haru | AIレンジャー - 高額な開発相場を成敗する",
+    default: "株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する",
     template: "%s | 株式会社Re.haru"
   },
-  description: "AIレンジャーが高額な開発相場を成敗！開発費用1/5、開発期間1/3を実現。テクノロジーの力で企業に「挑戦」「成長」「希望」を取り戻します。",
-  keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, AIレンジャー, 株式会社Re.haru",
+  description: "5レンジャーが高額な開発相場を成敗！一律500万円のシンプル料金、2〜6ヶ月の開発期間を実現。テクノロジーの力で企業に「挑戦」「成長」「希望」を取り戻します。",
+  keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, 5レンジャー, 株式会社Re.haru",
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
