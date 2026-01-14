@@ -7,11 +7,11 @@ import JsonLd from "@/components/common/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL('https://reharu.com'),
   title: {
-    default: "株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する",
+    default: "株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援",
     template: "%s | 株式会社Re.haru"
   },
-  description: "5レンジャーが高額な開発相場を成敗！一律500万円のシンプル料金、2〜6ヶ月の開発期間を実現。テクノロジーの力で企業に「挑戦」「成長」「希望」を取り戻します。",
-  keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, 5レンジャー, 株式会社Re.haru",
+  description: "テクノロジーの力ですべての企業にReturn青春をお届けします。",
+  keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, 5レンジャー, SysSuc, 株式会社Re.haru",
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
@@ -34,18 +34,18 @@ const organizationSchema = {
   url: "https://reharu.com",
   logo: "https://reharu.com/①Re.haru青ロゴ.png",
   description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",
-  foundingDate: "2024-01-01",
+  foundingDate: "2020-10-20",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "中央区花畑町",
+    streetAddress: "西区春日1-14-3 ザ・熊本タワー2901",
     addressLocality: "熊本市",
     addressRegion: "熊本県",
-    postalCode: "860-0000",
+    postalCode: "860-0047",
     addressCountry: "JP"
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+81-96-xxx-xxxx",
+    telephone: "+81-96-327-9339",
     contactType: "customer service",
     areaServed: "JP",
     availableLanguage: "Japanese"

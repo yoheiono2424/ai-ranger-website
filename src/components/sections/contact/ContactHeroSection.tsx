@@ -7,7 +7,7 @@ const ContactHeroSection = () => {
             お問い合わせ
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            5レンジャーに関するご質問、お見積もり、ご相談など<br />
+            株式会社Re.haruに関するご質問、お見積もり、ご相談など<br />
             お気軽にお問い合わせください
           </p>
         </div>

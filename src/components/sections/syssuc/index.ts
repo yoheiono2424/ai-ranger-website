@@ -1,0 +1,12 @@
+export { default as HeroSection } from './HeroSection';
+export { default as ProblemSection } from './ProblemSection';
+export { default as SolutionSection } from './SolutionSection';
+export { default as ReasonSection } from './ReasonSection';
+export { default as ServiceOverviewSection } from './ServiceOverviewSection';
+export { default as PricingSection } from './PricingSection';
+export { default as ComparisonSection } from './ComparisonSection';
+export { default as ResultsSection } from './ResultsSection';
+export { default as UseCaseSection } from './UseCaseSection';
+export { default as FlowSection } from './FlowSection';
+export { default as FAQSection } from './FAQSection';
+export { default as CTASection } from './CTASection';

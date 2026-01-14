@@ -4,12 +4,12 @@ import HeroSection from '@/components/sections/HeroSection';
 import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
-  title: '株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する',
-  description: '5レンジャーが高額な開発相場を成敗！最速2ヶ月〜の開発スピード、一律500万円のシンプル料金。スマホアプリから社内DXシステムまで、超速・低価格でシステム開発を提供します。',
-  keywords: '5レンジャー, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
+  title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
+  description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。',
+  keywords: '5レンジャー, SysSuc, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
   openGraph: {
-    title: '株式会社Re.haru | 5レンジャー - 高額な開発相場を成敗する',
-    description: '5レンジャーが高額な開発相場を成敗！最速2ヶ月〜の開発スピード、一律500万円のシンプル料金。',
+    title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
+    description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。',
     images: ['/①Re.haru青ロゴ.png'],
     type: 'website',
   },
@@ -21,7 +21,7 @@ const ProblemSection = dynamic(() => import('@/components/sections/ProblemSectio
 const ReturnSeishunVisionSection = dynamic(() => import('@/components/sections/ReturnSeishunVisionSection'), {
   loading: () => <div className="h-96" />,
 });
-const ReturnSeishunSolutionSection = dynamic(() => import('@/components/sections/ReturnSeishunSolutionSection'), {
+const ServiceIntroSection = dynamic(() => import('@/components/sections/ServiceIntroSection'), {
   loading: () => <div className="h-96" />,
 });
 const SuccessStoriesSection = dynamic(() => import('@/components/sections/SuccessStoriesSection'), {
@@ -38,7 +38,7 @@ export default function Home() {
       <NewsSection />
       <ProblemSection />
       <ReturnSeishunVisionSection />
-      <ReturnSeishunSolutionSection />
+      <ServiceIntroSection />
       <SuccessStoriesSection />
       <CTASection />
     </>

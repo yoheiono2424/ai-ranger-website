@@ -49,7 +49,7 @@ const CTASection = () => {
             viewport={{ once: true }}
           >
             高額な開発費用に悩む日々は、もう終わりです。
-            5レンジャーと一緒に、新しい挑戦を始めましょう。
+            Re.haruと一緒に、新しい挑戦を始めましょう。
           </motion.p>
 
           <motion.div
@@ -64,17 +64,29 @@ const CTASection = () => {
             </h3>
             <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-white">
               <div className="flex flex-col items-center">
-                <div className="text-4xl mb-3">💰</div>
+                <div className="w-12 h-12 mb-3">
+                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <p className="font-bold">節約可能額</p>
                 <p className="text-sm opacity-90">最大80%のコスト削減</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-4xl mb-3">📅</div>
+                <div className="w-12 h-12 mb-3">
+                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <p className="font-bold">開発期間</p>
                 <p className="text-sm opacity-90">2〜6ヶ月で完成</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-4xl mb-3">🎯</div>
+                <div className="w-12 h-12 mb-3">
+                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <p className="font-bold">実現可能性</p>
                 <p className="text-sm opacity-90">あなたのアイデアを診断</p>
               </div>

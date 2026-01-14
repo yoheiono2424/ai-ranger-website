@@ -40,7 +40,7 @@ const ContactFormSection = () => {
 
   const inquiryTypes = [
     { value: 'ai-ranger', label: '5レンジャーについて' },
-    { value: 'estimate', label: 'お見積もり依頼' },
+    { value: 'syssuc', label: 'SysSucについて' },
     { value: 'other', label: 'その他' },
   ];
 
