@@ -16,17 +16,6 @@ const ServiceIntroSection = () => {
       gradient: 'from-ai-blue to-sky-blue',
       iconBg: 'bg-ai-blue',
     },
-    {
-      name: 'SysSuc',
-      tagline: 'サブスク型システム開発',
-      description: '初期費用ゼロ、月額定額でシステム開発。保守・改修も込みで、持たない時代の新しい選択肢。',
-      price: '月額10万円〜',
-      priceNote: '初期費用ゼロ',
-      features: ['初期費用なし', '保守・改修込み', '月額定額制'],
-      href: '/syssuc',
-      gradient: 'from-[#1B3A5F] to-[#5BB7D3]',
-      iconBg: 'bg-[#1B3A5F]',
-    },
   ];
 
   return (
@@ -48,11 +37,11 @@ const ServiceIntroSection = () => {
             私たちのサービス
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            お客様のニーズに合わせて、2つのサービスをご用意しています
+            お客様の理想をカタチにするサービスをご提供しています
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid gap-8 max-w-xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               key={service.name}
@@ -118,7 +107,7 @@ const ServiceIntroSection = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-500 text-sm">
-            どちらのサービスが最適か分からない場合は、お気軽にご相談ください
+            サービスについて詳しく知りたい方は、お気軽にご相談ください
           </p>
         </motion.div>
       </div>

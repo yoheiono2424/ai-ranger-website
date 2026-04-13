@@ -41,11 +41,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/syssuc" className="text-gray-300 hover:text-white transition-colors">
-                  SysSuc
-                </Link>
-              </li>
-              <li>
                 <SmoothScrollLink href="/service#price" className="text-gray-300 hover:text-white transition-colors">
                   料金プラン
                 </SmoothScrollLink>

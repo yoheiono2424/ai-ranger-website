@@ -179,7 +179,7 @@ const PricingSection = () => {
           <div className="inline-block bg-gradient-to-r from-success-yellow to-hope-green p-1 rounded-2xl">
             <div className="bg-white rounded-xl px-8 py-6">
               <p className="text-lg font-bold text-gray-900 mb-2">
-                💡 料金シミュレーターで
+                <svg className="w-5 h-5 inline-block mr-1 text-challenge-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>料金シミュレーターで
                 <span className="text-ai-blue">あなたの節約額</span>
                 を確認
               </p>

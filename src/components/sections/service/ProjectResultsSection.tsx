@@ -8,7 +8,7 @@ const ProjectResultsSection = () => {
     // 社内DX
     {
       category: '社内DX',
-      categoryIcon: '🏢',
+      categoryIcon: <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
       categoryColor: 'from-green-500 to-green-600',
       title: 'カタログギフト自動連携システム',
       description: '複数システムを一元化、収益計算を自動化',
@@ -20,7 +20,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: '社内DX',
-      categoryIcon: '🏢',
+      categoryIcon: <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
       categoryColor: 'from-green-500 to-green-600',
       title: '現場向け勤怠管理システム',
       description: '直行直帰の正確な勤怠情報管理と社内共有',
@@ -32,7 +32,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: '社内DX',
-      categoryIcon: '🏢',
+      categoryIcon: <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
       categoryColor: 'from-green-500 to-green-600',
       title: '在庫管理システム',
       description: '複数拠点の在庫を一元管理し、発注を自動化',
@@ -45,7 +45,7 @@ const ProjectResultsSection = () => {
     // AI社内システム
     {
       category: 'AI社内システム',
-      categoryIcon: '🤖',
+      categoryIcon: <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-purple-500 to-purple-600',
       title: 'AI自動会計管理システム',
       description: '領収書画像をAIが自動解析し、自動仕分け',
@@ -57,7 +57,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: 'AI社内システム',
-      categoryIcon: '🤖',
+      categoryIcon: <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-purple-500 to-purple-600',
       title: '人材派遣スタッフAI管理システム',
       description: 'AIで人材マッチングを最適化、31社が導入',
@@ -69,7 +69,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: 'AI社内システム',
-      categoryIcon: '🤖',
+      categoryIcon: <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-purple-500 to-purple-600',
       title: 'AIチャットボット業務支援',
       description: '社内業務の問い合わせを24時間自動対応',
@@ -82,7 +82,7 @@ const ProjectResultsSection = () => {
     // スマホアプリ
     {
       category: 'スマホアプリ',
-      categoryIcon: '📱',
+      categoryIcon: <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-blue-500 to-blue-600',
       title: 'タレント農家コミュニティアプリ',
       description: '地図から商品購入、チャット機能まで全て込み',
@@ -94,7 +94,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: 'スマホアプリ',
-      categoryIcon: '📱',
+      categoryIcon: <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-blue-500 to-blue-600',
       title: 'キャンプフリマアプリ',
       description: 'キャンプ用品専門のフリマアプリ',
@@ -106,7 +106,7 @@ const ProjectResultsSection = () => {
     },
     {
       category: 'スマホアプリ',
-      categoryIcon: '📱',
+      categoryIcon: <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>,
       categoryColor: 'from-blue-500 to-blue-600',
       title: 'ショート動画型採用マッチングアプリ',
       description: 'ショート動画で求職者と企業をマッチング',
@@ -143,7 +143,7 @@ const ProjectResultsSection = () => {
               <div className="p-6">
                 {/* カテゴリタグ */}
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-2xl">{project.categoryIcon}</span>
+                  {project.categoryIcon}
                   <span className="text-sm font-bold text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                     {project.category}
                   </span>

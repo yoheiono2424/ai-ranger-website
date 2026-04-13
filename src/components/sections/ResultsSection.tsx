@@ -11,9 +11,9 @@ const ResultsSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   const categories = [
-    { id: 'app', name: 'スマホアプリ', icon: '📱' },
-    { id: 'dx', name: '社内DXシステム', icon: '🏢' },
-    { id: 'ai', name: 'AI活用システム', icon: '🤖' },
+    { id: 'app', name: 'スマホアプリ', icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg> },
+    { id: 'dx', name: '社内DXシステム', icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> },
+    { id: 'ai', name: 'AI活用システム', icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg> },
   ];
 
   const results = {
@@ -26,7 +26,7 @@ const ResultsSection = () => {
         originalCost: '500万円',
         description: '顧客管理から予約、決済まで一括管理',
         impact: '予約率3倍増、業務時間50%削減',
-        image: '💇‍♀️',
+        image: <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" /></svg>,
       },
       {
         title: 'フィットネストラッカー',
@@ -36,7 +36,7 @@ const ResultsSection = () => {
         originalCost: '750万円',
         description: 'トレーニング記録と食事管理を統合',
         impact: '会員継続率80%向上',
-        image: '💪',
+        image: <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>,
       },
     ],
     dx: [
@@ -48,7 +48,7 @@ const ResultsSection = () => {
         originalCost: '1,000万円',
         description: 'リアルタイム在庫追跡と自動発注',
         impact: '在庫コスト40%削減、欠品ゼロ達成',
-        image: '📦',
+        image: <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>,
       },
       {
         title: '営業支援システム',
@@ -58,7 +58,7 @@ const ResultsSection = () => {
         originalCost: '900万円',
         description: '顧客情報一元管理とAI提案機能',
         impact: '成約率2.5倍、営業効率60%向上',
-        image: '📊',
+        image: <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>,
       },
     ],
     ai: [
@@ -70,7 +70,7 @@ const ResultsSection = () => {
         originalCost: '650万円',
         description: '24時間365日の自動カスタマーサポート',
         impact: '問い合わせ対応コスト70%削減',
-        image: '🤖',
+        image: <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>,
       },
       {
         title: 'AI画像診断システム',
@@ -80,7 +80,7 @@ const ResultsSection = () => {
         originalCost: '1,500万円',
         description: '画像解析による異常検知自動化',
         impact: '検査時間80%短縮、精度99%達成',
-        image: '🔬',
+        image: <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>,
       },
     ],
   };
@@ -91,9 +91,15 @@ const ResultsSection = () => {
         style={{ y }}
         className="absolute inset-0 opacity-5"
       >
-        <div className="absolute top-20 left-10 text-8xl">🚀</div>
-        <div className="absolute top-40 right-20 text-8xl">⭐</div>
-        <div className="absolute bottom-20 left-1/2 text-8xl">💡</div>
+        <div className="absolute top-20 left-10 text-gray-300">
+          <svg className="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        </div>
+        <div className="absolute top-40 right-20 text-gray-300">
+          <svg className="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+        </div>
+        <div className="absolute bottom-20 left-1/2 text-gray-300">
+          <svg className="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+        </div>
       </motion.div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -127,7 +133,7 @@ const ResultsSection = () => {
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                <span className="text-xl">{category.icon}</span>
+                {category.icon}
                 <span className="text-sm sm:text-base">{category.name}</span>
               </button>
             ))}
@@ -146,7 +152,7 @@ const ResultsSection = () => {
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <div className="text-4xl mb-4">{result.image}</div>
+                    <div className="mb-4">{result.image}</div>
                     <h3 className="text-2xl font-black text-gray-900 mb-2">
                       {result.title}
                     </h3>

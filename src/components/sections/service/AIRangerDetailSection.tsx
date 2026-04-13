@@ -10,7 +10,7 @@ const AIRangerDetailSection = () => {
       duration: null,
       description: 'やりたいことを話すだけでOK',
       details: 'まずは『やりたいこと』『解決したい課題』を、普段の言葉でお聞かせください。ヒアリングを基にAIが即座にプロトタイプを開発。実際の画面を見ながら、お客様と一緒にイメージを具体化していきます。技術的な知識は一切不要です。',
-      icon: '💬',
+      icon: <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>,
       color: 'from-ai-blue to-sky-blue',
     },
     {
@@ -19,7 +19,7 @@ const AIRangerDetailSection = () => {
       duration: null,
       description: '一律500万円のシンプル料金',
       details: 'プロトタイプで確認したシステムをもとに、開発する機能や範囲を明確化します。一律500万円（機能数制限なし）のシンプルな料金体系で、追加費用の心配もありません。内容にご納得いただければ、すぐにご契約へ進めます。',
-      icon: '📝',
+      icon: <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
       color: 'from-hope-green to-emerald-400',
     },
     {
@@ -28,7 +28,7 @@ const AIRangerDetailSection = () => {
       duration: '2〜6ヶ月',
       description: 'AIが猛スピードで開発',
       details: 'スコープが明確なので、AIが迷うことなく猛スピードで開発を進めます。開発完了後は、実際にお客様に操作していただきながら動作確認を実施。対話を通じて改善点をフィードバックいただき、完璧な状態に仕上げます。',
-      icon: '⚡',
+      icon: <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       color: 'from-challenge-orange to-amber-400',
     },
     {
@@ -37,7 +37,7 @@ const AIRangerDetailSection = () => {
       duration: '継続サポート',
       description: '安心の保守運用付き',
       details: '合意したスコープ通りのシステムを納品及び保守を行います。月額3万円（固定）の安心プランで、機能追加や修正にも迅速に対応いたします。',
-      icon: '✨',
+      icon: <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
       color: 'from-purple-500 to-pink-500',
     },
   ];
@@ -76,6 +76,7 @@ const AIRangerDetailSection = () => {
                   >
                     {step.icon}
                   </div>
+
                   <div className="absolute -top-2 -right-2 bg-ai-blue text-white text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center">
                     {step.number}
                   </div>
@@ -91,7 +92,7 @@ const AIRangerDetailSection = () => {
                     </h3>
                     {step.duration && (
                       <div className="inline-block bg-ai-blue/10 text-ai-blue px-4 py-2 rounded-full text-sm font-medium">
-                        ⏱️ {step.duration}
+                        <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>{step.duration}
                       </div>
                     )}
                   </div>
@@ -108,7 +109,7 @@ const AIRangerDetailSection = () => {
                   {index === 0 && (
                     <div className="bg-gradient-to-r from-ai-blue/5 to-sky-blue/5 border-l-4 border-ai-blue rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">🖥️</div>
+                        <svg className="w-6 h-6 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         <div>
                           <p className="font-medium text-ai-blue mb-2">プロトタイプで理想を形に</p>
                           <p className="text-sm text-gray-600">
@@ -124,7 +125,7 @@ const AIRangerDetailSection = () => {
                   {index === 1 && (
                     <div className="bg-gradient-to-r from-hope-green/5 to-emerald-100/5 border-l-4 border-hope-green rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">💰</div>
+                        <svg className="w-6 h-6 text-hope-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         <div>
                           <p className="font-medium text-hope-green mb-2">日本発の百均的価格設計</p>
                           <p className="text-sm text-gray-600">
@@ -139,7 +140,7 @@ const AIRangerDetailSection = () => {
                   {index === 2 && (
                     <div className="bg-gradient-to-r from-challenge-orange/5 to-amber-100/5 border-l-4 border-challenge-orange rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">🚀</div>
+                        <svg className="w-6 h-6 text-challenge-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                         <div>
                           <p className="font-medium text-challenge-orange mb-2">AIによる高速開発とユーザーテスト</p>
                           <p className="text-sm text-gray-600">
@@ -154,7 +155,7 @@ const AIRangerDetailSection = () => {
                   {index === 3 && (
                     <div className="bg-gradient-to-r from-purple-100/50 to-pink-100/50 border-l-4 border-purple-500 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="text-xl">🛡️</div>
+                        <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                         <div>
                           <p className="font-medium text-purple-700 mb-2">安心の継続サポート</p>
                           <p className="text-sm text-gray-600">

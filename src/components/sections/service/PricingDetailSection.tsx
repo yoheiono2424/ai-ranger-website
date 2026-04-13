@@ -9,21 +9,21 @@ const PricingDetailSection = () => {
       price: '250万円',
       maintenance: 'なし',
       description: 'チャットボット、画像認識、データ分析などの高度なAI機能（固定料金）',
-      icon: '🤖',
+      icon: <svg className="w-10 h-10 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
     },
     {
       title: 'ネイティブアプリ化',
       price: '100万円',
       maintenance: 'なし',
       description: 'iOS/Androidアプリ化、ストア申請作業込み',
-      icon: '📱',
+      icon: <svg className="w-10 h-10 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>,
     },
     {
       title: '外部システム連携',
       price: '50万円/連携',
       maintenance: 'なし',
       description: 'APIキー接続系が対象。CSV連携は無償で対応します',
-      icon: '🔗',
+      icon: <svg className="w-10 h-10 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>,
     },
   ];
 
@@ -105,7 +105,7 @@ const PricingDetailSection = () => {
                 key={index}
                 className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6"
               >
-                <div className="text-4xl mb-4 text-center">{option.icon}</div>
+                <div className="mb-4 flex justify-center">{option.icon}</div>
                 <h4 className="font-bold text-gray-900 mb-2 text-center">{option.title}</h4>
                 <div className="text-center mb-4">
                   <span className="text-2xl font-black text-ai-blue">{option.price}</span>

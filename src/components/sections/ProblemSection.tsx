@@ -9,7 +9,7 @@ const ProblemSection = () => {
       title: '夢を諦めた経営者たち',
       description: '高額な開発費用の前に、新しい挑戦を断念',
       detail: 'システム開発の見積もりを見て、青春時代の夢や情熱を思い出しながらも、現実的な判断として諦めざるを得ない経営者が多数存在します。',
-      icon: '💔',
+      icon: <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 7l3 13M12 7l-3 13" /></svg>,
       color: 'text-red-600',
       bgColor: 'bg-red-50',
     },
@@ -18,7 +18,7 @@ const ProblemSection = () => {
       title: '成長の機会を失う若手社員',
       description: '手作業に追われ、創造的な仕事ができない日々',
       detail: 'システム化されていない業務に時間を取られ、本来の能力を発揮できず、成長の機会を失っている若手社員。彼らの青春は効率の悪い作業に消えています。',
-      icon: '⏰',
+      icon: <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
     },
@@ -27,7 +27,7 @@ const ProblemSection = () => {
       title: '希望を見出せない中小企業',
       description: 'DXの波に乗れず、競争力を失う恐怖',
       detail: '大企業との技術格差は広がるばかり。デジタル化の必要性は理解しているものの、その第一歩を踏み出すことができない中小企業が増えています。',
-      icon: '📉',
+      icon: <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>,
       color: 'text-gray-600',
       bgColor: 'bg-gray-50',
     },
@@ -75,7 +75,7 @@ const ProblemSection = () => {
                     delay: index * 0.5,
                   }}
                 >
-                  {problem.icon}
+                  <div className={`${problem.color} opacity-30`}>{problem.icon}</div>
                 </motion.div>
                 
                 <div className="relative z-10">

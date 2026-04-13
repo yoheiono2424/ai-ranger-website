@@ -110,7 +110,13 @@ const AccessSection = () => {
                     >
                       <div className="w-10 h-10 bg-gradient-to-br from-ai-blue to-sky-blue rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-sm">
-                          {transport.method === '市電' ? '🚃' : transport.method === 'バス' ? '🚌' : '🚗'}
+                          {transport.method === '市電' ? (
+                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17l-2 2m0 0l-2-2m2 2V3m12 16l-2 2m0 0l-2-2m2 2V3M3 7h4m10 0h4M3 11h4m10 0h4" /></svg>
+                          ) : transport.method === 'バス' ? (
+                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4-8v16m-4 0h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v12a2 2 0 002 2zm-2-2h12" /></svg>
+                          ) : (
+                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+                          )}
                         </span>
                       </div>
                       <div>

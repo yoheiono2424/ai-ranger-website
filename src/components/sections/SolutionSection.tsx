@@ -10,7 +10,7 @@ const SolutionSection = () => {
       title: '開発費用',
       value: '500万円',
       description: 'AIの力で開発コストを大幅削減',
-      icon: '💰',
+      icon: <svg className="w-10 h-10 md:w-12 md:h-12 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
       color: 'text-ai-blue',
       bgColor: 'bg-ai-blue/10',
     },
@@ -19,7 +19,7 @@ const SolutionSection = () => {
       title: '開発期間',
       value: '2〜6ヶ月',
       description: '超高速開発で素早く実現',
-      icon: '⚡',
+      icon: <svg className="w-10 h-10 md:w-12 md:h-12 text-hope-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       color: 'text-hope-green',
       bgColor: 'bg-hope-green/10',
     },
@@ -28,7 +28,7 @@ const SolutionSection = () => {
       title: '要件定義',
       value: '対話のみ',
       description: '対話だけで要件が明確に',
-      icon: '🎯',
+      icon: <svg className="w-10 h-10 md:w-12 md:h-12 text-challenge-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeWidth={1.5} /><circle cx="12" cy="12" r="6" strokeWidth={1.5} /><circle cx="12" cy="12" r="2" strokeWidth={1.5} /></svg>,
       color: 'text-challenge-orange',
       bgColor: 'bg-challenge-orange/10',
     },
@@ -72,7 +72,7 @@ const SolutionSection = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="text-4xl md:text-5xl">{solution.icon}</span>
+                {solution.icon}
               </motion.div>
               
               <h3 className="text-lg font-bold text-gray-900 mb-2">

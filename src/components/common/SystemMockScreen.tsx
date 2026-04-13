@@ -45,12 +45,12 @@ export default function SystemMockScreen({ type, title }: SystemMockScreenProps)
         <div className="bg-white p-4 rounded-lg border border-gray-200">
           <div className="text-gray-500 text-sm">要発注</div>
           <div className="text-2xl font-bold text-orange-600 mt-1">23</div>
-          <div className="text-orange-600 text-sm mt-1">⚠ 確認が必要</div>
+          <div className="text-orange-600 text-sm mt-1">要確認</div>
         </div>
         <div className="bg-white p-4 rounded-lg border border-gray-200">
           <div className="text-gray-500 text-sm">欠品</div>
           <div className="text-2xl font-bold text-red-600 mt-1">3</div>
-          <div className="text-red-600 text-sm mt-1">⚠ 至急対応</div>
+          <div className="text-red-600 text-sm mt-1">至急対応</div>
         </div>
       </div>
 

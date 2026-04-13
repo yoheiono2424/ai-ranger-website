@@ -34,7 +34,7 @@ const ProblemSolutionSection = () => {
               <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-red-100">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl text-white">😰</span>
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h3 className="text-2xl font-bold text-red-800 mb-2">従来の開発</h3>
                   <p className="text-red-600 font-medium">諦めるしかない現実</p>
@@ -87,7 +87,7 @@ const ProblemSolutionSection = () => {
               <div className="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-ai-blue">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-ai-blue to-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl text-white">⚡</span>
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
                   <h3 className="text-2xl font-bold text-ai-blue mb-2">5レンジャー</h3>
                   <p className="text-gray-700 font-medium">夢を現実に変える力</p>
@@ -96,7 +96,7 @@ const ProblemSolutionSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg">
                     <div className="w-8 h-8 bg-ai-blue rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">✓</span>
+                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <div>
                       <p className="font-bold text-gray-800 text-sm mb-1">一律500万円で何でも開発</p>
@@ -106,7 +106,7 @@ const ProblemSolutionSection = () => {
                   
                   <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
                     <div className="w-8 h-8 bg-hope-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">✓</span>
+                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <div>
                       <p className="font-bold text-gray-800 text-sm mb-1">透明な機能別料金</p>
@@ -116,7 +116,7 @@ const ProblemSolutionSection = () => {
                   
                   <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-lg">
                     <div className="w-8 h-8 bg-challenge-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">✓</span>
+                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <div>
                       <p className="font-bold text-gray-800 text-sm mb-1">最短2ヶ月で完成</p>

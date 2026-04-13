@@ -6,20 +6,6 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
-
-  const navItems = [
-    { href: '/', label: 'トップ' },
-    { href: '/news', label: 'お知らせ' },
-    { href: '/blog', label: '開発事例' },
-    { href: '/about', label: '会社概要' },
-    { href: '/contact', label: 'お問い合わせ' },
-  ];
-
-  const serviceSubItems = [
-    { href: '/service', label: '5レンジャー' },
-    { href: '/syssuc', label: 'SysSuc' },
-  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm">
@@ -50,45 +36,12 @@ const Header = () => {
             >
               お知らせ
             </Link>
-
-            {/* サービス詳細ドロップダウン */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsServiceMenuOpen(true)}
-              onMouseLeave={() => setIsServiceMenuOpen(false)}
+            <Link
+              href="/service"
+              className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
-              <button
-                className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium flex items-center gap-1"
-              >
-                サービス詳細
-                <svg
-                  className={`w-4 h-4 transition-transform duration-200 ${isServiceMenuOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {/* ドロップダウンメニュー */}
-              <div
-                className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[160px] transition-all duration-200 ${
-                  isServiceMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                }`}
-              >
-                {serviceSubItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2 text-gray-700 hover:text-ai-blue hover:bg-gray-50 transition-colors duration-200 font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
+              サービス詳細
+            </Link>
             <Link
               href="/blog"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
@@ -146,24 +99,13 @@ const Header = () => {
             >
               お知らせ
             </Link>
-
-            {/* サービス詳細サブメニュー */}
-            <div className="py-3">
-              <span className="text-gray-700 font-medium">サービス詳細</span>
-              <div className="pl-4 mt-2 border-l-2 border-gray-200">
-                {serviceSubItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block py-2 text-gray-600 hover:text-ai-blue transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
+            <Link
+              href="/service"
+              className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              サービス詳細
+            </Link>
             <Link
               href="/blog"
               className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"

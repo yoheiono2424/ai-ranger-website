@@ -208,21 +208,21 @@ const FunctionCountSection = () => {
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-start">
-                      <span className="text-ai-blue mr-2">✓</span>
+                      <svg className="w-4 h-4 text-ai-blue mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                       <div>
                         <p className="text-sm font-medium text-gray-900">1つの明確な目的を持つ機能</p>
                         <p className="text-xs text-gray-600">例：「商品を登録する」「レポートを出力する」</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <span className="text-ai-blue mr-2">✓</span>
+                      <svg className="w-4 h-4 text-ai-blue mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                       <div>
                         <p className="text-sm font-medium text-gray-900">1クリック/1フォーム送信で完結</p>
                         <p className="text-xs text-gray-600">ボタンクリックやフォーム送信で実行される操作</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <span className="text-ai-blue mr-2">✓</span>
+                      <svg className="w-4 h-4 text-ai-blue mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                       <div>
                         <p className="text-sm font-medium text-gray-900">「〜する」と動詞で表現可能</p>
                         <p className="text-xs text-gray-600">ユーザー視点での具体的なアクション</p>

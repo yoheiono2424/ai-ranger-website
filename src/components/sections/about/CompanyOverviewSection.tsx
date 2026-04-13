@@ -88,7 +88,7 @@ const CompanyOverviewSection = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-md text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-ai-blue to-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-white">⚡</span>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
                   <h5 className="font-bold text-gray-900 mb-2">独自AI技術</h5>
                   <p className="text-sm text-gray-600">
@@ -97,7 +97,7 @@ const CompanyOverviewSection = () => {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-hope-green to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-white">💰</span>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h5 className="font-bold text-gray-900 mb-2">透明な価格</h5>
                   <p className="text-sm text-gray-600">
@@ -106,7 +106,7 @@ const CompanyOverviewSection = () => {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-challenge-orange to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-white">🎯</span>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeWidth={2} /><circle cx="12" cy="12" r="6" strokeWidth={2} /><circle cx="12" cy="12" r="2" strokeWidth={2} /></svg>
                   </div>
                   <h5 className="font-bold text-gray-900 mb-2">簡単プロセス</h5>
                   <p className="text-sm text-gray-600">

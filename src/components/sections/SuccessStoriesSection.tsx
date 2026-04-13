@@ -18,7 +18,7 @@ const SuccessStoriesSection = () => {
       transformation: '新規事業を諦める日々 → 夢だった事業を実現',
       result: '開発費85%削減',
       industry: '農業×EC',
-      icon: '🌾',
+      icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
       features: ['地図購入機能', 'チャット機能', '決済システム'],
       bgGradient: 'from-green-400 to-emerald-500',
     },
@@ -32,7 +32,7 @@ const SuccessStoriesSection = () => {
       transformation: '業務に追われる毎日 → 創造的な仕事に集中',
       result: '開発費80%削減',
       industry: 'EC・物流',
-      icon: '🎁',
+      icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
       features: ['自動収支計算', 'EC連携', '配送システム統合'],
       bgGradient: 'from-pink-400 to-rose-500',
     },
@@ -46,7 +46,7 @@ const SuccessStoriesSection = () => {
       transformation: '競争に諦めムード → 業界のイノベーターへ',
       result: '開発費90%削減',
       industry: '人材派遣',
-      icon: '👥',
+      icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
       features: ['AI自動マッチング', '自動請求書作成', '収益化成功'],
       bgGradient: 'from-blue-400 to-indigo-500',
     },
@@ -92,7 +92,7 @@ const SuccessStoriesSection = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${story.bgGradient} opacity-5 group-hover:opacity-10 transition-opacity`}></div>
               
               {/* アイコン */}
-              <div className="absolute top-16 right-4 text-5xl opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-16 right-4 opacity-10 group-hover:opacity-20 transition-opacity text-gray-500">
                 {story.icon}
               </div>
               

@@ -6,7 +6,7 @@ import NewsSection from '@/components/NewsSection';
 export const metadata: Metadata = {
   title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
   description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。',
-  keywords: '5レンジャー, SysSuc, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
+  keywords: '5レンジャー, システム開発, 低価格開発, DXシステム, スマホアプリ開発, 熊本, Return青春, 株式会社Re.haru',
   openGraph: {
     title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
     description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。',

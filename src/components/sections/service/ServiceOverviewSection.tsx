@@ -8,7 +8,7 @@ const ServiceOverviewSection = () => {
       title: '開発スピードの革命',
       value: '最速 2ヶ月〜',
       description: '独自のAI開発技術で常識を覆す開発スピード',
-      icon: '⚡',
+      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       details: [
         '独自のAIによる開発技術の確立',
         '従来の常識を覆す開発スピード',
@@ -20,7 +20,7 @@ const ServiceOverviewSection = () => {
       title: '価格の革命',
       value: '日本発 百均的',
       description: '誰もが手の届く明確でシンプルな価格設計',
-      icon: '💰',
+      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
       details: [
         '一律500万円のシンプルな料金体系',
         '機能数制限なし、何でも開発可能',
@@ -32,7 +32,7 @@ const ServiceOverviewSection = () => {
       title: 'プロセスの革命',
       value: '即座に 開始',
       description: 'お客様は「やりたいこと」を伝えるだけ',
-      icon: '🎯',
+      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeWidth={1.5} /><circle cx="12" cy="12" r="6" strokeWidth={1.5} /><circle cx="12" cy="12" r="2" strokeWidth={1.5} /></svg>,
       details: [
         '複雑な要件定義はAIが機能数として明確化します',
         '専門知識不要で即座に開発開始',
@@ -98,7 +98,7 @@ const ServiceOverviewSection = () => {
                   {/* アイコンと値 */}
                   <div className="flex items-center justify-between mb-6">
                     <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-4xl">{feature.icon}</span>
+                      {feature.icon}
                     </div>
                     <div className="text-right">
                       <div className="text-sm text-gray-500 font-medium">
