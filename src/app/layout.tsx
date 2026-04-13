@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/common/JsonLd";
+
+const GA_ID = "G-FL2R2EK4DM";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://reharu.com'),
@@ -64,6 +67,18 @@ export default function RootLayout({
   return (
     <html lang="ja" data-scroll-behavior="smooth">
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
         <JsonLd data={organizationSchema} />
       </head>
       <body className="antialiased">
