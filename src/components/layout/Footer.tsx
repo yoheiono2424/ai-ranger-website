@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-                  開発事例
+                  開発ブログ
                 </Link>
               </li>
               <li>

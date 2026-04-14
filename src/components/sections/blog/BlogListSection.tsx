@@ -223,7 +223,7 @@ function ArticleCard({ article }: { article: Article }) {
           {article.thumbnail_url ? (
             <Image
               src={article.thumbnail_url}
-              alt={`${article.industries.join('・')}のDXシステム開発事例 - ${article.title.replace(/【.*?】/, '').trim()}`}
+              alt={`${article.industries.join('・')}向けシステム開発の解説記事 - ${article.title.replace(/【.*?】/, '').trim()}`}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -5,14 +5,14 @@ import BlogListSection from '@/components/sections/blog/BlogListSection';
 import type { Article } from '@/types/blog';
 
 export const metadata: Metadata = {
-  title: 'DX開発事例 | 5レンジャー - 株式会社Re.haru',
+  title: '開発ブログ | 5レンジャー - 株式会社Re.haru',
   description:
-    'AI技術を活用した社内DXシステム開発の事例をご紹介。製造業、建設業、飲食業など、業種別の課題解決ストーリーから御社に最適なソリューションを見つけてください。',
+    'システム開発・AI活用・DX推進に関する最新情報を発信。製造業、建設業、飲食業など業種別の課題解決のヒントから、業務改善・コスト削減に役立つ情報をお届けします。',
   keywords: [
-    'DX開発事例',
-    'DX事例',
-    'AI開発',
+    '開発ブログ',
     'システム開発',
+    'AI開発',
+    'DX',
     '業務効率化',
     '社内DX',
     '5レンジャー',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     '建設業DX',
   ],
   openGraph: {
-    title: 'DX開発事例 | 5レンジャー',
-    description: 'AI技術を活用した社内DXシステム開発の事例をご紹介',
+    title: '開発ブログ | 5レンジャー',
+    description: 'システム開発・AI活用・DX推進に関する最新情報を発信',
     type: 'website',
     url: 'https://reharu.com/blog',
   },
@@ -90,7 +90,7 @@ export default async function BlogPage() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: '開発事例',
+        name: '開発ブログ',
         item: 'https://reharu.com/blog',
       },
     ],

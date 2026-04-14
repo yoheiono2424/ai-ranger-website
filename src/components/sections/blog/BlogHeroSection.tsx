@@ -4,12 +4,12 @@ export default function BlogHeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            DX開発事例
+            開発ブログ
           </h1>
           <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
-            AI技術を活用した社内DXシステム開発の事例をご紹介します。
+            システム開発・AI活用・DX推進に関する最新情報をお届けします。
             <br />
-            業種別の課題解決ストーリーから、御社に最適なソリューションを見つけてください。
+            御社の業務改善・コスト削減に役立つ情報を定期的に発信中。
           </p>
         </div>
       </div>

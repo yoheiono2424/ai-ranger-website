@@ -179,7 +179,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: '開発事例',
+        name: '開発ブログ',
         item: 'https://reharu.com/blog',
       },
       {
@@ -217,7 +217,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             </li>
             <li>
               <Link href="/blog" className="hover:text-blue-600">
-                開発事例
+                開発ブログ
               </Link>
             </li>
             <li>
@@ -262,7 +262,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             <div className="relative w-full h-96 mb-12 rounded-lg overflow-hidden">
               <Image
                 src={article.thumbnail_url}
-                alt={`${article.industries.join('・')}のDXシステム開発事例 - ${article.title.replace(/【.*?】/, '').trim()} | 5レンジャー導入による業務効率化・コスト削減の実績`}
+                alt={`${article.industries.join('・')}向けシステム開発の解説記事 - ${article.title.replace(/【.*?】/, '').trim()} | 5レンジャー`}
                 fill
                 className="object-cover"
                 priority
@@ -591,7 +591,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             href="/blog"
             className="inline-block text-blue-600 hover:text-blue-700 font-semibold"
           >
-            ← 開発事例一覧に戻る
+            ← 開発ブログ一覧に戻る
           </Link>
         </div>
       </div>

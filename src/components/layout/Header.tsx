@@ -46,7 +46,7 @@ const Header = () => {
               href="/blog"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
-              開発事例
+              開発ブログ
             </Link>
             <Link
               href="/about"
@@ -111,7 +111,7 @@ const Header = () => {
               className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              開発事例
+              開発ブログ
             </Link>
             <Link
               href="/about"
