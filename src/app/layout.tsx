@@ -8,7 +8,7 @@ import JsonLd from "@/components/common/JsonLd";
 const GA_ID = "G-FL2R2EK4DM";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://reharu.com'),
+  metadataBase: new URL('https://www.reharu.com'),
   title: {
     default: "株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援",
     template: "%s | 株式会社Re.haru"
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",
     type: "website",
     locale: "ja_JP",
-    url: "https://reharu.com",
+    url: "https://www.reharu.com",
     siteName: "株式会社Re.haru",
   },
 };
@@ -34,8 +34,8 @@ const organizationSchema = {
   "@type": "Organization",
   name: "株式会社Re.haru",
   alternateName: "Re.haru",
-  url: "https://reharu.com",
-  logo: "https://reharu.com/①Re.haru青ロゴ.png",
+  url: "https://www.reharu.com",
+  logo: "https://www.reharu.com/①Re.haru青ロゴ.png",
   description: "テクノロジーの力で誰もが青春のような「挑戦」「成長」「希望」を持ち続けられる社会を創る。",
   foundingDate: "2020-10-20",
   address: {

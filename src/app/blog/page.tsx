@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: '開発ブログ | 5レンジャー',
     description: 'システム開発・AI活用・DX推進に関する最新情報を発信',
     type: 'website',
-    url: 'https://reharu.com/blog',
+    url: 'https://www.reharu.com/blog',
   },
 };
 
@@ -85,13 +85,13 @@ export default async function BlogPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'トップ',
-        item: 'https://reharu.com',
+        item: 'https://www.reharu.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '開発ブログ',
-        item: 'https://reharu.com/blog',
+        item: 'https://www.reharu.com/blog',
       },
     ],
   };

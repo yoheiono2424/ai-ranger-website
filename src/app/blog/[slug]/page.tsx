@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.summary,
       type: 'article',
-      url: `https://reharu.com/blog/${article.slug}`,
+      url: `https://www.reharu.com/blog/${article.slug}`,
       images: article.thumbnail_url ? [{ url: article.thumbnail_url }] : [],
       publishedTime: article.scheduled_at,
     },
@@ -147,22 +147,22 @@ export default async function BlogDetailPage({ params }: PageProps) {
     author: {
       '@type': 'Organization',
       name: '株式会社Re.haru',
-      url: 'https://reharu.com',
+      url: 'https://www.reharu.com',
     },
     publisher: {
       '@type': 'Organization',
       name: '株式会社Re.haru',
-      url: 'https://reharu.com',
+      url: 'https://www.reharu.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://reharu.com/logo.png',
+        url: 'https://www.reharu.com/logo.png',
       },
     },
-    image: article.thumbnail_url || 'https://reharu.com/og-image.png',
+    image: article.thumbnail_url || 'https://www.reharu.com/og-image.png',
     description: article.summary,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://reharu.com/blog/${article.slug}`,
+      '@id': `https://www.reharu.com/blog/${article.slug}`,
     },
   };
 
@@ -174,19 +174,19 @@ export default async function BlogDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'トップ',
-        item: 'https://reharu.com',
+        item: 'https://www.reharu.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '開発ブログ',
-        item: 'https://reharu.com/blog',
+        item: 'https://www.reharu.com/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: article.title,
-        item: `https://reharu.com/blog/${article.slug}`,
+        item: `https://www.reharu.com/blog/${article.slug}`,
       },
     ],
   };
