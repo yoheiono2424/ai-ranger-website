@@ -8,10 +8,10 @@ const ServiceIntroSection = () => {
     {
       name: '5レンジャー',
       tagline: '一律料金システム開発',
-      description: '日本初の安心百均価格設計。一律500万円で機能数制限なく、あなたの理想のシステムを開発します。',
+      description: '日本初の安心百均価格設計。一律500万円・AI機能込みで、あなたの理想のシステムを開発します。',
       price: '500万円〜',
-      priceNote: '一律料金',
-      features: ['機能数制限なし', '2〜6ヶ月で完成', '所有権あり'],
+      priceNote: '一律料金（AI機能込み）',
+      features: ['機能数制限なし', 'AI機能込み', '2〜6ヶ月で完成', '所有権あり'],
       href: '/service',
       gradient: 'from-ai-blue to-sky-blue',
       iconBg: 'bg-ai-blue',

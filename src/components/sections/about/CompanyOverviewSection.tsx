@@ -101,7 +101,7 @@ const CompanyOverviewSection = () => {
                   </div>
                   <h5 className="font-bold text-gray-900 mb-2">透明な価格</h5>
                   <p className="text-sm text-gray-600">
-                    機能別の明確な料金体系で不透明な見積もりを撤廃
+                    一律料金体系で不透明な見積もりを撤廃
                   </p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md text-center">

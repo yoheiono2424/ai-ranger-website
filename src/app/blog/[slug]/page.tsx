@@ -527,7 +527,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                   </h4>
                 </div>
                 <p className="text-sm text-gray-600">
-                  機能数ベースの明確な料金体系をご確認ください
+                  一律500万円・AI機能込みの明確な料金体系をご確認ください
                 </p>
               </Link>
 

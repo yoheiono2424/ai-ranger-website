@@ -99,8 +99,8 @@ const ProblemSolutionSection = () => {
                       <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">一律500万円で何でも開発</p>
-                      <p className="text-gray-600 text-xs">機能数制限なしのシンプル料金</p>
+                      <p className="font-bold text-gray-800 text-sm mb-1">一律500万円でAI機能まで込み</p>
+                      <p className="text-gray-600 text-xs">機能数制限なし＋AI機能込み</p>
                     </div>
                   </div>
                   

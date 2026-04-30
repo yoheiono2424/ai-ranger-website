@@ -5,15 +5,8 @@ import Link from 'next/link';
 const PricingDetailSection = () => {
   const additionalOptions = [
     {
-      title: 'AI機能開発',
-      price: '250万円',
-      maintenance: 'なし',
-      description: 'チャットボット、画像認識、データ分析などの高度なAI機能（固定料金）',
-      icon: <svg className="w-10 h-10 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
-    },
-    {
       title: 'ネイティブアプリ化',
-      price: '100万円',
+      price: '250万円',
       maintenance: 'なし',
       description: 'iOS/Androidアプリ化、ストア申請作業込み',
       icon: <svg className="w-10 h-10 text-ai-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>,
@@ -41,7 +34,6 @@ const PricingDetailSection = () => {
       items: [
         { name: 'データサーバー', price: '$25/月〜', note: '従量課金あり' },
         { name: '公開サーバー', price: '$20/月〜', note: 'WEB公開時' },
-        { name: 'AIサーバー', price: '$59/月〜', note: 'AI機能利用時' },
       ]
     }
   ];
@@ -68,10 +60,13 @@ const PricingDetailSection = () => {
             <div className="p-8">
               <div className="flex justify-center mb-8">
                 <div className="text-center max-w-md w-full">
-                  <div className="bg-ai-blue/10 rounded-xl p-8">
+                  <div className="bg-ai-blue/10 rounded-xl p-8 relative">
+                    <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-challenge-orange text-white text-xs font-black px-3 py-1 rounded-full whitespace-nowrap shadow-md">
+                      AI機能 込み
+                    </span>
                     <p className="text-sm text-gray-600 mb-2">基本料金</p>
                     <p className="text-5xl font-black text-ai-blue mb-3">一律500万円</p>
-                    <p className="text-base text-gray-700 font-semibold mb-2">機能数制限なし</p>
+                    <p className="text-base text-gray-700 font-semibold mb-2">機能数制限なし＋AI機能込み</p>
                     <p className="text-sm text-gray-600">何でも開発できる一律料金</p>
                   </div>
                 </div>
@@ -95,11 +90,11 @@ const PricingDetailSection = () => {
 
 
         {/* 特別オプション */}
-        <div className="max-w-5xl mx-auto mb-16">
+        <div className="max-w-3xl mx-auto mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             特別オプション
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {additionalOptions.map((option, index) => (
               <div
                 key={index}
@@ -151,7 +146,7 @@ const PricingDetailSection = () => {
             </div>
             <div className="bg-gray-50 p-4">
               <p className="text-xs text-gray-600 text-center">
-                ※サーバー費用は各サーバー会社から直接請求となります
+                ※従量課金分は実費でのご請求となります
               </p>
             </div>
           </div>

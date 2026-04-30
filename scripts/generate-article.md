@@ -44,20 +44,19 @@ UPDATE keywords SET status = 'generated' WHERE id = '取得したキーワード
 - 株式会社Re.haru（熊本県）
 - サービス：5レンジャー
 - 料金体系：
-  - **基本料金（DXシステム）：一律500万円**（機能数制限なし）
-  - **AI機能追加オプション：+250万円**（合計750万円）
-  - ネイティブアプリ対応：+100万円
+  - **基本料金：一律500万円**（機能数制限なし＋AI機能込み）
+  - ネイティブアプリ対応：+250万円
   - 外部システム連携：+50万円/連携
 - 開発期間：2〜6ヶ月
 - 強み：独自AI技術を活用した開発で従来比80〜90%のコスト削減を実現
-- 保守：月額3万円（固定）、AI機能あり+月2万円
+- 保守：月額3万円（固定）、AI機能あり+月2万円、ネイティブアプリ+月2万円
 
 ### 料金に関する記述ルール（必須）
-- **AI機能なしのDXシステム記事** → 「一律500万円」と記載
-- **AI機能ありの記事** → 「750万円（基本500万円+AI機能250万円）」と記載
-- 4カード型HTMLテンプレートの費用欄も記事の種類に応じて変更すること
-  - DXシステム記事の場合：「一律500万円 / 機能数制限なし」
-  - AI付きシステム記事の場合：「750万円〜 / 基本500万円+AI250万円」
+- **すべての記事**で「一律500万円（AI機能込み）」と記載
+- AI機能ありの記事でも、料金は基本料金500万円に込み込み（AI機能は何個実装しても追加料金なし）
+- 「750万円」「+AI250万円」「+AI機能250万円」などの旧表記は使わない
+- 4カード型HTMLテンプレートの費用欄は全記事共通で「一律500万円 / AI機能込み」と記載
+- AI使用料（API実費相当）のみ従量課金で別途請求になる旨は、AI記事では触れてもOK（必須ではない）
 
 ### 今回のキーワード
 {keyword}
@@ -81,7 +80,7 @@ UPDATE keywords SET status = 'generated' WHERE id = '取得したキーワード
 4. **5レンジャーがこの課題に向いている理由（200〜300字）**
    - 自然な流れで5レンジャーのメリットに触れる
    - 押し売り感を出さない
-   - 「一律500万円」「機能数制限なし」「2〜6ヶ月」の具体数字を含める
+   - 「一律500万円」「機能数制限なし」「AI機能込み」「2〜6ヶ月」の具体数字を含める
 
 5. **CTA（100〜150字）**
    - 「まずは無料相談から」的な誘導
@@ -112,7 +111,7 @@ UPDATE keywords SET status = 'generated' WHERE id = '取得したキーワード
 <div style="background:#f0f9ff;border:2px solid #3B82F6;border-radius:0.75rem;padding:1.25rem;text-align:center;">
 <p style="font-size:0.8rem;color:#6b7280;margin-bottom:0.25rem;">開発費用</p>
 <p style="font-size:1.5rem;font-weight:900;color:#3B82F6;margin:0;">一律500万円</p>
-<p style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">機能数制限なし</p>
+<p style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">AI機能込み</p>
 </div>
 <div style="background:#f0fdf4;border:2px solid #22c55e;border-radius:0.75rem;padding:1.25rem;text-align:center;">
 <p style="font-size:0.8rem;color:#6b7280;margin-bottom:0.25rem;">開発期間</p>

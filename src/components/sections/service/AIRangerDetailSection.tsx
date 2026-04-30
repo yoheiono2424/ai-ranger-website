@@ -17,8 +17,8 @@ const AIRangerDetailSection = () => {
       number: '02',
       title: '開発内容の確定＆ご契約',
       duration: null,
-      description: '一律500万円のシンプル料金',
-      details: 'プロトタイプで確認したシステムをもとに、開発する機能や範囲を明確化します。一律500万円（機能数制限なし）のシンプルな料金体系で、追加費用の心配もありません。内容にご納得いただければ、すぐにご契約へ進めます。',
+      description: '一律500万円・AI機能込み',
+      details: 'プロトタイプで確認したシステムをもとに、開発する機能や範囲を明確化します。一律500万円（機能数制限なし＋AI機能込み）のシンプルな料金体系で、追加費用の心配もありません。内容にご納得いただければ、すぐにご契約へ進めます。',
       icon: <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
       color: 'from-hope-green to-emerald-400',
     },
@@ -129,7 +129,7 @@ const AIRangerDetailSection = () => {
                         <div>
                           <p className="font-medium text-hope-green mb-2">日本発の百均的価格設計</p>
                           <p className="text-sm text-gray-600">
-                            一律500万円のシンプルな料金体系で、機能数に制限はありません。<br />
+                            一律500万円のシンプルな料金体系で、機能数に制限はありません。AI機能も基本料金に込みで、何個実装しても追加料金なしです。<br />
                             「人月計算」「管理費一式」などの曖昧な見積もりは一切なし。プロトタイプで確認した内容を、そのまま開発できます。
                           </p>
                         </div>
