@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'プライバシーポリシー | 株式会社Re.haru',
   description: '株式会社Re.haruのプライバシーポリシー。個人情報の取り扱いについて説明しています。',
+  alternates: {
+    canonical: 'https://www.reharu.com/privacy-policy',
+  },
   openGraph: {
     title: 'プライバシーポリシー | 株式会社Re.haru',
     description: '個人情報の取り扱いについて',

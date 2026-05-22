@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     '製造業DX',
     '建設業DX',
   ],
+  alternates: {
+    canonical: 'https://www.reharu.com/blog',
+  },
   openGraph: {
     title: '開発ブログ | 5レンジャー',
     description: 'システム開発・AI活用・DX推進に関する最新情報を発信',

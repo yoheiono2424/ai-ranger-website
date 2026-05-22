@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   description: "テクノロジーの力ですべての企業にReturn青春をお届けします。",
   keywords: "Return青春, AIシステム開発, 低価格開発, ノーコード開発, DXシステム, 熊本 システム開発, 5レンジャー, 株式会社Re.haru",
+  alternates: {
+    canonical: 'https://www.reharu.com',
+  },
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',

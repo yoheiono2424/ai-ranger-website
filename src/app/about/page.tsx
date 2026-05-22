@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: '会社概要 | 株式会社Re.haru',
   description: '株式会社Re.haruは「Return青春」を企業理念に、企業の挑戦を支援。熊本から全国へ、テクノロジーの力ですべての企業にReturn青春を届けます。',
   keywords: '株式会社Re.haru, 会社概要, Return青春, 企業理念, 熊本, システム開発会社',
+  alternates: {
+    canonical: 'https://www.reharu.com/about',
+  },
   openGraph: {
     title: '会社概要 | 株式会社Re.haru',
     description: 'Return青春 - テクノロジーの力で企業に「挑戦」「成長」「希望」を取り戻す',

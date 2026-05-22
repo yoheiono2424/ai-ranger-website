@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
   description: '5レンジャーの詳細情報。開発実績、料金プランまで。一律500万円で機能数制限なし、何でも開発できる革新的なシステム開発サービス。',
   keywords: '5レンジャー, 料金プラン, 開発実績, システム開発, DX, 一律料金',
+  alternates: {
+    canonical: 'https://www.reharu.com/service',
+  },
   openGraph: {
     title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
     description: '一律500万円で機能数制限なし。何でも開発できる革新的なシステム開発。2〜6ヶ月の開発期間を実現。',

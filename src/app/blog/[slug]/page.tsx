@@ -114,6 +114,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${article.title} | 5レンジャー - 株式会社Re.haru`,
     description: article.summary,
     keywords: article.seo_keywords || [],
+    alternates: {
+      canonical: `https://www.reharu.com/blog/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.summary,
