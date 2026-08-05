@@ -5,6 +5,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import SectionHeader from './SectionHeader';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -15,15 +16,15 @@ const FAQSection = () => {
       items: [
         {
           question: '料金体系を教えてください',
-          answer: '5レンジャープランは一律500万円の固定料金で、機能数制限なく何でも開発できます。AI機能も基本料金に込み込みで、何個実装しても追加料金はかかりません。シンプルでわかりやすい料金設定が特徴です。'
+          answer: '開発費用は一律300万円です。機能を何個作っても金額は変わりません。AI機能も基本料金に込みで、何個実装しても追加料金はかかりません。見積もりを取っていただく必要がないので、最初から金額が確定しています。'
         },
         {
-          question: '見積もり金額に含まれるものは何ですか？',
-          answer: '見積もり金額には、要件定義、デザイン、開発、テスト、納品までの全ての工程が含まれています。ただし、サーバー費用やドメイン費用などのランニングコスト、保守費用は別途必要です。'
+          question: '300万円に含まれるものは何ですか？',
+          answer: '要件定義、デザイン、開発、テスト、納品までの全ての工程が含まれます。AI機能も込みです。所有権はお客様のものになります。別途かかるのは、納品後の月額プラン（3万円または10万円）と、サーバー費用・AI利用料（各社からの実費請求分）のみです。'
         },
         {
-          question: '支払いのタイミングはいつですか？',
-          answer: '着手時に半金、納品時に残りの半金をお支払いいただきます。5レンジャープランの場合、着手時に250万円、納品時に250万円となります。'
+          question: 'スマホアプリとして公開することもできますか？',
+          answer: 'はい。ネイティブアプリ化（iOS / Android・ストア申請作業込み）は +300万円で、合計600万円となります。なお、Apple（年間$99）・Google Play（年間$25）の登録費用は別途実費でご負担いただきます。'
         }
       ]
     },
@@ -36,11 +37,11 @@ const FAQSection = () => {
         },
         {
           question: '開発中の仕様変更は可能ですか？',
-          answer: '軽微な変更は可能ですが、大幅な仕様変更の場合は追加費用が発生する可能性があります。基本的な機能追加もAI機能の追加も、基本料金500万円に込み込みです。何個実装しても追加料金は発生しません（AI使用料のAPI実費相当のみ従量課金で別途請求となります）。'
+          answer: '可能です。機能の追加もAI機能の追加も、基本料金300万円に込みです。何個実装しても追加料金は発生しません（AI使用料のAPI実費相当のみ従量課金で別途請求となります）。'
         },
         {
           question: '既存システムとの連携は可能ですか？',
-          answer: 'はい、可能です。APIキー接続系の外部システム連携を1連携あたり50万円で実装いたします。CSV連携は無償で対応いたします。連携先システムの仕様により開発期間が変動する可能性がありますので、詳細はお問い合わせください。'
+          answer: 'はい、可能です。外部システムとの連携も基本料金300万円に含まれており、別途の連携費用はいただきません。連携先システムの仕様により開発期間が変動する可能性がありますので、詳細はお問い合わせください。'
         }
       ]
     },
@@ -48,20 +49,20 @@ const FAQSection = () => {
       category: '保守・運用について',
       items: [
         {
-          question: '保守費用には何が含まれますか？',
-          answer: '保守費用には、システムの安定稼働のための監視、軽微なバグ修正、セキュリティアップデート、サーバーメンテナンスサポートが含まれます。新機能の追加や大幅な改修は別途お見積もりとなります。'
+          question: '月額プランについて教えてください',
+          answer: '2つから選ぶだけです。ライトプラン（月3万円）はシステムの安定稼働と基本的なサポートが含まれ、機能追加は都度お見積もりとなります。フルプラン（月10万円）はライトプランのすべてに加えて、機能追加が無制限です。後からライトプランからフルプランへ変更することもできます。'
+        },
+        {
+          question: 'フルプランの「機能追加が無制限」とはどういうことですか？',
+          answer: '納品後も、運用に合わせて機能を追加し続けられるということです。追加のたびに見積もりや請求は発生しません。人を1人雇えば月30万円以上かかりますが、その1/3の費用で「作り続けられる体制」を持てる、という考え方のプランです。'
         },
         {
           question: 'サーバー費用はどのくらいかかりますか？',
-          answer: 'データサーバー（Supabase）が月25$〜、公開サーバー（Vercel）が月20$〜で、合計月45$〜となります。AI機能を使う場合、AI使用料（API実費相当）のみ従量課金で別途請求となります。'
+          answer: 'データサーバー（Supabase）が月$25〜、Webサイトとして公開する場合は公開サーバー（Vercel）が月$20〜です。社員100人が毎日使う業務システムであれば、基本料金の範囲をまず超えません。月の利用上限額を設定できるため、予期せぬ高額請求は防げます。'
         },
         {
-          question: '納品後のサポート体制はどうなっていますか？',
-          answer: '納品後は月額保守契約をご契約いただくことで継続的なサポートを提供します。基本保守費用は月3万円で、AI機能を利用される場合は+月2万円、ネイティブアプリの場合も+月2万円となります。緊急時の対応も含まれています。'
-        },
-        {
-          question: 'システムのアップデートは可能ですか？',
-          answer: '可能です。保守契約内での軽微な修正は無料で対応します。新機能の追加や大幅な改修については、内容に応じて別途お見積もりさせていただきます。'
+          question: 'AI利用料はどのくらいかかりますか？',
+          answer: '使った分だけの従量課金（実費）です。日本語1,000文字あたりの目安は、高性能モデルで約6円、バランスモデルで約0.6円、節約モデルで約0.12円です。用途に応じて最適なモデルを組み込みます。'
         }
       ]
     }
@@ -73,90 +74,75 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-24 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
-        <div
-          className="text-center mb-12"
-        >
-          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-4">
-            よくあるご質問
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            5レンジャーに関する疑問にお答えします
-          </p>
-        </div>
-
         <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            index="10"
+            eyebrow="FAQ"
+            heading="よくあるご質問"
+            lead="オーダーメイド業務AIに関する疑問にお答えします。"
+          />
+
           {faqs.map((category, categoryIndex) => (
-            <div
-              key={categoryIndex}
-              className="mb-8"
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-ai-blue">
+            <div key={categoryIndex} className="mb-16 last:mb-0">
+              <h3 className="text-xs font-bold tracking-eyebrow text-muted mb-6">
                 {category.category}
               </h3>
-              <div className="space-y-4">
-                {category.items.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="bg-gray-50 rounded-lg overflow-hidden"
-                  >
-                    <button
-                      onClick={() => toggleAccordion(categoryIndex, itemIndex)}
-                      className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors"
-                    >
-                      <span className="font-medium text-gray-900 pr-4">
-                        {item.question}
-                      </span>
-                      <svg
-                        className={`w-5 h-5 text-gray-500 flex-shrink-0 transform transition-transform ${
-                          openIndex === categoryIndex * 10 + itemIndex ? 'rotate-180' : ''
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+              <div className="border-t border-line">
+                {category.items.map((item, itemIndex) => {
+                  const isOpen = openIndex === categoryIndex * 10 + itemIndex;
+                  return (
+                    <div key={itemIndex} className="border-b border-line">
+                      <button
+                        onClick={() => toggleAccordion(categoryIndex, itemIndex)}
+                        className="w-full py-6 text-left flex justify-between items-start gap-6 group"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                    <div
-                      style={{
-                        height: openIndex === categoryIndex * 10 + itemIndex ? 'auto' : 0,
-                        opacity: openIndex === categoryIndex * 10 + itemIndex ? 1 : 0,
-                      }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-4 text-gray-600">
-                        {item.answer}
-                      </div>
+                        <span className="text-base md:text-lg font-bold text-ink group-hover:text-accent transition-colors leading-snug">
+                          {item.question}
+                        </span>
+                        <svg
+                          className={`w-5 h-5 text-muted flex-shrink-0 mt-1 transform transition-transform duration-200 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                      {isOpen && (
+                        <div className="pb-8 pr-10 text-sm md:text-base text-body leading-loose">
+                          {item.answer}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
-        </div>
 
-        <div
-          className="text-center mt-12"
-        >
-          <p className="text-gray-600 mb-6">
-            その他のご質問もお気軽にお問い合わせください
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-ai-blue text-white font-bold rounded-full hover:bg-sky-blue transition-all duration-300 transform hover:scale-105"
-          >
-            無料相談・お問い合わせ
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <div className="text-center mt-24">
+            <p className="text-base text-body mb-8">
+              その他のご質問もお気軽にお問い合わせください
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200"
+            >
+              無料で相談する
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

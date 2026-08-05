@@ -1,183 +1,100 @@
-import Image from 'next/image';
 import SmoothScrollLink from '@/components/common/SmoothScrollLink';
+import SectionHeader from './SectionHeader';
 
 const ServiceOverviewSection = () => {
-  
   const features = [
     {
-      title: '開発スピードの革命',
-      value: '最速 2ヶ月〜',
-      description: '独自のAI開発技術で常識を覆す開発スピード',
-      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+      value: '最短 2ヶ月',
+      title: '開発スピード',
       details: [
-        '独自のAIによる開発技術の確立',
-        '従来の常識を覆す開発スピード',
-        '最短2ヶ月での納品を実現'
+        '独自のAI開発技術を確立',
+        '要件定義から実装までを圧縮',
+        '最短2ヶ月での納品を実現',
       ],
-      color: 'from-ai-blue to-sky-blue',
     },
     {
-      title: '価格の革命',
-      value: '日本発 百均的',
-      description: '誰もが手の届く明確でシンプルな価格設計',
-      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+      value: '見積もり 不要',
+      title: '価格',
       details: [
-        '一律500万円のシンプルな料金体系',
-        '機能数制限なし＋AI機能込み',
-        'オプション機能も明確な価格設定'
+        '一律300万円のシンプルな料金体系',
+        '機能数の制限なし＋AI機能込み',
+        '契約後の追加請求は0円',
       ],
-      color: 'from-hope-green to-emerald-400',
     },
     {
-      title: 'プロセスの革命',
-      value: '即座に 開始',
-      description: 'お客様は「やりたいこと」を伝えるだけ',
-      icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeWidth={1.5} /><circle cx="12" cy="12" r="6" strokeWidth={1.5} /><circle cx="12" cy="12" r="2" strokeWidth={1.5} /></svg>,
+      value: 'まず、作る',
+      title: 'プロセス',
       details: [
-        '複雑な要件定義はAIが機能数として明確化します',
-        '専門知識不要で即座に開発開始',
-        '柔軟な変更対応も可能'
+        'やりたいことを話すだけでOK',
+        '契約前にプロトタイプをお見せします',
+        '実物を見てから決められます',
       ],
-      color: 'from-challenge-orange to-amber-400',
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="py-24 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
-        {/* メインタイトルセクション */}
-        <div className="text-center mb-20">
-          <div className="relative inline-block mb-8">
-            <h2 className="relative text-3xl md:text-5xl font-black text-gray-900">
-              <span className="inline-block">なぜ<span className="text-ai-blue">5レンジャー</span>が</span>
-              <span className="block md:inline">選ばれるのか</span>
-            </h2>
-          </div>
-          
-          {/* 独自AI技術の強調 */}
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 max-w-4xl mx-auto border-2 border-ai-blue/20">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-br from-ai-blue to-sky-blue rounded-full p-6">
-                <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-            </div>
-            
-            <h3 className="text-2xl md:text-3xl font-black mb-4 bg-gradient-to-r from-ai-blue to-sky-blue text-transparent bg-clip-text">
-              独自のAIシステム開発技術
-            </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              従来の開発会社にはない、<strong className="inline-block">完全独自開発のAI技術</strong>により
-              「高額な開発相場を成敗する!!」を実現します
-            </p>
-          </div>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          <SectionHeader
+            index="04"
+            eyebrow="OUR TECHNOLOGY"
+            heading={
+              <>
+                なぜ、この<span className="text-accent">価格とスピード</span>で
+                <br />
+                作れるのか
+              </>
+            }
+            lead="独自開発のAIシステム開発技術によって、従来は人手でかかっていた工程を大幅に圧縮しました。浮いたコストと時間を、そのまま価格と納期に反映しています。"
+          />
 
-        {/* 3つの革命セクション */}
-        <div className="relative mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-              <span className="inline-block">独自AI技術が起こす</span>
-              <span className="text-ai-blue block md:inline">3つの革命</span>
-            </h3>
-            <p className="text-lg text-gray-600">
-              我々にお任せください！
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* 3つの特徴 */}
+          <div className="grid md:grid-cols-3 border-t border-line">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="relative group"
+                className="py-10 md:py-12 md:px-8 md:first:pl-0 md:last:pr-0 border-b md:border-b-0 md:border-r md:last:border-r-0 border-line"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-ai-blue/5 to-transparent rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                  
-                  {/* アイコンと値 */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}>
-                      {feature.icon}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-gray-500 font-medium">
-                        {feature.value.split(' ')[0]}
-                      </div>
-                      <div className="text-4xl font-black bg-gradient-to-r from-ai-blue to-sky-blue text-transparent bg-clip-text">
-                        {feature.value.split(' ')[1]}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-black text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  
-                  {/* 常に表示される詳細 */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <ul className="space-y-3">
-                      {feature.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-ai-blue to-sky-blue flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                          <span className="text-sm text-gray-700 leading-relaxed">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <p className="text-xs font-bold tracking-eyebrow text-muted mb-4">
+                  {feature.title}
+                </p>
+                <p className="text-2xl md:text-3xl font-black text-ink mb-8">{feature.value}</p>
+                <ul className="space-y-3">
+                  {feature.details.map((detail, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-sm text-body leading-relaxed"
+                    >
+                      <span className="text-accent mr-3 flex-shrink-0">—</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* CTAセクション */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-ai-blue to-sky-blue rounded-3xl blur-3xl opacity-20"></div>
-          <div className="relative bg-gradient-to-r from-ai-blue to-sky-blue rounded-3xl p-10 md:p-16 text-white overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-            
-            <div className="relative z-10 text-center">
-              <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-full mb-8">
-                <svg className="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              
-              <h3 className="text-2xl md:text-4xl font-black mb-6">
-                <span className="block">独自のAI開発技術で</span>
-                <span className="inline-block">あなたの「諦め」を</span>
-                <span className="block md:inline">「実現」に</span>
-              </h3>
-              
-              <p className="text-lg md:text-xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-                一律500万円・AI機能込みのシンプル料金で、
-                理想のシステムを開発します
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <SmoothScrollLink 
-                  href="#price"
-                  className="px-10 py-5 bg-white text-ai-blue font-bold text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 inline-block text-center"
-                >
-                  料金プランを見る
-                </SmoothScrollLink>
-                <SmoothScrollLink 
-                  href="#results"
-                  className="px-10 py-5 bg-transparent text-white font-bold text-lg rounded-full border-2 border-white hover:bg-white/10 transition-all duration-300 inline-block text-center"
-                >
-                  開発実績を見る
-                </SmoothScrollLink>
-              </div>
+          {/* 締め */}
+          <div className="mt-24 text-center">
+            <p className="text-2xl md:text-4xl font-black text-ink leading-[1.4] mb-12">
+              使われるAIを、御社の業務の
+              <br />
+              「中」に。
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <SmoothScrollLink
+                href="#pricing"
+                className="px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200 inline-block text-center"
+              >
+                料金プランを見る
+              </SmoothScrollLink>
+              <SmoothScrollLink
+                href="#results"
+                className="px-9 py-4 bg-white text-accent font-bold rounded-lg border border-accent/30 hover:border-accent transition-colors duration-200 inline-block text-center"
+              >
+                開発実績を見る
+              </SmoothScrollLink>
             </div>
           </div>
         </div>

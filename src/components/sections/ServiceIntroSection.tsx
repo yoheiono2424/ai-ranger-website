@@ -6,12 +6,12 @@ import Link from 'next/link';
 const ServiceIntroSection = () => {
   const services = [
     {
-      name: '5レンジャー',
-      tagline: '一律料金システム開発',
-      description: '日本初の安心百均価格設計。一律500万円・AI機能込みで、あなたの理想のシステムを開発します。',
-      price: '500万円〜',
-      priceNote: '一律料金（AI機能込み）',
-      features: ['機能数制限なし', 'AI機能込み', '2〜6ヶ月で完成', '所有権あり'],
+      name: 'オーダーメイド業務AI',
+      tagline: '御社専用の業務システム＋AI',
+      description: '御社専用の業務システムを作ります。その中に、AIが入っています。一律300万円、機能を何個作っても金額は変わりません。',
+      price: '一律300万円',
+      priceNote: 'AI機能込み・機能数の制限なし',
+      features: ['見積もりが要りません', 'AIは"標準装備"', '契約後の追加請求0円', '2〜6ヶ月で納品・所有権はお客様'],
       href: '/service',
       gradient: 'from-ai-blue to-sky-blue',
       iconBg: 'bg-ai-blue',

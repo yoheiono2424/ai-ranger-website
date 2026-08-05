@@ -1,176 +1,114 @@
-
-
-
-import Image from 'next/image';
+import SectionHeader from './SectionHeader';
 
 const ProblemSolutionSection = () => {
+  const removed = [
+    {
+      before: '見積もり',
+      after: '一律 300万円',
+      description: '機能を何個作っても、金額は変わりません',
+    },
+    {
+      before: '追加請求',
+      after: '0円',
+      description: '契約したあとに金額が増えることは、一度もありません',
+    },
+    {
+      before: '作って終わり',
+      after: '月10万円で無制限',
+      description: '納品後も機能を追加し続けられます',
+    },
+  ];
+
+  const problems = [
+    {
+      title: 'いくらかかるのか分からない',
+      description: '見積もりを取るまで読めず、何社も取るのも手間',
+    },
+    {
+      title: '契約したあとに増えるのが怖い',
+      description: '31.2%のプロジェクトで、追加の開発費が発生している',
+    },
+    {
+      title: '作ったあとに直せない',
+      description: '少し変えたいだけでも、毎回見積もりと請求が出る',
+    },
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section className="py-24 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          
-          {/* メインメッセージ */}
-          <div
-            className="text-center mb-20"
-          >
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              システム開発の
-              <span className="text-red-600">「諦め」</span>を
-              <span className="text-ai-blue">「実現」</span>に変える
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              高額な開発費用で夢を断念する時代は終わりました
+        <div className="max-w-5xl mx-auto">
+          <SectionHeader
+            index="07"
+            eyebrow="OUR PRICE"
+            heading={
+              <>
+                システム開発が
+                <br />
+                <span className="text-alert">「頼みにくいもの」</span>になっている。
+              </>
+            }
+            lead="それを変えるのが、私たちの仕事です。"
+          />
+
+          {/* 頼みにくい3つの理由 */}
+          <div className="grid md:grid-cols-3 border-t border-line mb-24">
+            {problems.map((item, index) => (
+              <div
+                key={index}
+                className="py-8 md:py-10 md:px-6 md:first:pl-0 md:last:pr-0 border-b md:border-b-0 md:border-r md:last:border-r-0 border-line"
+              >
+                <p className="text-base md:text-lg font-bold text-ink mb-3 leading-snug">
+                  {item.title}
+                </p>
+                <p className="text-sm text-body leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* なくしたもの */}
+          <div className="mb-24">
+            <h3 className="text-2xl md:text-4xl font-black text-ink leading-snug mb-4">
+              私たちが、なくしたもの
+            </h3>
+            <p className="text-base text-body mb-12">
+              開発を頼みにくくしていた3つを、やめました。
+            </p>
+
+            <div className="border-t border-line">
+              {removed.map((item, index) => (
+                <div
+                  key={index}
+                  className="border-b border-line py-8 md:py-10 grid md:grid-cols-[13rem_1fr] gap-y-3 md:gap-x-10 items-center"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-base md:text-lg font-bold text-muted line-through decoration-alert decoration-2">
+                      {item.before}
+                    </span>
+                    <span className="text-muted">→</span>
+                  </div>
+                  <div>
+                    <p className="text-xl md:text-3xl font-black text-accent mb-2">{item.after}</p>
+                    <p className="text-sm md:text-base text-body">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 締め */}
+          <div className="text-center">
+            <p className="text-2xl md:text-5xl font-black text-ink leading-[1.4] mb-10">
+              一律300万円。
+              <br />
+              これが、システム開発の&quot;百均&quot;です。
+            </p>
+            <p className="text-base md:text-lg text-body leading-loose max-w-2xl mx-auto">
+              私たちがお渡ししたいのは、安さではありません。
+              <br />
+              <strong className="text-ink">3年後の総額まで、最初から読める</strong>という確かさです。
             </p>
           </div>
-
-          {/* Before → After の比較 */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            
-            {/* Before（従来の問題）*/}
-            <div
-              className="relative"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-br from-red-100 to-orange-100 rounded-3xl transform rotate-2 opacity-30"></div>
-              <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-red-100">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-red-800 mb-2">従来の開発</h3>
-                  <p className="text-red-600 font-medium">諦めるしかない現実</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 p-4 bg-red-50 rounded-lg">
-                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">×</span>
-                    </div>
-                    <div>
-                      <p className="font-bold text-red-800 text-sm mb-1">2,000万円〜の高額見積もり</p>
-                      <p className="text-red-600 text-xs">高額すぎてシステム開発に手が届かない</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-lg">
-                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">×</span>
-                    </div>
-                    <div>
-                      <p className="font-bold text-orange-800 text-sm mb-1">不透明な費用構造</p>
-                      <p className="text-orange-600 text-xs">「人月計算」で実態が見えない</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-4 bg-yellow-50 rounded-lg">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">×</span>
-                    </div>
-                    <div>
-                      <p className="font-bold text-yellow-800 text-sm mb-1">長期間の開発期間</p>
-                      <p className="text-yellow-600 text-xs">1年以上かかることも</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-gray-100 rounded-lg text-center">
-                  <p className="text-gray-600 font-medium">結果</p>
-                  <p className="text-xl font-black text-red-600">開発を諦める</p>
-                </div>
-              </div>
-            </div>
-
-            {/* After（5レンジャーの解決策）*/}
-            <div
-              className="relative"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-br from-ai-blue/10 to-sky-blue/10 rounded-3xl transform -rotate-2"></div>
-              <div className="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-ai-blue">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-ai-blue to-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-ai-blue mb-2">5レンジャー</h3>
-                  <p className="text-gray-700 font-medium">夢を現実に変える力</p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg">
-                    <div className="w-8 h-8 bg-ai-blue rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">一律500万円でAI機能まで込み</p>
-                      <p className="text-gray-600 text-xs">機能数制限なし＋AI機能込み</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
-                    <div className="w-8 h-8 bg-hope-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">透明な機能別料金</p>
-                      <p className="text-gray-600 text-xs">オプション機能も明確な価格設計</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-lg">
-                    <div className="w-8 h-8 bg-challenge-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-800 text-sm mb-1">最短2ヶ月で完成</p>
-                      <p className="text-gray-600 text-xs">AI開発で超高速実現</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-gradient-to-r from-ai-blue to-sky-blue rounded-lg text-center">
-                  <p className="text-white font-medium">結果</p>
-                  <p className="text-xl font-black text-white">夢が現実になる！</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 実現メッセージ */}
-          <div
-            className="text-center"
-          >
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-ai-blue">
-                <div className="flex justify-center" style={{ marginTop: '-80px', marginBottom: '-80px' }}>
-                  <div style={{
-                    width: '500px',
-                    maxWidth: '90%'
-                  }}>
-                    <Image
-                      src="/5-ranger-logo.png"
-                      alt="5レンジャー"
-                      width={500}
-                      height={140}
-                      className="object-contain"
-                      style={{
-                        width: '100%',
-                        height: 'auto'
-                      }}
-                    />
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl md:text-4xl font-black mb-6 text-gray-900">
-                  <span className="text-red-600 inline-block">高額な開発相場</span><span className="inline-block">を</span>
-                  <span className="text-ai-blue block md:inline">成敗する！！</span>
-                </h3>
-                
-                <p className="text-lg md:text-xl mb-8 leading-relaxed text-gray-700">
-                  あなたのアイデアを、もう諦める必要はありません。<br />
-                  <strong className="text-ai-blue">安心・低コスト・高品質</strong>で理想のシステムを実現します。
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

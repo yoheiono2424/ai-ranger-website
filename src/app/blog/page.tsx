@@ -5,7 +5,7 @@ import BlogListSection from '@/components/sections/blog/BlogListSection';
 import type { Article } from '@/types/blog';
 
 export const metadata: Metadata = {
-  title: '開発ブログ | 5レンジャー - 株式会社Re.haru',
+  title: '開発ブログ | オーダーメイド業務AI - 株式会社Re.haru',
   description:
     'システム開発・AI活用・DX推進に関する最新情報を発信。製造業、建設業、飲食業など業種別の課題解決のヒントから、業務改善・コスト削減に役立つ情報をお届けします。',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'DX',
     '業務効率化',
     '社内DX',
-    '5レンジャー',
+    'オーダーメイド業務AI',
     '製造業DX',
     '建設業DX',
   ],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.reharu.com/blog',
   },
   openGraph: {
-    title: '開発ブログ | 5レンジャー',
+    title: '開発ブログ | オーダーメイド業務AI',
     description: 'システム開発・AI活用・DX推進に関する最新情報を発信',
     type: 'website',
     url: 'https://www.reharu.com/blog',

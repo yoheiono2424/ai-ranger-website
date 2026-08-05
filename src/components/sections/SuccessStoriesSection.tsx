@@ -10,13 +10,10 @@ const SuccessStoriesSection = () => {
   const stories = [
     {
       company: 'タレント農家コミュニティアプリ',
-      originalCost: '4,000万円',
-      actualCost: '750万円',
-      savedAmount: '3,250万円',
+      before: '新規事業を諦める日々',
+      after: '夢だった事業を実現',
       seishunStory: '諦めかけていた新規事業への挑戦を実現',
-      quote: '「もう諦めようと思っていたんです。でも、5レンジャーなら750万円で。あの時の"やってやる！"という気持ちが蘇りました。長年の夢だった農家支援事業をついに始めることができました。」',
-      transformation: '新規事業を諦める日々 → 夢だった事業を実現',
-      result: '開発費81.3%削減',
+      quote: '「もう諦めようと思っていたんです。でも金額が最初から決まっていたので、あの時の"やってやる！"という気持ちが蘇りました。長年の夢だった農家支援事業をついに始めることができました。」',
       industry: '農業×EC',
       icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
       features: ['地図購入機能', 'チャット機能', '決済システム'],
@@ -24,13 +21,10 @@ const SuccessStoriesSection = () => {
     },
     {
       company: 'カタログギフト自動連携システム',
-      originalCost: '2,500万円',
-      actualCost: '500万円',
-      savedAmount: '2,000万円',
+      before: '業務に追われる毎日',
+      after: '創造的な仕事に集中',
       seishunStory: '効率化の夢が、ついに現実のものに',
       quote: '「毎日深夜まで手作業で処理していた業務が、今では全自動。社員が定時で帰れるようになり、新しい企画を考える時間ができました。会社に笑顔が戻りました。」',
-      transformation: '業務に追われる毎日 → 創造的な仕事に集中',
-      result: '開発費80%削減',
       industry: 'EC・物流',
       icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
       features: ['自動収支計算', 'EC連携', '配送システム統合'],
@@ -38,13 +32,10 @@ const SuccessStoriesSection = () => {
     },
     {
       company: '人材派遣スタッフAI管理システム',
-      originalCost: '7,500万円',
-      actualCost: '500万円',
-      savedAmount: '7,000万円',
+      before: '競争に諦めムード',
+      after: '業界のイノベーターへ',
       seishunStory: '中小企業でもAIで業界をリードできる',
-      quote: '「大手には勝てない、そう思っていました。でも5レンジャーで開発したシステムが評判になり、今では31社が導入。夢のような話が現実になったんです。」',
-      transformation: '競争に諦めムード → 業界のイノベーターへ',
-      result: '開発費93.3%削減',
+      quote: '「大手には勝てない、そう思っていました。でも開発したシステムが評判になり、今では31社が導入。夢のような話が現実になったんです。」',
       industry: '人材派遣',
       icon: <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
       features: ['AI自動マッチング', '自動請求書作成', '収益化成功'],
@@ -111,16 +102,13 @@ const SuccessStoriesSection = () => {
                 
                 {/* Before/After変換 */}
                 <div className="bg-gradient-to-r from-gray-50 to-green-50 rounded-lg p-4 mb-4">
-                  <p className="text-xs text-gray-600 text-center mb-3 font-medium">
-                    {story.transformation}
-                  </p>
                   <div className="flex items-center justify-between">
                     <div className="text-center flex-1">
                       <p className="text-xs text-gray-500 mb-1">Before</p>
-                      <p className="text-sm font-bold text-gray-400 line-through">{story.originalCost}</p>
+                      <p className="text-sm font-bold text-gray-400">{story.before}</p>
                     </div>
-                    <motion.div 
-                      className="text-xl text-hope-green"
+                    <motion.div
+                      className="text-xl text-hope-green px-2"
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
@@ -128,18 +116,18 @@ const SuccessStoriesSection = () => {
                     </motion.div>
                     <div className="text-center flex-1">
                       <p className="text-xs text-hope-green mb-1">After</p>
-                      <p className="text-lg font-black text-hope-green">{story.actualCost}</p>
+                      <p className="text-sm font-black text-hope-green">{story.after}</p>
                     </div>
                   </div>
                 </div>
-                
-                {/* 削減額 */}
+
+                {/* 料金 */}
                 <div className="text-center mb-4">
                   <div className="inline-block bg-challenge-orange/10 rounded-full px-3 py-1">
-                    <span className="text-challenge-orange font-bold text-sm">{story.result}</span>
+                    <span className="text-challenge-orange font-bold text-sm">機能無制限 / 追加請求 0円</span>
                   </div>
                 </div>
-                
+
                 {/* 実装機能 */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {story.features.map((feature, idx) => (

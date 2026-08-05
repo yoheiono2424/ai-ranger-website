@@ -2,6 +2,18 @@ import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import ServiceHeroSection from '@/components/sections/service/ServiceHeroSection';
 
+const AIProblemSection = dynamic(() => import('@/components/sections/service/AIProblemSection'), {
+  loading: () => <div className="h-96" />,
+});
+const AIInsideSection = dynamic(() => import('@/components/sections/service/AIInsideSection'), {
+  loading: () => <div className="h-96" />,
+});
+const OrderMadeSection = dynamic(() => import('@/components/sections/service/OrderMadeSection'), {
+  loading: () => <div className="h-96" />,
+});
+const MarketRateSection = dynamic(() => import('@/components/sections/service/MarketRateSection'), {
+  loading: () => <div className="h-96" />,
+});
 const ServiceOverviewSection = dynamic(() => import('@/components/sections/service/ServiceOverviewSection'), {
   loading: () => <div className="h-96" />,
 });
@@ -25,15 +37,15 @@ const FAQSection = dynamic(() => import('@/components/sections/service/FAQSectio
 });
 
 export const metadata: Metadata = {
-  title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
-  description: '5レンジャーの詳細情報。開発実績、料金プランまで。一律500万円で機能数制限なし、何でも開発できる革新的なシステム開発サービス。',
-  keywords: '5レンジャー, 料金プラン, 開発実績, システム開発, DX, 一律料金',
+  title: 'サービス詳細 | 株式会社Re.haru - オーダーメイド業務AI',
+  description: '研修を受けても、ツールを入れても、AIを使わない社員がいる。AI単体は「使う習慣」がないと使われないからです。私たちは御社専用の業務システムを作り、その中にAIを入れます。だから毎日使われます。開発費用は一律300万円。',
+  keywords: 'AI 定着しない, AI 使われない, AI導入 失敗, 業務システム開発, オーダーメイド業務AI, AI 社内 定着, 料金プラン, 一律料金',
   alternates: {
     canonical: 'https://www.reharu.com/service',
   },
   openGraph: {
-    title: 'サービス詳細 | 株式会社Re.haru - 5レンジャー',
-    description: '一律500万円で機能数制限なし。何でも開発できる革新的なシステム開発。2〜6ヶ月の開発期間を実現。',
+    title: 'サービス詳細 | 株式会社Re.haru - オーダーメイド業務AI',
+    description: 'うちはAI単体は売りません。使われないので。御社専用の業務システムを作り、その中にAIを入れます。開発費用は一律300万円。',
     images: ['/①Re.haru青ロゴ.png'],
   },
 };
@@ -42,7 +54,9 @@ export default function ServicePage() {
   return (
     <>
       <ServiceHeroSection />
-      <ProblemSolutionSection />
+      <AIProblemSection />
+      <AIInsideSection />
+      <OrderMadeSection />
       <ServiceOverviewSection />
       <div id="airanger-detail">
         <AIRangerDetailSection />
@@ -50,6 +64,8 @@ export default function ServicePage() {
       <div id="results">
         <ProjectResultsSection />
       </div>
+      <ProblemSolutionSection />
+      <MarketRateSection />
       <div id="price">
         <PricingDetailSection />
       </div>

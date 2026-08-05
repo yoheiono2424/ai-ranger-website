@@ -14,8 +14,27 @@ export default {
         'challenge-orange': '#FB923C',
         'success-yellow': '#FDE047',
         'hope-green': '#34D399',
+        // サービスページ用の絞り込みパレット（2026/08 デザイン刷新）
+        ink: '#0A1A2F',        // 濃紺：見出し・反転背景
+        'ink-soft': '#16304F', // 濃紺の明るい階調
+        'ink-line': '#22456B', // 反転背景上の罫線
+        accent: '#2563EB',     // アクセントは青1色に集約
+        'accent-soft': '#EFF4FF',
+        'surface': '#F7F8FA',  // 極薄グレー背景
+        'line': '#E5E7EB',     // 罫線
+        'body': '#4B5563',     // 本文グレー
+        'muted': '#8A94A6',    // 補足グレー
+        alert: '#DC2626',      // 失敗の表現のみに使用
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      letterSpacing: {
+        eyebrow: '0.2em',
+      },
+      boxShadow: {
+        card: '0 1px 2px rgba(10,26,47,0.04), 0 8px 24px -12px rgba(10,26,47,0.10)',
+        'card-hover': '0 1px 2px rgba(10,26,47,0.05), 0 16px 40px -16px rgba(10,26,47,0.18)',
+        panel: '0 2px 4px rgba(10,26,47,0.03), 0 24px 48px -24px rgba(10,26,47,0.14)',
       },
       fontFamily: {
         sans: ['Noto Sans JP', 'sans-serif'],

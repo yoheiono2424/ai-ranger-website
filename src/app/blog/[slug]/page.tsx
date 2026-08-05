@@ -106,12 +106,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!article) {
     return {
-      title: '記事が見つかりません | 5レンジャー',
+      title: '記事が見つかりません | オーダーメイド業務AI',
     };
   }
 
   return {
-    title: `${article.title} | 5レンジャー - 株式会社Re.haru`,
+    title: `${article.title} | オーダーメイド業務AI - 株式会社Re.haru`,
     description: article.summary,
     keywords: article.seo_keywords || [],
     alternates: {
@@ -265,7 +265,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             <div className="relative w-full h-96 mb-12 rounded-lg overflow-hidden">
               <Image
                 src={article.thumbnail_url}
-                alt={`${article.industries.join('・')}向けシステム開発の解説記事 - ${article.title.replace(/【.*?】/, '').trim()} | 5レンジャー`}
+                alt={`${article.industries.join('・')}向けシステム開発の解説記事 - ${article.title.replace(/【.*?】/, '').trim()} | オーダーメイド業務AI`}
                 fill
                 className="object-cover"
                 priority
@@ -502,7 +502,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                   </h4>
                 </div>
                 <p className="text-sm text-gray-600">
-                  5レンジャーの開発プロセスや開発実績をご紹介
+                  オーダーメイド業務AIの開発プロセスや開発実績をご紹介
                 </p>
               </Link>
 
@@ -530,7 +530,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                   </h4>
                 </div>
                 <p className="text-sm text-gray-600">
-                  一律500万円・AI機能込みの明確な料金体系をご確認ください
+                  一律300万円・AI機能込みの明確な料金体系をご確認ください
                 </p>
               </Link>
 

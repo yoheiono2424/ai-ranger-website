@@ -73,7 +73,7 @@ export default function ArticleContent({ content }: ArticleContentProps) {
 
           strong: ({ children, ...props }) => {
             const text = String(children);
-            if (text.includes('500万円') || text.includes('80〜90%') || text.includes('2〜6ヶ月')) {
+            if (text.includes('300万円') || text.includes('80〜90%') || text.includes('2〜6ヶ月')) {
               return <strong className="font-bold text-ai-blue" {...props}>{children}</strong>;
             }
             return <strong className="font-bold text-gray-900" {...props}>{children}</strong>;
