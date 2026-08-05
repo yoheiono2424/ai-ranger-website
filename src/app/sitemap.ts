@@ -1,12 +1,10 @@
 import { MetadataRoute } from 'next'
 
-// ISR設定: 1時間ごとにsitemapを再検証し、新しい記事を自動追加
-export const revalidate = 3600
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.reharu.com'
 
   // 静的ページ
+  // ※ 開発ブログ（/blog）は2026/08/05に廃止し、/service へ301転送しているため掲載しない
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -18,12 +16,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/service`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
       priority: 0.9,
     },
     {
@@ -46,32 +38,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // 動的なブログ記事ページ（Supabaseから取得）
-  let articlePages: MetadataRoute.Sitemap = []
-
-  // ビルド時に環境変数がない場合はスキップ
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    try {
-      const { createClient } = require('@supabase/supabase-js')
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-      )
-      const { data: articles } = await supabase
-        .from('articles')
-        .select('slug, updated_at')
-        .lte('scheduled_at', new Date().toISOString())
-
-      articlePages = articles?.map((article: any) => ({
-        url: `${baseUrl}/blog/${article.slug}`,
-        lastModified: new Date(article.updated_at),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-      })) || []
-    } catch (error) {
-      console.log('Failed to fetch articles for sitemap, using static pages only')
-    }
-  }
-
-  return [...staticPages, ...articlePages]
+  return staticPages
 }

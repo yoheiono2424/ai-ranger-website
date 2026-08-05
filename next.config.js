@@ -31,6 +31,19 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // 開発ブログ（旧サービス「一律500万円」前提の記事146本）を廃止。
+      // 被リンク・インデックスの評価をサービスページへ引き継ぐため301で転送する。
+      // 絶対URLを指定して www 統一リダイレクトとの二重ホップを避ける。
+      {
+        source: '/blog',
+        destination: 'https://www.reharu.com/service',
+        permanent: true,
+      },
+      {
+        source: '/blog/:slug*',
+        destination: 'https://www.reharu.com/service',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [

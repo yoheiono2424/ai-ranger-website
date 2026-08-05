@@ -43,12 +43,6 @@ const Header = () => {
               サービス詳細
             </Link>
             <Link
-              href="/blog"
-              className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
-            >
-              開発ブログ
-            </Link>
-            <Link
               href="/about"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
@@ -105,13 +99,6 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               サービス詳細
-            </Link>
-            <Link
-              href="/blog"
-              className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              開発ブログ
             </Link>
             <Link
               href="/about"
