@@ -18,16 +18,10 @@ export const metadata: Metadata = {
   },
 };
 
-const ProblemSection = dynamic(() => import('@/components/sections/ProblemSection'), {
+const BusinessSection = dynamic(() => import('@/components/sections/BusinessSection'), {
   loading: () => <div className="h-96" />,
 });
 const ReturnSeishunVisionSection = dynamic(() => import('@/components/sections/ReturnSeishunVisionSection'), {
-  loading: () => <div className="h-96" />,
-});
-const ServiceIntroSection = dynamic(() => import('@/components/sections/ServiceIntroSection'), {
-  loading: () => <div className="h-96" />,
-});
-const SuccessStoriesSection = dynamic(() => import('@/components/sections/SuccessStoriesSection'), {
   loading: () => <div className="h-96" />,
 });
 const CTASection = dynamic(() => import('@/components/sections/CTASection'), {
@@ -38,11 +32,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <NewsSection />
-      <ProblemSection />
+      <BusinessSection />
       <ReturnSeishunVisionSection />
-      <ServiceIntroSection />
-      <SuccessStoriesSection />
+      <NewsSection />
       <CTASection />
     </>
   );

@@ -1,146 +1,78 @@
-'use client';
-
-import { m, LazyMotion, domAnimation } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const HeroSection = () => {
-  // 軽量なアニメーション設定
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+  const businesses = [
+    {
+      label: '法人向け',
+      name: 'オーダーメイド業務AI',
+      note: '御社専用の業務システム＋AI',
+    },
+    {
+      label: '個人向け',
+      name: 'Re.haru',
+      note: '青春エンターテイメントアプリ',
+    },
+  ];
 
   return (
-    <LazyMotion features={domAnimation} strict>
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-ai-blue via-hope-green to-success-yellow opacity-10"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <m.div
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5, staggerChildren: 0.1 }}
-          >
-            <m.div 
-              className="text-sm md:text-base text-ai-blue font-bold mb-4"
-              variants={fadeInUp}
-            >
-              株式会社Re.haruの企業理念
-            </m.div>
-            
-            <m.h1 
-              className="text-4xl md:text-6xl font-black text-gray-900 mb-6"
-              variants={fadeInUp}
-            >
-              <span className="text-ai-blue">Return</span>青春
-              <span className="block text-2xl md:text-3xl mt-4 font-bold text-gray-700">
-                もう一度、青春を取り戻す
-              </span>
-            </m.h1>
-            
-            <m.p 
-              className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed"
-              variants={fadeInUp}
-            >
-              私たちは、テクノロジーの力で誰もが青春のような
-              <span className="text-ai-blue font-bold inline-block">「挑戦」「成長」「希望」</span>
-              を持ち続けられる社会を創ります。
-            </m.p>
+    <section className="relative bg-gradient-to-b from-accent-soft via-white to-white pt-32 pb-0 md:pt-40 overflow-hidden">
+      {/* 背景の淡いグロー */}
+      <div className="pointer-events-none absolute -top-52 -right-32 h-[560px] w-[560px] rounded-full bg-sky-blue/25 blur-[150px]" />
+      <div className="pointer-events-none absolute top-20 -left-40 h-[420px] w-[420px] rounded-full bg-accent/10 blur-[140px]" />
 
-            <m.div 
-              className="hidden md:block"
-              variants={fadeInUp}
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-challenge-orange text-white font-bold text-base rounded-full hover:bg-orange-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                無料相談で夢を語る
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </m.div>
-          </m.div>
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs font-bold tracking-eyebrow text-accent mb-8">
+            株式会社Re.haru
+          </p>
 
-          <m.div
-            className="relative order-first md:order-last"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <m.p
-                    className="text-xl md:text-2xl text-gray-700 font-bold mb-2 md:mb-4 order-first"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    Restart your Spring
-                  </m.p>
-                  <m.div
-                    className="text-5xl sm:text-6xl md:text-8xl font-black"
-                    style={{
-                      backgroundImage: 'linear-gradient(45deg, #2563EB, #10B981)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      color: 'transparent',
-                    }}
-                    animate={{
-                      backgroundImage: [
-                        'linear-gradient(45deg, #2563EB, #10B981)',
-                        'linear-gradient(45deg, #10B981, #F59E0B)',
-                        'linear-gradient(45deg, #F59E0B, #2563EB)',
-                      ],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    Re.haru
-                  </m.div>
-                </div>
-              </div>
-              <m.div
-                className="absolute inset-0 bg-gradient-to-t from-ai-blue/20 to-transparent rounded-full blur-3xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </div>
-          </m.div>
+          <h1 className="text-[2rem] leading-[1.4] md:text-[3.5rem] md:leading-[1.3] font-black text-ink mb-10">
+            テクノロジーの力で、
+            <br />
+            <span className="text-accent">挑戦できる状態</span>を取り戻す。
+          </h1>
+
+          <p className="text-base md:text-xl text-body leading-loose max-w-2xl mb-12">
+            誰もが青春のような挑戦・成長・希望を持ち続けられる社会を創る。
+            <br />
+            それが私たちの掲げる「Return青春」です。
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-20">
+            <Link
+              href="/service"
+              className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200"
+            >
+              事業を見る
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-9 py-4 bg-white text-accent font-bold rounded-lg border border-accent/30 hover:border-accent transition-colors duration-200"
+            >
+              お問い合わせ
+            </Link>
+          </div>
         </div>
       </div>
 
-      <m.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </m.div>
+      {/* 事業の帯 */}
+      <div className="relative z-10 border-t border-line bg-white/70 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-line">
+            {businesses.map((biz, index) => (
+              <div key={index} className="py-8 md:py-10 md:px-8 md:first:pl-0">
+                <p className="text-xs font-bold tracking-eyebrow text-muted mb-3">{biz.label}</p>
+                <p className="text-xl md:text-2xl font-black text-ink mb-2">{biz.name}</p>
+                <p className="text-xs text-muted">{biz.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
-    </LazyMotion>
   );
 };
 

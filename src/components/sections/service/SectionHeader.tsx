@@ -1,5 +1,6 @@
 type SectionHeaderProps = {
-  index: string;
+  /** 通し番号。省略するとラベルのみを表示する（トップページなど） */
+  index?: string;
   eyebrow: string;
   /** 見出し。JSXで改行や強調を含められる */
   heading: React.ReactNode;
@@ -16,8 +17,12 @@ const SectionHeader = ({ index, eyebrow, heading, lead, tone = 'accent' }: Secti
     <div className="mb-16 md:mb-20">
       {/* インデックス＋ラベル */}
       <div className="flex items-center gap-4 mb-8">
-        <span className={`text-xs font-black tabular-nums ${toneClass}`}>{index}</span>
-        <span className={`h-px w-8 ${ruleClass}`} />
+        {index && (
+          <>
+            <span className={`text-xs font-black tabular-nums ${toneClass}`}>{index}</span>
+            <span className={`h-px w-8 ${ruleClass}`} />
+          </>
+        )}
         <span className={`text-xs font-bold tracking-eyebrow ${toneClass}`}>{eyebrow}</span>
       </div>
 

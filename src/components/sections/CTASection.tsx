@@ -1,172 +1,45 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-ai-blue via-sky-blue to-hope-green relative overflow-hidden">
-      <motion.div
-        className="absolute inset-0"
-        animate={{
-          background: [
-            'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)',
-            'radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%)',
-            'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)',
-          ],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+    <section className="py-24 md:py-32 bg-white border-t border-line">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-accent-soft border border-accent/20 rounded-xl px-8 py-16 md:px-16 md:py-20 text-center shadow-card">
+            <p className="text-xs font-bold tracking-eyebrow text-accent mb-8">CONTACT</p>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
-            initial={{ scale: 0.9 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.3 }}
-            viewport={{ once: true }}
-          >
-            今こそ、
-            <span className="block mt-2">青春を取り戻す時</span>
-          </motion.h2>
+            <p className="text-2xl md:text-5xl font-black text-ink leading-[1.4] mb-8">
+              まずは、いちばん面倒な作業を
+              <br />
+              教えてください。
+            </p>
 
-          <motion.p
-            className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            高額な開発費用に悩む日々は、もう終わりです。
-            Re.haruと一緒に、新しい挑戦を始めましょう。
-          </motion.p>
+            <p className="text-base md:text-lg text-body leading-loose mb-12">
+              その場で、何がどう変わるかをお見せします。
+              <br className="hidden md:block" />
+              試作品の制作費はいただきません。気に入らなければ契約は不要です。
+            </p>
 
-          <motion.div
-            className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-4">
-              無料相談で分かること
-            </h3>
-            <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-white">
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 mb-3">
-                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="font-bold">節約可能額</p>
-                <p className="text-sm opacity-90">最大80%のコスト削減</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 mb-3">
-                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="font-bold">開発期間</p>
-                <p className="text-sm opacity-90">2〜6ヶ月で完成</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 mb-3">
-                  <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="font-bold">実現可能性</p>
-                <p className="text-sm opacity-90">あなたのアイデアを診断</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Link
-              href="/contact"
-              className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-ai-blue font-black text-lg rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              <span className="relative z-10">
-                無料相談を今すぐ申し込む
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-challenge-orange to-success-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-              <motion.span
-                className="relative z-10 ml-2 group-hover:text-white transition-colors duration-300"
-                animate={{
-                  x: [0, 5, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200"
               >
-                →
-              </motion.span>
-            </Link>
-            
-            <p className="text-white/80 text-sm">
-              ※ 相談は完全無料・売り込みなし
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <p className="text-white/60 text-sm mb-4">
-              相談実績500社以上 | 満足度98%
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-              <div className="text-white/80">
-                <span className="text-3xl font-black">24時間</span>
-                <p className="text-sm">以内に返信</p>
-              </div>
-              <div className="text-white/80">
-                <span className="text-3xl font-black">0円</span>
-                <p className="text-sm">相談費用</p>
-              </div>
-              <div className="text-white/80">
-                <span className="text-3xl font-black">30分</span>
-                <p className="text-sm">で診断完了</p>
-              </div>
+                無料で相談する
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/service"
+                className="inline-flex items-center justify-center px-9 py-4 bg-white text-accent font-bold rounded-lg border border-accent/30 hover:border-accent transition-colors duration-200"
+              >
+                サービス詳細を見る
+              </Link>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
-
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent"
-        animate={{
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-        }}
-      />
     </section>
   );
 };
