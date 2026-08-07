@@ -68,12 +68,12 @@ const AIRangerDetailSection = () => {
           <div className="bg-surface rounded-xl px-8 py-14 md:px-16 md:py-20 border border-line shadow-card">
             <p className="text-xs font-bold tracking-eyebrow text-accent mb-6">OUR PROMISE</p>
             <h3 className="text-2xl md:text-5xl font-black text-ink leading-[1.35] mb-10">
-              まず<span className="text-accent">作って</span>から、
+              まず<span className="text-accent">試作品を見て</span>から、
               <br />
               決めてください。
             </h3>
             <p className="text-base md:text-lg text-body leading-loose mb-12 max-w-3xl">
-              資料やお見積書では、イメージが湧きません。だから私たちは、契約前に実物を作ります。
+              資料やお見積書では、イメージが湧きません。だからご契約の前に、こちらで実物をお作りします。
               触ってみて「これは違う」と思われたら、契約していただかなくて結構です。
             </p>
 

@@ -25,6 +25,11 @@ export default {
         'body': '#4B5563',     // 本文グレー
         'muted': '#8A94A6',    // 補足グレー
         alert: '#DC2626',      // 失敗の表現のみに使用
+        // 青春パレット（トップページ専用・ブランドカラー 水色→アクア→ピンク）
+        'seishun-sky': '#7DD3FC',
+        'seishun-aqua': '#5EEAD4',
+        'seishun-pink': '#F9A8D4',
+        'seishun-deep': '#0284C7',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

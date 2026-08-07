@@ -1,28 +1,29 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import SectionHeader from '@/components/sections/service/SectionHeader';
 
 const BusinessSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-line">
+    <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <SectionHeader
-            eyebrow="OUR BUSINESS"
-            heading={
-              <>
-                私たちがやっている、
-                <br />
-                2つの事業
-              </>
-            }
-            lead="どちらも「Return青春」— 挑戦できる状態を取り戻すための事業です。"
-          />
+          <div className="mb-14 md:mb-20">
+            <p className="text-xs font-bold tracking-eyebrow text-seishun-deep mb-6">
+              OUR BUSINESS
+            </p>
+            <h2 className="text-2xl md:text-5xl font-black text-ink leading-[1.45] mb-6">
+              私たちがやっている、
+              <br className="md:hidden" />
+              2つの事業
+            </h2>
+            <p className="text-sm md:text-lg text-body leading-loose">
+              どちらも「Return青春」— 挑戦できる状態を取り戻すための事業です。
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* 事業1：オーダーメイド業務AI */}
-            <div className="group flex flex-col rounded-xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
-              <div className="bg-accent-soft px-8 pb-8 pt-10 border-b border-line min-h-[232px] flex flex-col justify-end">
+            <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
+              <div className="bg-gradient-to-br from-accent-soft to-seishun-sky/25 px-8 pb-8 pt-10 border-b border-line min-h-[232px] flex flex-col justify-end">
                 <p className="text-xs font-bold tracking-eyebrow text-accent mb-4">
                   法人向け / システム開発
                 </p>
@@ -56,7 +57,7 @@ const BusinessSection = () => {
 
                 <Link
                   href="/service"
-                  className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200"
+                  className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
                 >
                   サービス詳細を見る
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +68,7 @@ const BusinessSection = () => {
             </div>
 
             {/* 事業2：Re.haru（青春エンターテイメント） */}
-            <div className="group flex flex-col rounded-xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
+            <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
               <div className="relative h-[232px] overflow-hidden">
                 <Image
                   src="/reharu/fireworks.webp"
@@ -114,7 +115,7 @@ const BusinessSection = () => {
                   href="https://reharu.jp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-ink text-white font-bold rounded-lg hover:bg-accent transition-colors duration-200"
+                  className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-ink text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
                 >
                   Re.haru 公式サイトへ
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

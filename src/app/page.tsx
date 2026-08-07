@@ -32,9 +32,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <NewsSection />
       <BusinessSection />
       <ReturnSeishunVisionSection />
-      <NewsSection />
       <CTASection />
     </>
   );

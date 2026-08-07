@@ -4,34 +4,40 @@ import SectionHeader from './SectionHeader';
 const ProjectResultsSection = () => {
   const allProjects = [
     {
-      category: '社内DX',
-      title: 'カタログギフト自動連携システム',
-      description: '複数システムを一元化、収益計算を自動化',
-      features: ['自動収支計算', 'クロネコヤマト連携', 'ギフト自動発送', 'EC連携'],
+      category: '建設',
+      title: '進捗管理AIシステム',
+      description: '現場の進捗をAIが集約し、遅れの兆候を先に知らせる',
+      features: ['進捗の自動集約', 'AI遅延検知', '写真・報告の一元管理', '原価連動'],
     },
     {
-      category: '社内DX',
-      title: '現場向け勤怠管理システム',
-      description: '直行直帰でも正確な勤怠情報の管理と社内共有',
-      features: ['勤怠管理', '社内共有', '日報投稿', 'データ蓄積'],
+      category: '介護・福祉',
+      title: '介護日報AIシステム',
+      description: '話すだけでAIが日報に整える。記録の時間を大幅に短縮',
+      features: ['音声からAI作成', '記録の自動整形', '申し送り共有', '記録の蓄積'],
     },
     {
-      category: '社内DX',
-      title: '在庫管理システム',
-      description: '複数拠点の在庫を一元管理し、発注を自動化',
-      features: ['在庫一元管理', '自動発注', 'バーコード管理', '売上分析'],
+      category: '卸・小売',
+      title: '在庫管理AIシステム',
+      description: '複数拠点の在庫を一元管理し、AIが発注量を提案',
+      features: ['在庫一元管理', 'AI発注提案', 'バーコード管理', '売上分析'],
     },
     {
-      category: 'AI業務システム',
+      category: '会計・経理',
       title: 'AI自動会計管理システム',
       description: '領収書画像をAIが自動解析し、自動仕分け',
       features: ['AI-OCR', 'AIデータ解析', '顧客管理', '会計ソフト連携'],
     },
     {
-      category: 'AI業務システム',
+      category: '人材派遣',
       title: '人材派遣スタッフAI管理システム',
       description: 'AIが派遣先を自動選定。31社が導入',
       features: ['AI自動選定', '報酬自動計算', '請求書自動作成', 'CF管理'],
+    },
+    {
+      category: 'マーケティング',
+      title: 'AI SNS運用システム',
+      description: 'AIが投稿案を作成し、運用の手間をまとめて削減',
+      features: ['AI投稿文作成', '投稿管理', '反応の分析', '運用の自動化'],
     },
   ];
 
