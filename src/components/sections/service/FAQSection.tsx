@@ -33,7 +33,7 @@ const FAQSection = () => {
       items: [
         {
           question: '開発期間はどのくらいかかりますか？',
-          answer: '2〜6ヶ月がプロジェクト規模による目安です。機能の複雑さやAI機能の有無により変動する場合があります。詳細なスケジュールはヒアリング後にご提示いたします。'
+          answer: '2〜4ヶ月がプロジェクト規模による目安です。機能の複雑さやAI機能の有無により変動する場合があります。詳細なスケジュールはヒアリング後にご提示いたします。'
         },
         {
           question: '開発中の仕様変更は可能ですか？',
@@ -74,11 +74,11 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-white border-t border-line">
+    <section id="faq" className="py-16 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
-            index="10"
+            index="07"
             eyebrow="FAQ"
             heading="よくあるご質問"
             lead="オーダーメイド業務AIに関する疑問にお答えします。"

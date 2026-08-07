@@ -11,13 +11,7 @@ const AIInsideSection = dynamic(() => import('@/components/sections/service/AIIn
 const OrderMadeSection = dynamic(() => import('@/components/sections/service/OrderMadeSection'), {
   loading: () => <div className="h-96" />,
 });
-const MarketRateSection = dynamic(() => import('@/components/sections/service/MarketRateSection'), {
-  loading: () => <div className="h-96" />,
-});
-const ServiceOverviewSection = dynamic(() => import('@/components/sections/service/ServiceOverviewSection'), {
-  loading: () => <div className="h-96" />,
-});
-const ProblemSolutionSection = dynamic(() => import('@/components/sections/service/ProblemSolutionSection'), {
+const PriceStorySection = dynamic(() => import('@/components/sections/service/PriceStorySection'), {
   loading: () => <div className="h-96" />,
 });
 const AIRangerDetailSection = dynamic(() => import('@/components/sections/service/AIRangerDetailSection'), {
@@ -26,12 +20,6 @@ const AIRangerDetailSection = dynamic(() => import('@/components/sections/servic
 const ProjectResultsSection = dynamic(() => import('@/components/sections/service/ProjectResultsSection'), {
   loading: () => <div className="h-96" />,
 });
-const PricingDetailSection = dynamic(() => import('@/components/sections/service/PricingDetailSection'), {
-  loading: () => <div className="h-96" />,
-});
-// const FunctionCountSection = dynamic(() => import('@/components/sections/service/FunctionCountSection'), {
-//   loading: () => <div className="h-64" />,
-// });
 const FAQSection = dynamic(() => import('@/components/sections/service/FAQSection'), {
   loading: () => <div className="h-96" />,
 });
@@ -57,17 +45,12 @@ export default function ServicePage() {
       <AIProblemSection />
       <AIInsideSection />
       <OrderMadeSection />
-      <ServiceOverviewSection />
+      <PriceStorySection />
       <div id="airanger-detail">
         <AIRangerDetailSection />
       </div>
       <div id="results">
         <ProjectResultsSection />
-      </div>
-      <ProblemSolutionSection />
-      <MarketRateSection />
-      <div id="price">
-        <PricingDetailSection />
       </div>
       <FAQSection />
     </>

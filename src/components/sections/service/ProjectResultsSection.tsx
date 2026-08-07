@@ -33,41 +33,23 @@ const ProjectResultsSection = () => {
       description: 'AIが派遣先を自動選定。31社が導入',
       features: ['AI自動選定', '報酬自動計算', '請求書自動作成', 'CF管理'],
     },
-    {
-      category: 'スマホアプリ',
-      title: 'タレント農家コミュニティアプリ',
-      description: '地図から商品購入、チャット機能まで',
-      features: ['会員登録', '地図から商品購入', '商品登録', 'プッシュ通知'],
-    },
-    {
-      category: 'スマホアプリ',
-      title: 'キャンプフリマアプリ',
-      description: 'キャンプ用品専門のフリマアプリ',
-      features: ['会員登録', '商品購入', '商品掲載', 'プッシュ通知'],
-    },
-    {
-      category: 'スマホアプリ',
-      title: 'ショート動画型採用マッチングアプリ',
-      description: 'ショート動画で求職者と企業をマッチング',
-      features: ['会員登録', 'ショート動画', '企業求人掲載', 'プッシュ通知'],
-    },
   ];
 
   return (
-    <section id="results" className="py-24 md:py-32 bg-white border-t border-line">
+    <section id="results" className="py-16 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             index="06"
             eyebrow="WORKS"
             heading="開発実績"
-            lead="これまでに開発してきたシステムです。すべて一律300万円、機能数の制限はありません。"
+            lead="これまでに開発してきたシステムです。"
           />
 
           {/* 実績グリッド */}
           <div className="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden shadow-card">
             {allProjects.map((project, index) => (
-              <div key={index} className="bg-white p-8 md:p-10 transition-colors duration-200 hover:bg-accent-soft/40">
+              <div key={index} className="bg-white p-6 md:p-10">
                 <p className="text-xs font-bold tracking-eyebrow text-muted mb-5">
                   {project.category}
                 </p>
@@ -88,10 +70,6 @@ const ProjectResultsSection = () => {
               </div>
             ))}
           </div>
-
-          <p className="text-sm text-muted leading-relaxed mt-8">
-            ※ 上記はすべて開発費用 一律300万円（AI機能込み・機能数の制限なし）です。スマホアプリとしてストア公開する場合のみ、ネイティブアプリ化 +300万円（合計600万円）となります。
-          </p>
 
           {/* CTA */}
           <div className="mt-20 text-center">

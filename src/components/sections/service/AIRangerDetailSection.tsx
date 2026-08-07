@@ -19,21 +19,21 @@ const AIRangerDetailSection = () => {
     {
       no: '03',
       title: '開発・テスト',
-      lead: '2〜6ヶ月',
+      lead: '2〜4ヶ月',
       description:
         '開発範囲が明確なので、AIが迷うことなく開発を進めます。完成後は実際に操作していただきながら動作確認を実施。使いにくい箇所をフィードバックいただき、現場が毎日使える状態に仕上げます。',
     },
     {
       no: '04',
       title: '納品・保守',
-      lead: '月額3万円 または 10万円',
+      lead: '納品後もずっと',
       description:
-        '合意した内容どおりにシステムを納品し、その後の保守も対応します。月額プランは2つだけ。ライトプラン月3万円（安定稼働・基本サポート）と、フルプラン月10万円（機能追加が無制限）からお選びいただけます。',
+        '合意した内容どおりにシステムを納品し、その後の保守も対応します。月額プランは2つだけ。安定稼働とサポートのプランと、機能追加が無制限のプランからお選びいただけます。',
     },
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-line">
+    <section className="py-16 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
