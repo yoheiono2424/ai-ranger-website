@@ -14,15 +14,15 @@ const AIInsideSection = () => {
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             index="02"
-            eyebrow="OUR ANSWER"
+            eyebrow="SysSucの答え"
             heading={
               <>
-                うちは<span className="text-alert">AI単体は売りません。</span>
+                業務システムの中に、
                 <br />
-                使われないので。
+                <span className="text-accent">AIを組み込みます。</span>
               </>
             }
-            lead="業務システムを作って、その中にAIを入れます。だから毎日使われます。"
+            lead="いつもの仕事をするだけで、AIが勝手に使われる。覚える必要も、続ける努力もいりません。"
           />
 
           {/* 対比：スマホでも横2列のカード */}
@@ -38,9 +38,9 @@ const AIInsideSection = () => {
                 仕事は回る
               </p>
               <p className="text-xs md:text-sm font-bold text-alert leading-snug">
-                → 3ヶ月後には
+                → 翌月には、
                 <br className="md:hidden" />
-                開かれない
+                誰も開かない
               </p>
             </div>
 

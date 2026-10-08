@@ -46,7 +46,7 @@ const ProjectResultsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
-            index="06"
+            index="11"
             eyebrow="WORKS"
             heading="開発実績"
             lead="これまでに開発してきたシステムです。"
@@ -86,7 +86,7 @@ const ProjectResultsSection = () => {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-sky-blue transition-colors duration-200"
+              className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-lg hover:bg-ink transition-colors duration-200"
             >
               無料で相談する
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

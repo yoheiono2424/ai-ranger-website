@@ -1,26 +1,22 @@
+import Image from 'next/image';
 import SectionHeader from './SectionHeader';
 
 const AIProblemSection = () => {
-  const failures = [
+  const worries = [
     {
       no: '01',
-      title: '導入したが、誰も使っていない',
-      description: '翌月には、もう誰も開いていない',
+      title: 'AI研修を受けたけど、結局よく分からない',
+      description: '明日の仕事で、何をすればいいかが見えない',
     },
     {
       no: '02',
-      title: '何に使えばいいか分からない',
-      description: '使い道を、自分で考えないといけない',
+      title: 'ChatGPTを入れたけど、誰も使い続けない',
+      description: '最初の数週間だけで、開く人がいなくなる',
     },
     {
       no: '03',
-      title: '多機能すぎて、使いこなせない',
-      description: 'できることが増えた分、複雑になった',
-    },
-    {
-      no: '04',
-      title: '現場が覚えてくれない',
-      description: 'ツールが1つ増えただけで、業務は変わらない',
+      title: 'システム開発は数百万円〜。手が出ない',
+      description: '自社専用のシステムがあれば楽になるのに',
     },
   ];
 
@@ -30,41 +26,45 @@ const AIProblemSection = () => {
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             index="01"
-            eyebrow="THE PROBLEM"
+            eyebrow="よくあるお悩み"
             tone="alert"
             heading={
               <>
-                AIツールを導入した。
-                <br />
-                AI研修も受けた。
-                <br />
-                それでも<span className="text-alert">使われない</span>。
+                こんなこと、
+                <br className="md:hidden" />
+                ありませんか。
               </>
             }
-            lead="いま多くの会社が、同じところでつまずいています。"
           />
 
-          {/* 失敗4つ */}
-          <div className="border-t border-line mb-14 md:mb-20">
-            {failures.map((item, index) => (
-              <div
-                key={index}
-                className="border-b border-line py-6 md:py-8 grid grid-cols-[auto_1fr] md:grid-cols-[4rem_1fr_1.1fr] gap-x-4 md:gap-x-8 gap-y-1 items-baseline"
-              >
-                <span className="text-sm font-black text-muted tabular-nums">{item.no}</span>
-                <h3 className="text-base md:text-xl font-bold text-ink leading-snug">
-                  {item.title}
-                </h3>
-                <p className="col-start-2 md:col-start-3 text-sm text-body leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-[1fr_17rem] gap-10 md:gap-14 items-center mb-14 md:mb-20">
+            <div className="border-t border-line">
+              {worries.map((item) => (
+                <div
+                  key={item.no}
+                  className="border-b border-line py-6 md:py-8 grid grid-cols-[auto_1fr] gap-x-4 md:gap-x-8 gap-y-1 items-baseline"
+                >
+                  <span className="text-sm font-black text-muted tabular-nums">{item.no}</span>
+                  <h3 className="text-base md:text-xl font-bold text-ink leading-snug">{item.title}</h3>
+                  <p className="col-start-2 text-sm text-body leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="relative hidden md:block aspect-[880/1168] rounded-xl overflow-hidden shadow-card">
+              <Image
+                src="/syssuc/worry.webp"
+                alt="書類の山を前に考え込む経営者"
+                fill
+                sizes="17rem"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* 原因 */}
           <div className="text-center">
-            <p className="text-xs font-bold tracking-eyebrow text-accent mb-5">原因は1つです</p>
+            <p className="text-xs font-bold tracking-eyebrow text-accent mb-5">AIが使われない原因は1つです</p>
             <p className="text-2xl md:text-5xl font-black text-ink leading-[1.4]">
               AI単体は、<span className="text-accent">使わなくても</span>
               <br />

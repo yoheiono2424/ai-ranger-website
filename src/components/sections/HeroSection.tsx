@@ -4,8 +4,8 @@ const HeroSection = () => {
   const businesses = [
     {
       label: '法人向け',
-      name: 'オーダーメイド業務AI',
-      note: '御社専用の業務システム＋AI',
+      name: 'SysSuc（シススク）',
+      note: '初期費用0円の、システム開発サブスク',
     },
     {
       label: '個人向け',

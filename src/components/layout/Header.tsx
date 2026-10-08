@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
             <Link
               href="/contact"
-              className="bg-ai-blue text-white px-6 py-2.5 rounded-full hover:bg-sky-blue transition-colors duration-200 font-medium"
+              className="bg-accent text-white px-6 py-2.5 rounded-full hover:bg-ink transition-colors duration-200 font-medium"
             >
               無料相談する
             </Link>
@@ -116,7 +116,7 @@ const Header = () => {
             </Link>
             <Link
               href="/contact"
-              className="block w-full text-center bg-ai-blue text-white px-6 py-3 rounded-full hover:bg-sky-blue transition-colors duration-200 font-medium mt-4"
+              className="block w-full text-center bg-accent text-white px-6 py-3 rounded-full hover:bg-ink transition-colors duration-200 font-medium mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               無料相談する

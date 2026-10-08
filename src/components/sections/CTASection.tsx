@@ -15,9 +15,9 @@ const CTASection = () => {
             </p>
 
             <p className="text-base md:text-lg text-body leading-loose mb-12">
-              その場で、何がどう変わるかをお見せします。
+              御社の業務に合わせた試作画面を、無料でお見せします。
               <br className="hidden md:block" />
-              試作品の制作費はいただきません。気に入らなければ契約は不要です。
+              打ち合わせはオンラインで完結します。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

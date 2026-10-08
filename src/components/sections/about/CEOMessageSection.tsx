@@ -81,7 +81,7 @@ const CEOMessageSection = () => {
                 </div>
 
                 <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                  オーダーメイド業務AIが実現する「新しいチャレンジ」
+                  SysSucが実現する「新しいチャレンジ」
                 </h4>
 
                 <div className="bg-gray-50 rounded-2xl p-6">
@@ -100,16 +100,16 @@ const CEOMessageSection = () => {
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-ai-blue mb-2">300万円</div>
-                    <p className="text-sm font-bold text-gray-700">一律料金</p>
+                    <div className="text-3xl font-black text-ai-blue mb-2">0円</div>
+                    <p className="text-sm font-bold text-gray-700">初期費用</p>
                     <p className="text-xs text-gray-600 mt-1">もう予算を理由に諦める必要はありません</p>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-hope-green mb-2">2〜6ヶ月</div>
-                    <p className="text-sm font-bold text-gray-700">開発期間</p>
+                    <div className="text-3xl font-black text-hope-green mb-2">1か月以内</div>
+                    <p className="text-sm font-bold text-gray-700">1件あたりの開発</p>
                     <p className="text-xs text-gray-600 mt-1">アイデアをすぐに形にできます</p>
                   </motion.div>
                   <motion.div

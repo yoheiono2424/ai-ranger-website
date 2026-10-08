@@ -37,11 +37,11 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/service" className="text-gray-300 hover:text-white transition-colors">
-                  オーダーメイド業務AI
+                  SysSuc（シススク）
                 </Link>
               </li>
               <li>
-                <SmoothScrollLink href="/service#price" className="text-gray-300 hover:text-white transition-colors">
+                <SmoothScrollLink href="/service#pricing" className="text-gray-300 hover:text-white transition-colors">
                   料金プラン
                 </SmoothScrollLink>
               </li>

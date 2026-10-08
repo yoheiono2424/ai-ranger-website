@@ -158,9 +158,9 @@ const VisionSection = () => {
                   viewport={{ once: true }}
                   className="text-4xl md:text-5xl font-black text-hope-green mb-2"
                 >
-                  300万円
+                  0円
                 </motion.div>
-                <p className="text-gray-700 font-bold">一律料金</p>
+                <p className="text-gray-700 font-bold">初期費用</p>
                 <p className="text-sm text-gray-600 mt-2">
                   誰もが手の届く価格で
                 </p>

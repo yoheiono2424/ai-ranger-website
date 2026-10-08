@@ -9,7 +9,7 @@ const CompanyInfoSection = () => {
     { label: '代表取締役', value: '小野 陽平' },
     { label: '住所', value: '〒860-0047 熊本県熊本市西区春日1-14-3 ザ・熊本タワー2901' },
     { label: '電話番号', value: '096-327-9339' },
-    { label: '事業内容', value: 'AI業務システム開発「オーダーメイド業務AI」/ 青春エンターテイメント事業' },
+    { label: '事業内容', value: 'システム開発サブスク「SysSuc」/ 青春エンターテイメント事業' },
   ];
 
   return (

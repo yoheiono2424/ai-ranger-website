@@ -21,37 +21,46 @@ const BusinessSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* 事業1：オーダーメイド業務AI */}
+            {/* 事業1：SysSuc（システム開発サブスク） */}
             <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
               <div className="bg-gradient-to-br from-accent-soft to-seishun-sky/25 px-8 pb-8 pt-10 border-b border-line min-h-[232px] flex flex-col justify-end">
                 <p className="text-xs font-bold tracking-eyebrow text-accent mb-4">
-                  法人向け / システム開発
+                  法人向け / システム開発サブスク
                 </p>
-                <h3 className="text-2xl md:text-3xl font-black text-ink leading-snug mb-3">
-                  オーダーメイド業務AI
+                <Image
+                  src="/syssuc/logo.png"
+                  alt="SysSuc（シススク）"
+                  width={600}
+                  height={221}
+                  className="h-12 md:h-14 w-auto self-start mb-4"
+                />
+                <h3 className="text-xl md:text-2xl font-black text-ink leading-snug mb-3">
+                  初期費用0円の、システム開発サブスク
                 </h3>
                 <p className="text-sm text-body leading-relaxed">
-                  御社専用の業務システムを作ります。その中に、AIが入っています。
+                  御社専用の業務システムを、月額で1件ずつ。その中に、AIが入っています。
                 </p>
               </div>
 
               <div className="flex flex-col flex-1 px-8 py-8">
                 <p className="text-sm text-body leading-loose mb-8">
-                  研修を受けても、ツールを入れても、使わない社員がいる。AI単体は「使う習慣」がないと使われないからです。私たちは業務システムの中にAIを入れることで、定着の問題そのものをなくします。
+                  AI研修を受けても、ChatGPTを入れても、使われ続けない。AI単体は、使わなくても仕事が回るからです。SysSucは毎日使う業務システムの中にAIを組み込むので、いつもの仕事をするだけで、AIが勝手に使われます。
                 </p>
 
                 <dl className="border-t border-line mb-8">
                   <div className="flex items-baseline justify-between py-4 border-b border-line">
-                    <dt className="text-xs text-muted">開発費用</dt>
-                    <dd className="text-lg font-black text-ink">一律 300万円</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between py-4 border-b border-line">
-                    <dt className="text-xs text-muted">機能数</dt>
-                    <dd className="text-lg font-black text-ink">制限なし</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between py-4 border-b border-line">
-                    <dt className="text-xs text-muted">契約後の追加請求</dt>
+                    <dt className="text-xs text-muted">初期費用</dt>
                     <dd className="text-lg font-black text-ink">0円</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between py-4 border-b border-line">
+                    <dt className="text-xs text-muted">月額</dt>
+                    <dd className="text-lg font-black text-ink">
+                      20万円<span className="text-xs font-medium text-muted ml-1">（税別）</span>
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between py-4 border-b border-line">
+                    <dt className="text-xs text-muted">作り方</dt>
+                    <dd className="text-lg font-black text-ink">1件ずつ・1か月以内</dd>
                   </div>
                 </dl>
 
@@ -59,7 +68,7 @@ const BusinessSection = () => {
                   href="/service"
                   className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
                 >
-                  サービス詳細を見る
+                  SysSucの詳細を見る
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
