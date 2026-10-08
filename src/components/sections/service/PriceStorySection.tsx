@@ -12,13 +12,13 @@ const PriceStorySection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
-            index="04"
+            index="06"
             eyebrow="料金"
             heading={
               <>
-                数百万円のシステム開発を、
+                一般的な開発なら、数百万円〜。
                 <br />
-                サブスクで。
+                SysSucなら、初期費用0円。
               </>
             }
           />

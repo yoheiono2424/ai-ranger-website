@@ -23,7 +23,7 @@ const FlowSection = () => {
     <section className="py-16 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <SectionHeader index="10" eyebrow="進め方" heading="ご利用開始までの流れ" />
+          <SectionHeader index="09" eyebrow="進め方" heading="ご利用開始までの流れ" />
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-16 md:mb-24">
             {steps.map((step, index) => (

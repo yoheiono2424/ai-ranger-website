@@ -16,13 +16,11 @@ const StackSection = () => {
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             index="05"
-            eyebrow="月額20万円の中身"
+            eyebrow="SysSucでできること"
             heading={
               <>
-                月20万円の定額で、
+                御社のシステムを、
                 <br />
-                御社のシステムを
-                <br className="md:hidden" />
                 1件ずつ作っていきます。
               </>
             }

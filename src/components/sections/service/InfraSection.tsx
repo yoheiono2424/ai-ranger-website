@@ -18,7 +18,7 @@ const InfraSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
-            index="07"
+            index="08"
             eyebrow="インフラ費（実費）について"
             heading={
               <>

@@ -46,7 +46,7 @@ const ProjectResultsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
-            index="11"
+            index="04"
             eyebrow="WORKS"
             heading="開発実績"
             lead="これまでに開発してきたシステムです。"

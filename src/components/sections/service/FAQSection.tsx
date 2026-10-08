@@ -21,7 +21,7 @@ const FAQSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
-            index="12"
+            index="10"
             eyebrow="FAQ"
             heading="よくあるご質問"
             lead="SysSucに関する疑問にお答えします。"

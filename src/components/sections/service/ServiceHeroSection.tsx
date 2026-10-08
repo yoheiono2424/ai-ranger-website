@@ -29,22 +29,10 @@ const ServiceHeroSection = () => {
               システム開発サブスク
             </h1>
 
-            <p className="text-base md:text-lg text-body leading-loose mb-8">
+            <p className="text-base md:text-lg text-body leading-loose mb-10">
               御社専用の業務システムを、月額で1件ずつお作りします。
               その中にAIが入っているので、いつもの仕事をするだけで、AIが勝手に使われます。
             </p>
-
-            <div className="flex flex-wrap gap-3 mb-10">
-              <span className="inline-flex items-baseline gap-2 rounded-lg border border-line bg-white px-4 py-2.5">
-                <span className="text-xs text-muted">初期費用</span>
-                <span className="text-xl font-black text-ink">0円</span>
-              </span>
-              <span className="inline-flex items-baseline gap-2 rounded-lg border border-line bg-white px-4 py-2.5">
-                <span className="text-xs text-muted">月額</span>
-                <span className="text-xl font-black text-ink">20万円</span>
-                <span className="text-xs text-muted">（税別）</span>
-              </span>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -57,10 +45,10 @@ const ServiceHeroSection = () => {
                 </svg>
               </Link>
               <Link
-                href="#pricing"
+                href="#results"
                 className="inline-flex items-center justify-center px-9 py-4 bg-white text-accent font-bold rounded-lg border border-accent/30 hover:border-accent transition-colors duration-200"
               >
-                料金を見る
+                開発実績を見る
               </Link>
             </div>
           </div>

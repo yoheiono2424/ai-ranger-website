@@ -12,7 +12,7 @@ const ConditionsSection = () => {
     <section id="conditions" className="py-16 md:py-32 bg-white border-t border-line">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <SectionHeader index="06" eyebrow="契約条件" heading="条件は、最初にすべてお伝えします。" />
+          <SectionHeader index="07" eyebrow="契約条件" heading="条件は、最初にすべてお伝えします。" />
 
           <div className="border-t-2 border-ink">
             {conditions.map((item) => (
