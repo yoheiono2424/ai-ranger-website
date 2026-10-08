@@ -5,7 +5,7 @@ import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
   title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
-  description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。初期費用0円・月額20万円のシステム開発サブスク「SysSuc（シススク）」と、青春エンターテイメントアプリ「Re.haru」を展開しています。',
+  description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。初期費用0円のシステム開発サブスク「SysSuc（シススク）」と、青春エンターテイメントアプリ「Re.haru」を展開しています。',
   keywords: 'SysSuc, シススク, システム開発 サブスク, 初期費用0円 システム開発, 業務システム開発, 業務システム AI, 熊本 システム開発, Return青春, 株式会社Re.haru',
   alternates: {
     canonical: 'https://www.reharu.com',
