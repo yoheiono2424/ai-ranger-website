@@ -20,6 +20,7 @@ export interface NewsItem {
   content: string;      // 本文（詳細ページ用）
   externalLink?: string; // 外部リンク（オプション）
   images?: NewsImage[]; // 記事内の画像（オプション）
+  hideOnTop?: boolean;  // トップページの一覧に出さない（旧料金のお知らせ）
 }
 
 // お知らせデータ（新着順：最新が一番上）
@@ -64,6 +65,7 @@ AI単体は、使わなくても仕事が回ってしまうため、使われな
   },
   {
     id: "2026-08-05",
+    hideOnTop: true,
     date: "2026.08.05",
     title: "サービスを「オーダーメイド業務AI」へ刷新｜開発費用は一律300万円に",
     category: "サービス更新",
@@ -126,6 +128,7 @@ AI導入のご相談をいただく中で、繰り返し耳にしてきたお声
   },
   {
     id: "2026-04-30",
+    hideOnTop: true,
     date: "2026.04.30",
     title: "5レンジャーの料金体系を改定｜AI機能込みで一律500万円に",
     category: "サービス更新",
@@ -360,7 +363,7 @@ export function getAllNews(): NewsItem[] {
 
 // ヘルパー関数：指定件数の最新記事を取得
 export function getLatestNews(count: number): NewsItem[] {
-  return newsData.slice(0, count);
+  return newsData.filter(item => !item.hideOnTop).slice(0, count);
 }
 
 // ヘルパー関数：IDで記事を取得
