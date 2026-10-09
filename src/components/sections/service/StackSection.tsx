@@ -2,13 +2,13 @@ import SectionHeader from './SectionHeader';
 
 const StackSection = () => {
   const stages = [
-    { step: '1件目を作る', note: '1か月以内で完成', items: ['見積システム'] },
+    { step: '1件目を作る', note: '御社の業務に合わせて作る', items: ['見積システム'] },
     { step: '使いながら2件目へ', note: '完成したものは使い始める', items: ['日報システム', '見積システム'] },
     { step: '3件目へ', note: '使えるシステムが増えていく', items: ['受発注システム', '日報システム', '見積システム'] },
     { step: 'その先も、順番に', note: '', items: ['次の依頼…', '受発注システム', '日報システム', '見積システム'] },
   ];
 
-  const notes = ['1件は1か月以内', '打ち合わせはオンライン', '月額は定額（件数で変わらない）'];
+  const notes = ['データは御社のもの', '打ち合わせはオンライン', '月額は定額（件数で変わらない）'];
 
   return (
     <section className="py-16 md:py-32 bg-white border-t border-line">

@@ -108,9 +108,9 @@ const CEOMessageSection = () => {
                     whileHover={{ scale: 1.05 }}
                     className="bg-white rounded-xl p-4 shadow-lg text-center"
                   >
-                    <div className="text-3xl font-black text-hope-green mb-2">1か月以内</div>
-                    <p className="text-sm font-bold text-gray-700">1件あたりの開発</p>
-                    <p className="text-xs text-gray-600 mt-1">アイデアをすぐに形にできます</p>
+                    <div className="text-3xl font-black text-hope-green mb-2">標準搭載</div>
+                    <p className="text-sm font-bold text-gray-700">AI機能</p>
+                    <p className="text-xs text-gray-600 mt-1">毎日使う業務システムの中にAIを入れます</p>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
