@@ -44,6 +44,12 @@ const nextConfig = {
         destination: 'https://www.reharu.com/service',
         permanent: true,
       },
+      // 旧料金（一律300万円）のお知らせを削除。記事URLはサービスページへ転送する。
+      {
+        source: '/news/2026-08-05',
+        destination: 'https://www.reharu.com/service',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [
