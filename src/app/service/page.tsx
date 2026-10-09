@@ -11,7 +11,6 @@ const ExamplesSection = dynamic(() => import('@/components/sections/service/Exam
 const PriceStorySection = dynamic(() => import('@/components/sections/service/PriceStorySection'), { loading });
 const StackSection = dynamic(() => import('@/components/sections/service/StackSection'), { loading });
 const ConditionsSection = dynamic(() => import('@/components/sections/service/ConditionsSection'), { loading });
-const InfraSection = dynamic(() => import('@/components/sections/service/InfraSection'), { loading });
 const FlowSection = dynamic(() => import('@/components/sections/service/FlowSection'), { loading });
 const ProjectResultsSection = dynamic(() => import('@/components/sections/service/ProjectResultsSection'), { loading });
 const FAQSection = dynamic(() => import('@/components/sections/service/FAQSection'), { loading });
@@ -89,7 +88,6 @@ export default function ServicePage() {
       <StackSection />
       <PriceStorySection />
       <ConditionsSection />
-      <InfraSection />
       <FlowSection />
       <FAQSection />
     </>

@@ -67,7 +67,7 @@ const PriceStorySection = () => {
             ))}
           </div>
           <p className="text-xs text-muted leading-relaxed mt-4">
-            ※ 価格は税別です。システムを動かすサーバー等のインフラ費は、別途実費となります（目安は下でご説明します）。
+            ※ 価格は税別です。
           </p>
         </div>
       </div>

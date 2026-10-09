@@ -5,7 +5,6 @@ const ConditionsSection = () => {
     { label: '契約期間', value: '最低6か月', note: '以降は3か月ごとの更新' },
     { label: 'お支払い', value: '最初の3か月分（60万円）を前払い', note: '4か月目以降は毎月払い' },
     { label: 'データ', value: '御社のもの', note: 'AIの学習には使いません' },
-    { label: 'インフラ費', value: 'サーバー等は実費', note: '目安は次でご説明します' },
   ];
 
   return (
