@@ -52,9 +52,13 @@ const BusinessSection = () => {
                     <dt className="text-xs text-muted">初期費用</dt>
                     <dd className="text-lg font-black text-ink">0円</dd>
                   </div>
-                  <div className="flex items-baseline justify-between py-4 border-b border-line">
-                    <dt className="text-xs text-muted">作り方</dt>
-                    <dd className="text-lg font-black text-ink">1件ずつ・1か月以内</dd>
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">AI</dt>
+                    <dd className="text-lg font-black text-ink text-right">業務システムに標準搭載</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">打ち合わせ</dt>
+                    <dd className="text-lg font-black text-ink text-right">オンラインで完結</dd>
                   </div>
                 </dl>
 
