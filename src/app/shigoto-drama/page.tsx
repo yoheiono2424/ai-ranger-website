@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import DramaHeroSection from '@/components/sections/shigoto-drama/DramaHeroSection';
 import DramaProblemSection from '@/components/sections/shigoto-drama/DramaProblemSection';
 import DramaEvidenceSection from '@/components/sections/shigoto-drama/DramaEvidenceSection';
+import DramaCompareSection from '@/components/sections/shigoto-drama/DramaCompareSection';
 import DramaSamplesSection from '@/components/sections/shigoto-drama/DramaSamplesSection';
 import DramaUsesSection from '@/components/sections/shigoto-drama/DramaUsesSection';
 import DramaFlowSection from '@/components/sections/shigoto-drama/DramaFlowSection';
@@ -50,6 +51,7 @@ export default function ShigotoDramaPage() {
       <DramaHeroSection />
       <DramaProblemSection />
       <DramaEvidenceSection />
+      <DramaCompareSection />
       <DramaSamplesSection />
       <DramaUsesSection />
       <DramaFlowSection />
