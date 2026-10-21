@@ -4,11 +4,6 @@ import DramaHeading from './DramaHeading';
 const DramaEvidenceSection = () => {
   const stats = [
     {
-      label: '動画広告のクリック率',
-      value: '1.21倍',
-      description: '写真の広告と比べて。1件の獲得にかかる費用は、約3割安く。',
-    },
-    {
       label: '心を動かす広告の効果',
       value: '1.7倍',
       description: '理屈で訴える広告と比べた、ブランドへの効果。しかも長く続く。',
@@ -65,7 +60,7 @@ const DramaEvidenceSection = () => {
             説明より、物語。
           </p>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-5 mb-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-5 mb-8">
             {stats.map((stat) => (
               <div key={stat.label} className="rounded-xl bg-drama-panel border border-drama-line px-7 py-8">
                 <p className="text-sm font-bold text-white mb-4">{stat.label}</p>
@@ -76,7 +71,7 @@ const DramaEvidenceSection = () => {
           </div>
 
           <p className="text-[11px] text-drama-sand/80 leading-relaxed">
-            出典：サイバーエージェント／デジタルインファクト「動画広告市場調査」（2025年）、Recto「Meta広告 動画と静止画の効果比較」（2026年・20アカウント）、Binet &amp; Field「The Long and the Short of It」（IPA、約1,400事例）、Web担当者Forum（2024年）
+            出典：サイバーエージェント／デジタルインファクト「動画広告市場調査」（2025年）、Binet &amp; Field「The Long and the Short of It」（IPA、約1,400事例）、Web担当者Forum（2024年）
           </p>
         </div>
       </div>
