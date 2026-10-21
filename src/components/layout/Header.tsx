@@ -40,7 +40,13 @@ const Header = () => {
               href="/service"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
-              サービス詳細
+              SysSuc
+            </Link>
+            <Link
+              href="/shigoto-drama"
+              className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
+            >
+              シゴトドラマ
             </Link>
             <Link
               href="/about"
@@ -98,7 +104,14 @@ const Header = () => {
               className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              サービス詳細
+              SysSuc
+            </Link>
+            <Link
+              href="/shigoto-drama"
+              className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              シゴトドラマ
             </Link>
             <Link
               href="/about"

@@ -33,6 +33,14 @@ export default {
         'seishun-aqua': '#5EEAD4',
         'seishun-pink': '#F9A8D4',
         'seishun-deep': '#0284C7',
+        // シゴトドラマ（/shigoto-drama 専用・営業資料と同じ黒とオレンジ）
+        'drama-bg': '#0F1115',     // 背景の黒
+        'drama-panel': '#1C2028',  // カードの面
+        'drama-line': '#3A3F4A',   // 罫線
+        'drama-paper': '#F4EFE6',  // 明るいセクションの背景
+        'drama-gold': '#E39B3F',   // アクセントのオレンジ
+        'drama-sand': '#B9B2A6',   // 黒背景上の補足文字
+        'drama-brown': '#8C6A3E',  // 明るい背景上のラベル
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
@@ -46,6 +54,8 @@ export default {
       },
       fontFamily: {
         sans: ['Noto Sans JP', 'sans-serif'],
+        // シゴトドラマの見出し（営業資料の明朝に合わせる）
+        mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"YuMincho"', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

@@ -65,16 +65,16 @@ const ReturnSeishunVisionSection = () => {
             ))}
           </div>
 
-          {/* 2事業をつなぐメッセージ */}
+          {/* 3事業をつなぐメッセージ */}
           <div className="bg-white/70 backdrop-blur border border-white rounded-2xl p-8 md:p-12 shadow-card">
             <p className="text-xl md:text-3xl font-black text-ink leading-[1.5] mb-6">
               だから私たちは、
               <br className="md:hidden" />
-              まったく違う2つの事業をやっています。
+              まったく違う3つの事業をやっています。
             </p>
             <p className="text-sm md:text-base text-body leading-loose max-w-3xl">
-              会社の仕事をAIで変えることも、友達と過ごす時間を取り戻すことも、私たちにとっては同じことです。
-              どちらも「もうこんなものだ」と諦めていた状態から抜け出すための、手段でしかありません。
+              会社の仕事をAIで変えることも、会社の物語を外に届けることも、友達と過ごす時間を取り戻すことも、私たちにとっては同じことです。
+              どれも「もうこんなものだ」と諦めていた状態から抜け出すための、手段でしかありません。
             </p>
           </div>
         </div>

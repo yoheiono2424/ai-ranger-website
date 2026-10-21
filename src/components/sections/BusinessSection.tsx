@@ -5,7 +5,7 @@ const BusinessSection = () => {
   return (
     <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
             <p className="text-xs font-bold tracking-eyebrow text-seishun-deep mb-6">
               OUR BUSINESS
@@ -13,14 +13,14 @@ const BusinessSection = () => {
             <h2 className="text-2xl md:text-5xl font-black text-ink leading-[1.45] mb-6">
               私たちがやっている、
               <br className="md:hidden" />
-              2つの事業
+              3つの事業
             </h2>
             <p className="text-sm md:text-lg text-body leading-loose">
-              どちらも「Return青春」— 挑戦できる状態を取り戻すための事業です。
+              どれも「Return青春」— 挑戦できる状態を取り戻すための事業です。
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 事業1：SysSuc（システム開発サブスク） */}
             <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
               <div className="bg-gradient-to-br from-accent-soft to-seishun-sky/25 px-8 pb-8 pt-10 border-b border-line min-h-[232px] flex flex-col justify-end">
@@ -74,14 +74,70 @@ const BusinessSection = () => {
               </div>
             </div>
 
-            {/* 事業2：Re.haru（青春エンターテイメント） */}
+            {/* 事業2：シゴトドラマ（採用とPRのための縦型ドラマ） */}
+            <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
+              <div className="relative h-[232px] overflow-hidden">
+                <Image
+                  src="/shigoto-drama/hero.webp"
+                  alt="シゴトドラマ — 夕日の現場で並んで座るベテラン職人と新人"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-[70%_center]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 px-8 pb-8">
+                  <p className="text-xs font-bold tracking-eyebrow text-white/80 mb-3">
+                    法人向け / 採用・PRの縦型ドラマ
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-black text-white leading-snug mb-2">
+                    シゴトドラマ
+                  </h3>
+                  <p className="text-sm text-white/90 leading-relaxed">
+                    御社の仕事と商品を、ドラマに。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col flex-1 px-8 py-8">
+                <p className="text-sm text-body leading-loose mb-8">
+                  求人票や商品説明だけでは、職場の空気も作り手の想いも伝わりません。御社の本当の話を取材して、見た人の心が動く縦型ドラマにします。
+                </p>
+
+                <dl className="border-t border-line mb-8">
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">使い道</dt>
+                    <dd className="text-lg font-black text-ink text-right">採用 / 商品PR</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">撮影</dt>
+                    <dd className="text-lg font-black text-ink text-right">不要</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">ご負担</dt>
+                    <dd className="text-lg font-black text-ink text-right">取材1時間だけ</dd>
+                  </div>
+                </dl>
+
+                <Link
+                  href="/shigoto-drama"
+                  className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
+                >
+                  シゴトドラマの詳細を見る
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* 事業3：Re.haru（青春エンターテイメント） */}
             <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
               <div className="relative h-[232px] overflow-hidden">
                 <Image
                   src="/reharu/fireworks.webp"
                   alt="Re.haru — 友達と4人で過ごす青春の風景"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
