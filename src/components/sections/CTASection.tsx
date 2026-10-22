@@ -9,15 +9,15 @@ const CTASection = () => {
             <p className="text-xs font-bold tracking-eyebrow text-seishun-deep mb-8">CONTACT</p>
 
             <p className="text-2xl md:text-5xl font-black text-ink leading-[1.4] mb-8">
-              まずは、いちばん面倒な作業を
+              まずは、お気軽に
               <br />
-              教えてください。
+              ご相談ください。
             </p>
 
             <p className="text-base md:text-lg text-body leading-loose mb-12">
-              御社の業務に合わせた試作画面を、無料でお見せします。
+              システム開発のこと、採用やPRの動画のこと。
               <br className="hidden md:block" />
-              打ち合わせはオンラインで完結します。
+              どの事業のご相談でも、こちらから受け付けています。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -29,12 +29,6 @@ const CTASection = () => {
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
-              <Link
-                href="/service"
-                className="inline-flex items-center justify-center px-9 py-4 bg-white/80 backdrop-blur text-ink font-bold rounded-full border border-white hover:bg-white transition-colors duration-200"
-              >
-                サービス詳細を見る
               </Link>
             </div>
           </div>

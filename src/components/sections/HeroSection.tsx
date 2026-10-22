@@ -1,19 +1,6 @@
 import Link from 'next/link';
 
 const HeroSection = () => {
-  const businesses = [
-    {
-      label: '法人向け',
-      name: 'SysSuc（シススク）',
-      note: '初期費用0円の、システム開発サブスク',
-    },
-    {
-      label: '個人向け',
-      name: 'Re.haru',
-      note: '青春エンターテイメントアプリ',
-    },
-  ];
-
   return (
     <section className="relative pt-32 pb-0 md:pt-40 overflow-hidden">
       {/* 青春グラデーション背景（水色 → アクア → ピンク） */}
@@ -50,7 +37,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16 md:mb-20">
             <Link
-              href="/service"
+              href="#business"
               className="inline-flex items-center justify-center px-9 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
             >
               事業を見る
@@ -64,21 +51,6 @@ const HeroSection = () => {
             >
               お問い合わせ
             </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* 事業の帯 */}
-      <div className="relative z-10 border-t border-white/70 bg-white/60 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-line/70">
-            {businesses.map((biz, index) => (
-              <div key={index} className="py-8 md:py-10 md:px-8 md:first:pl-0">
-                <p className="text-xs font-bold tracking-eyebrow text-muted mb-3">{biz.label}</p>
-                <p className="text-xl md:text-2xl font-black text-ink mb-2">{biz.name}</p>
-                <p className="text-xs text-muted">{biz.note}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

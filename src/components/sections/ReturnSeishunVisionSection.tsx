@@ -70,7 +70,7 @@ const ReturnSeishunVisionSection = () => {
             <p className="text-xl md:text-3xl font-black text-ink leading-[1.5] mb-6">
               だから私たちは、
               <br className="md:hidden" />
-              まったく違う3つの事業をやっています。
+              まったく違う事業をやっています。
             </p>
             <p className="text-sm md:text-base text-body leading-loose max-w-3xl">
               会社の仕事をAIで変えることも、会社の物語を外に届けることも、友達と過ごす時間を取り戻すことも、私たちにとっては同じことです。
