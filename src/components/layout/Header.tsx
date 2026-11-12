@@ -40,7 +40,7 @@ const Header = () => {
               href="/service"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
-              SysSuc
+              社長の別班
             </Link>
             <Link
               href="/shigoto-drama"
@@ -104,7 +104,7 @@ const Header = () => {
               className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              SysSuc
+              社長の別班
             </Link>
             <Link
               href="/shigoto-drama"

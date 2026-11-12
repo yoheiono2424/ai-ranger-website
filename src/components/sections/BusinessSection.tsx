@@ -21,44 +21,47 @@ const BusinessSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 事業1：SysSuc（システム開発サブスク） */}
+            {/* 事業1：社長の別班 */}
             <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
-              <div className="bg-gradient-to-br from-accent-soft to-seishun-sky/25 px-8 pb-8 pt-10 border-b border-line min-h-[232px] flex flex-col justify-end">
-                <p className="text-xs font-bold tracking-eyebrow text-accent mb-4">
-                  法人向け / システム開発サブスク
-                </p>
+              <div className="relative h-[232px] overflow-hidden bg-[#08090C]">
                 <Image
-                  src="/syssuc/logo.png"
-                  alt="SysSuc（シススク）"
-                  width={600}
-                  height={221}
-                  className="h-12 md:h-14 w-auto self-start mb-4"
+                  src="/bettan/team.webp"
+                  alt="社長の別班 — 赤い光の中に立つ5人のシルエット"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-[75%_center]"
                 />
-                <h3 className="text-xl md:text-2xl font-black text-ink leading-snug mb-3">
-                  初期費用0円の、システム開発サブスク
-                </h3>
-                <p className="text-sm text-body leading-relaxed">
-                  御社専用の業務システムを、月額で1件ずつ。その中に、AIが入っています。
-                </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 px-8 pb-8">
+                  <p className="text-xs font-bold tracking-eyebrow text-white/80 mb-3">
+                    法人向け / 事業を形にする
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-black text-white leading-snug mb-2">
+                    社長の別班
+                  </h3>
+                  <p className="text-sm text-white/90 leading-relaxed">
+                    社長の「やりたい」を、すぐ形に。
+                  </p>
+                </div>
               </div>
 
               <div className="flex flex-col flex-1 px-8 py-8">
                 <p className="text-sm text-body leading-loose mb-8">
-                  AI研修を受けても、ChatGPTを入れても、使われ続けない。AI単体は、使わなくても仕事が回るからです。SysSucは毎日使う業務システムの中にAIを組み込むので、いつもの仕事をするだけで、AIが勝手に使われます。
+                  やりたいことも、困りごとも。社長の話から「やりたい」を確かめ、ITで形にします。教えて終わりではなく、その先もずっと支えます。
                 </p>
 
                 <dl className="border-t border-line mb-8">
-                  <div className="flex items-baseline justify-between py-4 border-b border-line">
-                    <dt className="text-xs text-muted">初期費用</dt>
-                    <dd className="text-lg font-black text-ink">0円</dd>
+                  <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+                    <dt className="text-xs text-muted shrink-0">任務</dt>
+                    <dd className="text-lg font-black text-ink text-right">ITの任務すべて</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
-                    <dt className="text-xs text-muted shrink-0">AI</dt>
-                    <dd className="text-lg font-black text-ink text-right">業務システムに標準搭載</dd>
+                    <dt className="text-xs text-muted shrink-0">開発費</dt>
+                    <dd className="text-lg font-black text-ink text-right">込み</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
-                    <dt className="text-xs text-muted shrink-0">打ち合わせ</dt>
-                    <dd className="text-lg font-black text-ink text-right">オンラインで完結</dd>
+                    <dt className="text-xs text-muted shrink-0">初回の作戦会議</dt>
+                    <dd className="text-lg font-black text-ink text-right">60分 無料</dd>
                   </div>
                 </dl>
 
@@ -66,7 +69,7 @@ const BusinessSection = () => {
                   href="/service"
                   className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
                 >
-                  SysSucの詳細を見る
+                  社長の別班の詳細を見る
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

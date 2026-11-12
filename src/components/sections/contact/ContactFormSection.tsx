@@ -39,7 +39,7 @@ const ContactFormSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const inquiryTypes = [
-    { value: 'ai-ranger', label: 'SysSuc（システム開発サブスク）について' },
+    { value: 'ai-ranger', label: '社長の別班について' },
     { value: 'shigoto-drama', label: 'シゴトドラマ（採用・PRの縦型ドラマ）について' },
     { value: 'other', label: 'その他' },
   ];

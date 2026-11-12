@@ -41,6 +41,13 @@ export default {
         'drama-gold': '#E39B3F',   // アクセントのオレンジ
         'drama-sand': '#B9B2A6',   // 黒背景上の補足文字
         'drama-brown': '#8C6A3E',  // 明るい背景上のラベル
+        // 社長の別班（/service 専用・営業資料と同じ黒と赤）
+        'bettan-bg': '#08090C',    // 背景の黒
+        'bettan-panel': '#15171D', // カードの面
+        'bettan-line': '#3A3E48',  // 罫線
+        'bettan-text': '#F4F4F6',  // 黒背景上の文字
+        'bettan-muted': '#B4B8C2', // 黒背景上の補足文字
+        'bettan-red': '#D3172C',   // アクセントの赤
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

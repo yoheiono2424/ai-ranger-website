@@ -37,7 +37,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/service" className="text-gray-300 hover:text-white transition-colors">
-                  SysSuc（シススク）
+                  社長の別班
                 </Link>
               </li>
               <li>
@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <SmoothScrollLink href="/service#results" className="text-gray-300 hover:text-white transition-colors">
-                  開発実績
+                  実績
                 </SmoothScrollLink>
               </li>
               <li>
