@@ -13,7 +13,7 @@ import BettanCTASection from '@/components/sections/bettan/BettanCTASection';
 import JsonLd from '@/components/common/JsonLd';
 
 const description =
-  '社長の「やりたい」を、すぐ形に。「社長の別班」は、業務の自動化や社内システムから、ホームページ・ネット販売まで、ITの任務を引き受けます。教えて終わりではなく、形にして、その先もずっと。熊本・九州から。';
+  '社長の「やりたい」を、すぐ形に。「社長の別班」は、業務の自動化や社内システムから、ホームページ・ネット販売まで、ITの任務を引き受けます。教えるのではなく、裏で形にして、ずっと支えます。熊本・九州から。';
 
 export const metadata: Metadata = {
   title: '社長の別班｜社長の「やりたい」を、すぐ形に',

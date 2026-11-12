@@ -47,7 +47,7 @@ const BusinessSection = () => {
 
               <div className="flex flex-col flex-1 px-8 py-8">
                 <p className="text-sm text-body leading-loose mb-8">
-                  やりたいことも、困りごとも。社長の話から「やりたい」を確かめ、ITで形にします。教えて終わりではなく、その先もずっと支えます。
+                  やりたいことも、困りごとも。社長の話から「やりたい」を確かめ、裏で形にして、その先もずっと支えます。
                 </p>
 
                 <dl className="border-t border-line mb-8">
