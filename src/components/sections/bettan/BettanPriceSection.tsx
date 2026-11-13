@@ -11,10 +11,11 @@ const BettanPriceSection = () => {
 
           <div className="grid md:grid-cols-[1fr_1.15fr] gap-5 md:gap-8 items-stretch">
             <div className="rounded-xl border border-bettan-line bg-bettan-panel/90 p-7 md:p-9">
-              <p className="text-sm md:text-base font-bold text-bettan-muted mb-4">専門の担当者を雇う</p>
-              <p className="text-3xl md:text-4xl font-black text-bettan-text mb-4">月40万円前後</p>
+              <p className="text-sm md:text-base font-bold text-bettan-muted mb-4">分野ごとに専門の人を雇う</p>
+              <p className="text-3xl md:text-4xl font-black text-bettan-text mb-4">月200万円前後</p>
               <p className="text-xs md:text-sm text-bettan-muted leading-relaxed">
-                熊本での目安。できるのは専門の1分野だけ。
+                システム・ホームページ・AI・デザイン・動画の5人。<br />
+                熊本で1人40万円前後 × 5人の目安。
               </p>
             </div>
             <div className="rounded-xl border-2 border-bettan-red bg-bettan-panel/95 p-7 md:p-9">
