@@ -50,11 +50,6 @@ const Footer = () => {
                   実績
                 </SmoothScrollLink>
               </li>
-              <li>
-                <Link href="/shigoto-drama" className="text-gray-300 hover:text-white transition-colors">
-                  シゴトドラマ
-                </Link>
-              </li>
             </ul>
           </div>
 

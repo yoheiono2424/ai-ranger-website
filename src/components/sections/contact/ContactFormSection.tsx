@@ -38,7 +38,7 @@ const ContactFormSection = () => {
   // ?type=ai-ranger などで種別を最初から選んだ状態にする（広告LPから来た人向け）
   useEffect(() => {
     const t = new URLSearchParams(window.location.search).get('type');
-    if (t && ['ai-ranger', 'shigoto-drama', 'other'].includes(t)) {
+    if (t && ['ai-ranger', 'other'].includes(t)) {
       setFormData((prev) => ({ ...prev, inquiryType: t }));
     }
   }, []);
@@ -49,7 +49,6 @@ const ContactFormSection = () => {
 
   const inquiryTypes = [
     { value: 'ai-ranger', label: '社長の別班について' },
-    { value: 'shigoto-drama', label: 'シゴトドラマ（採用・PRの縦型ドラマ）について' },
     { value: 'other', label: 'その他' },
   ];
 

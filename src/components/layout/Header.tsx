@@ -43,12 +43,6 @@ const Header = () => {
               社長の別班
             </Link>
             <Link
-              href="/shigoto-drama"
-              className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
-            >
-              シゴトドラマ
-            </Link>
-            <Link
               href="/about"
               className="text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
             >
@@ -105,13 +99,6 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               社長の別班
-            </Link>
-            <Link
-              href="/shigoto-drama"
-              className="block py-3 text-gray-700 hover:text-ai-blue transition-colors duration-200 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              シゴトドラマ
             </Link>
             <Link
               href="/about"
