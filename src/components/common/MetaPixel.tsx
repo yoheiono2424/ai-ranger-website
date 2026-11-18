@@ -1,10 +1,10 @@
 import Script from 'next/script';
 
 /**
- * Metaピクセル。NEXT_PUBLIC_META_PIXEL_ID が設定されたときだけ動く
- * （広告アカウント作成後にIDを .env とVercelに入れる）
+ * Metaピクセル（データセット「reharu.com（社長の別班）」・広告アカウント「社長の別班」にリンク済み）
+ * ピクセルIDは公開される値なので直接書いてよい。環境変数があればそちらを優先
  */
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '886268374536602';
 
 const MetaPixel = () => {
   if (!PIXEL_ID) return null;
