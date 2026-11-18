@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { trackLead } from '@/lib/track';
 
 interface FormData {
   company: string;
@@ -33,6 +34,14 @@ const ContactFormSection = () => {
     message: '',
     privacyPolicy: false,
   });
+
+  // ?type=ai-ranger などで種別を最初から選んだ状態にする（広告LPから来た人向け）
+  useEffect(() => {
+    const t = new URLSearchParams(window.location.search).get('type');
+    if (t && ['ai-ranger', 'shigoto-drama', 'other'].includes(t)) {
+      setFormData((prev) => ({ ...prev, inquiryType: t }));
+    }
+  }, []);
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -136,6 +145,7 @@ const ContactFormSection = () => {
           templateParams,
           PUBLIC_KEY
         );
+        trackLead('contact');
         
         setIsSubmitting(false);
         setIsSubmitted(true);

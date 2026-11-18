@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/common/JsonLd";
+import MetaPixel from "@/components/common/MetaPixel";
 
 const GA_ID = "G-FL2R2EK4DM";
 
@@ -85,6 +86,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
       </head>
       <body className="antialiased">
+        <MetaPixel />
         <Header />
         <main className="min-h-screen pt-20">
           {children}

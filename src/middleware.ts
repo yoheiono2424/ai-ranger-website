@@ -14,11 +14,11 @@ export function middleware(request: NextRequest) {
   // Content Security Policy (CSP)
   const csp = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https:",
     "font-src 'self' data:",
-    "connect-src 'self' https://api.emailjs.com",
+    "connect-src 'self' https://api.emailjs.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.facebook.com https://connect.facebook.net",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'"

@@ -1,0 +1,132 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import emailjs from '@emailjs/browser';
+import { trackLead } from '@/lib/track';
+
+/** スマホで画面の下にずっと出るボタン（最初の画面と入力欄が見えている間は隠す） */
+export const StickyCTA = () => {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const form = document.getElementById('form');
+      const formTop = form ? form.getBoundingClientRect().top : Infinity;
+      setShow(window.scrollY > window.innerHeight * 0.9 && formTop > window.innerHeight * 0.6);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <div
+      className={`md:hidden fixed inset-x-0 bottom-0 z-50 p-3 bg-bettan-bg/95 border-t border-bettan-line backdrop-blur transition-transform duration-300 ${
+        show ? 'translate-y-0' : 'translate-y-full'
+      }`}
+    >
+      <a
+        href="#form"
+        className="flex w-full items-center justify-center py-3.5 bg-bettan-red text-white font-bold rounded-lg"
+      >
+        まず話してみる（無料）
+      </a>
+    </div>
+  );
+};
+
+/** LPの中に置く短い入力欄（4項目） */
+export const ShortForm = () => {
+  const [v, setV] = useState({ company: '', name: '', contact: '', message: '' });
+  const [err, setErr] = useState('');
+  const [state, setState] = useState<'idle' | 'sending' | 'done'>('idle');
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!v.name.trim() || !v.contact.trim()) {
+      setErr('お名前と、連絡先（メールか電話番号）を入れてください');
+      return;
+    }
+    setErr('');
+    setState('sending');
+    const isMail = v.contact.includes('@');
+    const params = {
+      company: v.company || '未記入',
+      name: v.name,
+      email: isMail ? v.contact : '未記入',
+      phone: isMail ? '未記入' : v.contact,
+      inquiryType: '社長の別班について（広告LP /lp/ai から）',
+      message: v.message || '（ひと言なし）',
+    };
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    try {
+      if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, PUBLIC_KEY);
+      } else {
+        console.log('EmailJS未設定のため送信しません（確認用）', params);
+      }
+      trackLead('lp-ai');
+      setState('done');
+    } catch {
+      setState('idle');
+      setErr('送信できませんでした。時間をおいてもう一度お試しください。');
+    }
+  };
+
+  if (state === 'done') {
+    return (
+      <div className="rounded-xl border-2 border-bettan-red bg-bettan-panel p-8 text-center">
+        <p className="text-xl font-black mb-3">指令を受け取りました。</p>
+        <p className="text-sm text-bettan-muted leading-loose">
+          担当から、ご連絡します。
+          <br />
+          少しだけお待ちください。
+        </p>
+      </div>
+    );
+  }
+
+  const field =
+    'w-full rounded-lg border border-bettan-line bg-bettan-bg px-4 py-3.5 text-base text-bettan-text placeholder:text-[#6B7080] focus:border-bettan-red focus:outline-none';
+
+  return (
+    <form onSubmit={submit} className="rounded-xl border border-bettan-line bg-bettan-panel/95 p-5 md:p-8 space-y-4">
+      <div>
+        <label className="block text-sm font-bold mb-2" htmlFor="lp-name">
+          お名前 <span className="text-bettan-red text-xs">必須</span>
+        </label>
+        <input id="lp-name" className={field} value={v.name} onChange={(e) => setV({ ...v, name: e.target.value })} placeholder="例）熊本 太郎" autoComplete="name" />
+      </div>
+      <div>
+        <label className="block text-sm font-bold mb-2" htmlFor="lp-company">
+          会社名
+        </label>
+        <input id="lp-company" className={field} value={v.company} onChange={(e) => setV({ ...v, company: e.target.value })} placeholder="例）株式会社〇〇" autoComplete="organization" />
+      </div>
+      <div>
+        <label className="block text-sm font-bold mb-2" htmlFor="lp-contact">
+          メールか電話番号 <span className="text-bettan-red text-xs">必須</span>
+        </label>
+        <input id="lp-contact" className={field} value={v.contact} onChange={(e) => setV({ ...v, contact: e.target.value })} placeholder="ご連絡しやすい方をひとつ" />
+      </div>
+      <div>
+        <label className="block text-sm font-bold mb-2" htmlFor="lp-msg">
+          ひと言（なくても大丈夫です）
+        </label>
+        <textarea id="lp-msg" rows={3} className={field} value={v.message} onChange={(e) => setV({ ...v, message: e.target.value })} placeholder="例）見積もりづくりを楽にしたい" />
+      </div>
+      {err && <p className="text-sm text-bettan-red font-bold">{err}</p>}
+      <button
+        type="submit"
+        disabled={state === 'sending'}
+        className="w-full py-4 bg-bettan-red text-white text-lg font-bold rounded-lg hover:bg-white hover:text-bettan-bg transition-colors disabled:opacity-60"
+      >
+        {state === 'sending' ? '送っています…' : '無料で話してみる'}
+      </button>
+      <p className="text-xs text-bettan-muted leading-relaxed">
+        送信すると<Link href="/privacy-policy" className="underline">プライバシーポリシー</Link>に同意したものとします。
+      </p>
+    </form>
+  );
+};
