@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { ArrowIcon, CheckIcon, CrossIcon, Stamp } from '@/components/sections/bettan/BettanParts';
-import { ShortForm, StickyCTA } from './LpParts';
+import { LpReadTracker, ShortForm, StickyCTA } from './LpParts';
 
 /**
  * 広告（Meta動画広告）からの着地ページ
@@ -484,6 +484,7 @@ export default function LpAiPage() {
         </div>
       </section>
       <StickyCTA />
+      <LpReadTracker />
     </div>
   );
 }

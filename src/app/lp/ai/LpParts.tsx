@@ -130,3 +130,49 @@ export const ShortForm = () => {
     </form>
   );
 };
+
+/** LPのどこまで読まれたかを計測に送る（各セクションの表示・25/50/75/100%・入力開始）。GA4とMetaピクセルへ */
+export const LpReadTracker = () => {
+  useEffect(() => {
+    type W = Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+    const w = window as W;
+    const sent = new Set<string>();
+    const send = (name: string, params: Record<string, string | number>) => {
+      const key = name + JSON.stringify(params);
+      if (sent.has(key)) return;
+      sent.add(key);
+      w.gtag?.('event', name, { lp: 'ai', ...params });
+      w.fbq?.('trackCustom', name, { lp: 'ai', ...params });
+    };
+    const sections = Array.from(document.querySelectorAll('section'));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const i = sections.indexOf(e.target as HTMLElement) + 1;
+          const h = (e.target.querySelector('h1,h2,h3')?.textContent || '').trim().slice(0, 30);
+          send('lp_section', { section_no: i, section_title: h });
+          io.unobserve(e.target);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    sections.forEach((s) => io.observe(s));
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 100;
+      [25, 50, 75, 100].forEach((p) => pct >= p - 1 && send('lp_scroll', { percent: p }));
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const onFocus = (ev: FocusEvent) => {
+      if ((ev.target as HTMLElement)?.closest?.('#form form')) send('lp_form_start', { form: 'lp-ai' });
+    };
+    document.addEventListener('focusin', onFocus);
+    return () => {
+      io.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('focusin', onFocus);
+    };
+  }, []);
+  return null;
+};
