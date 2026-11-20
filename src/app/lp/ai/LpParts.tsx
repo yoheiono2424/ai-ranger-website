@@ -143,12 +143,19 @@ export const LpReadTracker = () => {
       sent.add(key);
       w.gtag?.('event', name, { lp: 'ai', ...params });
       w.fbq?.('trackCustom', name, { lp: 'ai', ...params });
+      // Metaはパラメーター別の内訳が見られないので、番号入りの名前でも送る（lp_s03・lp_scroll_50 など）
+      const metaName =
+        name === 'lp_section' ? `lp_s${String(params.section_no).padStart(2, '0')}` :
+        name === 'lp_scroll' ? `lp_scroll_${params.percent}` : '';
+      if (metaName) w.fbq?.('trackCustom', metaName, { lp: 'ai' });
     };
+    // 「まず話してみる」で入力欄へ飛んだ後は、読んだ扱いにしない（飛んだ瞬間に100%まで記録されるため）
+    let jumped = false;
     const sections = Array.from(document.querySelectorAll('section'));
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (!e.isIntersecting) return;
+          if (!e.isIntersecting || jumped) return;
           const i = sections.indexOf(e.target as HTMLElement) + 1;
           const h = (e.target.querySelector('h1,h2,h3')?.textContent || '').trim().slice(0, 30);
           send('lp_section', { section_no: i, section_title: h });
@@ -159,6 +166,7 @@ export const LpReadTracker = () => {
     );
     sections.forEach((s) => io.observe(s));
     const onScroll = () => {
+      if (jumped) return;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const pct = max > 0 ? (window.scrollY / max) * 100 : 100;
       [25, 50, 75, 100].forEach((p) => pct >= p - 1 && send('lp_scroll', { percent: p }));
@@ -168,7 +176,16 @@ export const LpReadTracker = () => {
       if ((ev.target as HTMLElement)?.closest?.('#form form')) send('lp_form_start', { form: 'lp-ai' });
     };
     document.addEventListener('focusin', onFocus);
+    const onClick = (ev: MouseEvent) => {
+      const a = (ev.target as HTMLElement)?.closest?.('a[href="#form"]');
+      if (!a) return;
+      const i = sections.indexOf(a.closest('section') as HTMLElement) + 1;
+      jumped = true;
+      send('lp_cta_click', { section_no: i });
+    };
+    document.addEventListener('click', onClick, true);
     return () => {
+      document.removeEventListener('click', onClick, true);
       io.disconnect();
       window.removeEventListener('scroll', onScroll);
       document.removeEventListener('focusin', onFocus);
