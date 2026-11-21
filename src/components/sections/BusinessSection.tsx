@@ -21,46 +21,46 @@ const BusinessSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* 事業1：社長の別班 */}
+            {/* 事業1：社長のAI別班 */}
             <div className="group flex flex-col rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300">
-              <div className="relative h-[232px] overflow-hidden bg-[#08090C]">
+              <div className="relative h-[232px] overflow-hidden bg-[#13294B]">
                 <Image
-                  src="/bettan/team.webp"
-                  alt="社長の別班 — 赤い光の中に立つ5人のシルエット"
+                  src="/aibettan/cover.webp"
+                  alt="社長のAI別班 — タブレットを見る社長と、まわりに浮かぶAIの画面"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-[75%_center]"
+                  className="object-cover object-[70%_center]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 px-8 pb-8">
                   <p className="text-xs font-bold tracking-eyebrow text-white/80 mb-3">
-                    法人向け / 事業を形にする
+                    法人向け / AIエージェントシステム
                   </p>
                   <h3 className="text-2xl md:text-3xl font-black text-white leading-snug mb-2">
-                    社長の別班
+                    社長のAI別班
                   </h3>
                   <p className="text-sm text-white/90 leading-relaxed">
-                    社長の「やりたい」を、すぐ形に。
+                    御社の仕事を、自動でこなす。
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 px-8 py-8">
                 <p className="text-sm text-body leading-loose mb-8">
-                  やりたいことも、困りごとも。社長の話から「やりたい」を確かめ、裏で形にして、その先もずっと支えます。
+                  御社専用のAIエージェントシステムを、つくって、育て続けます。人を雇わず、社外にAIの専用部署を。
                 </p>
 
                 <dl className="border-t border-line mb-8">
                   <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
-                    <dt className="text-xs text-muted shrink-0">任務</dt>
-                    <dd className="text-lg font-black text-ink text-right">ITの任務すべて</dd>
+                    <dt className="text-xs text-muted shrink-0">作るもの</dt>
+                    <dd className="text-lg font-black text-ink text-right">自動化・管理・分析</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
                     <dt className="text-xs text-muted shrink-0">開発費</dt>
                     <dd className="text-lg font-black text-ink text-right">込み</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
-                    <dt className="text-xs text-muted shrink-0">初回の作戦会議</dt>
+                    <dt className="text-xs text-muted shrink-0">初回のご相談</dt>
                     <dd className="text-lg font-black text-ink text-right">60分 無料</dd>
                   </div>
                 </dl>
@@ -69,7 +69,7 @@ const BusinessSection = () => {
                   href="/service"
                   className="mt-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-seishun-deep transition-colors duration-200"
                 >
-                  社長の別班の詳細を見る
+                  社長のAI別班の詳細を見る
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

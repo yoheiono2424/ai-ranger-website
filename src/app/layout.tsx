@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | 株式会社Re.haru"
   },
   description: "テクノロジーの力ですべての企業にReturn青春をお届けします。",
-  keywords: "Return青春, 社長の別班, 新規事業 支援, システム開発, Web広告 運用, 熊本 システム開発, 株式会社Re.haru",
+  keywords: "Return青春, 社長のAI別班, 新規事業 支援, システム開発, Web広告 運用, 熊本 システム開発, 株式会社Re.haru",
   alternates: {
     canonical: 'https://www.reharu.com',
   },

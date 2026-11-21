@@ -81,7 +81,7 @@ const CEOMessageSection = () => {
                 </div>
 
                 <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                  社長の別班が実現する「新しいチャレンジ」
+                  社長のAI別班が実現する「新しいチャレンジ」
                 </h4>
 
                 <div className="bg-gray-50 rounded-2xl p-6">

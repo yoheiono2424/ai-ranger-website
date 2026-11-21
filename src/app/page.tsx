@@ -5,8 +5,8 @@ import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
   title: '株式会社Re.haru | Return青春 - テクノロジーで挑戦を支援',
-  description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。社長の「やりたい」をすぐ形にする「社長の別班」と、青春エンターテイメントアプリ「Re.haru」を展開しています。',
-  keywords: '社長の別班, 新規事業 支援, システム開発, Web広告 運用, 熊本 システム開発, Return青春, 株式会社Re.haru',
+  description: 'テクノロジーの力ですべての企業にReturn青春をお届けします。御社専用のAIエージェントシステムをつくる「社長のAI別班」と、青春エンターテイメントアプリ「Re.haru」を展開しています。',
+  keywords: '社長のAI別班, 新規事業 支援, システム開発, Web広告 運用, 熊本 システム開発, Return青春, 株式会社Re.haru',
   alternates: {
     canonical: 'https://www.reharu.com',
   },

@@ -20,13 +20,13 @@ export const StickyCTA = () => {
   }, []);
   return (
     <div
-      className={`md:hidden fixed inset-x-0 bottom-0 z-50 p-3 bg-bettan-bg/95 border-t border-bettan-line backdrop-blur transition-transform duration-300 ${
+      className={`md:hidden fixed inset-x-0 bottom-0 z-50 p-3 bg-white/95 border-t border-ab-line backdrop-blur transition-transform duration-300 ${
         show ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
       <a
         href="#form"
-        className="flex w-full items-center justify-center py-3.5 bg-bettan-red text-white font-bold rounded-lg"
+        className="flex w-full items-center justify-center py-3.5 bg-ab-cyan text-white font-bold rounded-lg"
       >
         まず話してみる（無料）
       </a>
@@ -54,7 +54,7 @@ export const ShortForm = () => {
       name: v.name,
       email: isMail ? v.contact : '未記入',
       phone: isMail ? '未記入' : v.contact,
-      inquiryType: '社長の別班について（広告LP /lp/ai から）',
+      inquiryType: '社長のAI別班について（広告LP /lp/ai から）',
       message: v.message || '（ひと言なし）',
     };
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -76,9 +76,9 @@ export const ShortForm = () => {
 
   if (state === 'done') {
     return (
-      <div className="rounded-xl border-2 border-bettan-red bg-bettan-panel p-8 text-center">
-        <p className="text-xl font-black mb-3">指令を受け取りました。</p>
-        <p className="text-sm text-bettan-muted leading-loose">
+      <div className="rounded-xl border-2 border-ab-cyan bg-white p-8 text-center">
+        <p className="text-xl font-black text-ab-navy mb-3">受け付けました。</p>
+        <p className="text-sm text-ab-muted leading-loose">
           担当から、ご連絡します。
           <br />
           少しだけお待ちください。
@@ -88,13 +88,13 @@ export const ShortForm = () => {
   }
 
   const field =
-    'w-full rounded-lg border border-bettan-line bg-bettan-bg px-4 py-3.5 text-base text-bettan-text placeholder:text-[#6B7080] focus:border-bettan-red focus:outline-none';
+    'w-full rounded-lg border border-ab-line bg-white px-4 py-3.5 text-base text-ab-text placeholder:text-[#9AA6B6] focus:border-ab-cyan focus:outline-none';
 
   return (
-    <form onSubmit={submit} className="rounded-xl border border-bettan-line bg-bettan-panel/95 p-5 md:p-8 space-y-4">
+    <form onSubmit={submit} className="rounded-xl border border-ab-line bg-white p-5 md:p-8 space-y-4 text-ab-navy">
       <div>
         <label className="block text-sm font-bold mb-2" htmlFor="lp-name">
-          お名前 <span className="text-bettan-red text-xs">必須</span>
+          お名前 <span className="text-ab-cyan-ink text-xs">必須</span>
         </label>
         <input id="lp-name" className={field} value={v.name} onChange={(e) => setV({ ...v, name: e.target.value })} placeholder="例）熊本 太郎" autoComplete="name" />
       </div>
@@ -106,7 +106,7 @@ export const ShortForm = () => {
       </div>
       <div>
         <label className="block text-sm font-bold mb-2" htmlFor="lp-contact">
-          メールか電話番号 <span className="text-bettan-red text-xs">必須</span>
+          メールか電話番号 <span className="text-ab-cyan-ink text-xs">必須</span>
         </label>
         <input id="lp-contact" className={field} value={v.contact} onChange={(e) => setV({ ...v, contact: e.target.value })} placeholder="ご連絡しやすい方をひとつ" />
       </div>
@@ -116,15 +116,15 @@ export const ShortForm = () => {
         </label>
         <textarea id="lp-msg" rows={3} className={field} value={v.message} onChange={(e) => setV({ ...v, message: e.target.value })} placeholder="例）見積もりづくりを楽にしたい" />
       </div>
-      {err && <p className="text-sm text-bettan-red font-bold">{err}</p>}
+      {err && <p className="text-sm text-ab-cyan-ink font-bold">{err}</p>}
       <button
         type="submit"
         disabled={state === 'sending'}
-        className="w-full py-4 bg-bettan-red text-white text-lg font-bold rounded-lg hover:bg-white hover:text-bettan-bg transition-colors disabled:opacity-60"
+        className="w-full py-4 bg-ab-cyan text-white text-lg font-bold rounded-lg hover:bg-ab-navy transition-colors disabled:opacity-60"
       >
         {state === 'sending' ? '送っています…' : '無料で話してみる'}
       </button>
-      <p className="text-xs text-bettan-muted leading-relaxed">
+      <p className="text-xs text-ab-muted leading-relaxed">
         送信すると<Link href="/privacy-policy" className="underline">プライバシーポリシー</Link>に同意したものとします。
       </p>
     </form>

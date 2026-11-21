@@ -41,6 +41,16 @@ export default {
         'drama-gold': '#E39B3F',   // アクセントのオレンジ
         'drama-sand': '#B9B2A6',   // 黒背景上の補足文字
         'drama-brown': '#8C6A3E',  // 明るい背景上のラベル
+        // 社長のAI別班（/service・/lp/ai 2026/11/21 刷新・営業資料v11と同じ白×紺×シアン）
+        'ab-navy': '#13294B',
+        'ab-navy2': '#1F3D66',
+        'ab-cyan': '#0AA5C8',
+        'ab-cyan-ink': '#0786A3', // 白地の文字用に少し濃いシアン
+        'ab-tint': '#EAF5F9',
+        'ab-gray': '#F3F5F8',
+        'ab-line': '#D5DBE3',
+        'ab-text': '#1B2433',
+        'ab-muted': '#5B6677',
         // 社長の別班（/service 専用・営業資料と同じ黒と赤）
         'bettan-bg': '#08090C',    // 背景の黒
         'bettan-panel': '#15171D', // カードの面
