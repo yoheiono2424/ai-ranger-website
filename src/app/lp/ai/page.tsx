@@ -11,12 +11,12 @@ import { LpReadTracker, ShortForm, StickyCTA } from './LpParts';
 
 export const metadata: Metadata = {
   title: 'AIは、社長が覚えなくていい｜社長のAI別班',
-  description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円から。開発費は月額に込み。試作までは無料です。',
+  description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円（税別）から。開発費は月額に込み。試作までは無料です。',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://www.reharu.com/lp/ai' },
   openGraph: {
     title: 'AIは、社長が覚えなくていい｜社長のAI別班',
-    description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円から。',
+    description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円（税別）から。',
     url: 'https://www.reharu.com/lp/ai',
     images: ['/aibettan/cover.webp'],
   },
