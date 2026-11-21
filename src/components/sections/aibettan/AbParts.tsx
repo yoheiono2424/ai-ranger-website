@@ -1,7 +1,7 @@
 /**
  * 社長のAI別班（/service・/lp/ai 共通）
  * 2026/11/21 営業資料v11に合わせて刷新：白×紺(ab-navy)×シアン(ab-cyan)
- * HPには条件を深く書かない（所有権・解約・支払いの細部は商談で）。金額は料金の所で1回だけ。
+ * HPには条件を深く書かない（プランの違い・期間・所有権・解約は提案書と商談で）。金額は「月15万円〜」を料金の所で1回だけ。
  */
 import Image from 'next/image';
 
@@ -369,11 +369,11 @@ export const AbSafety = ({ no = '09' }: { no?: string }) => (
   </section>
 );
 
-/* ── 相場（金額は料金の所で1回だけ出すので、ここでは出さない） ── */
+/* ── 料金（受託開発との比較・「月15万円〜」だけ出す。プランの細部や期間は商談で） ── */
 export const AbMarket = ({ no = '10' }: { no?: string }) => (
-  <section className="py-16 md:py-24 bg-ab-gray">
+  <section id="pricing" className="py-16 md:py-24 bg-ab-gray scroll-mt-24">
     <Wrap>
-      <Eyebrow>{no} ｜ 相場</Eyebrow>
+      <Eyebrow>{no} ｜ 料金</Eyebrow>
       <H2 lead="AIの付いた業務システムを、ふつうに外注した場合。">本来は、数百万円の開発費がかかります</H2>
       <div className="grid md:grid-cols-2 gap-4">
         <div className="rounded-2xl bg-white p-6 md:p-8">
@@ -388,8 +388,8 @@ export const AbMarket = ({ no = '10' }: { no?: string }) => (
         </div>
         <div className="rounded-2xl bg-ab-navy p-6 md:p-8">
           <p className="font-bold text-[#7FDBF0] mb-2">社長のAI別班</p>
-          <p className="text-3xl md:text-4xl font-black text-white mb-1">月額制</p>
-          <p className="text-xs text-[#C9D6E8] mb-5">開発費は、月額の中に込み</p>
+          <p className="text-3xl md:text-4xl font-black text-white mb-1">月15<span className="text-lg">万円〜</span></p>
+          <p className="text-xs text-[#C9D6E8] mb-5">開発費は、月額の中に込み（税別）</p>
           <ul className="space-y-2 text-sm text-white">
             {['まとまった開発費は不要', '直す・足すも月額の中', '保守も込み'].map((t) => (
               <li key={t} className="flex gap-2 items-center"><Check className="w-4 h-4 text-ab-cyan" />{t}</li>
@@ -402,93 +402,11 @@ export const AbMarket = ({ no = '10' }: { no?: string }) => (
   </section>
 );
 
-/* ── 料金（3プラン） ───────────────────────── */
-const plans = [
-  { name: 'ライト', price: '15', tag: '1つずつ、独立して', lead: '仕事ごとに独立したAIシステム', desc: '見積・経理…と1つずつ作れます。それぞれ単体で、毎月バージョンアップ。画面とデータは仕事ごとに別々です。', hi: false },
-  { name: 'スタンダード', price: '30', tag: 'おすすめ｜全部つながる', lead: '全部が1つにつながるAIシステム', desc: '1つの画面で全部を管理。営業・現場・経理のデータがつながり、会社全体の「なぜ」まで分析できます。同時に3つまで作れます。', hi: true },
-  { name: 'フル', price: '50', tag: 'スタンダード＋集客', lead: 'つながる仕組みと、集客まで', desc: 'HP・LP・Web広告・動画まで。集客の数字も一緒に分析します。※広告の出稿費は別途', hi: false },
-];
-export const AbPlans = ({ no = '11' }: { no?: string }) => (
-  <section id="pricing" className="py-16 md:py-24 bg-white scroll-mt-24">
-    <Wrap>
-      <Eyebrow>{no} ｜ 料金</Eyebrow>
-      <H2 lead="どのプランも、システム開発・AI・保守まで込み（月額・税別）。">3つのプランから選べます</H2>
-      <div className="grid md:grid-cols-3 gap-4 md:gap-5 items-stretch">
-        {plans.map((p) => (
-          <div key={p.name} className={`rounded-2xl p-6 md:p-7 flex flex-col ${p.hi ? 'bg-ab-navy text-white shadow-panel md:-my-3' : 'bg-white border border-ab-line shadow-card'}`}>
-            <p className={`text-xs font-bold mb-3 ${p.hi ? 'text-[#7FDBF0]' : 'text-ab-cyan-ink'}`}>{p.tag}</p>
-            <p className={`font-black ${p.hi ? 'text-white' : 'text-ab-navy'}`}>
-              <span className="text-lg mr-2">{p.name}</span>
-              <span className="text-5xl">{p.price}</span>
-              <span className="text-base">万円/月</span>
-            </p>
-            <hr className={`my-5 ${p.hi ? 'border-[#3A5A85]' : 'border-ab-line'}`} />
-            <p className={`text-lg font-black mb-3 ${p.hi ? 'text-white' : 'text-ab-navy'}`}>{p.lead}</p>
-            <p className={`text-sm leading-relaxed ${p.hi ? 'text-[#DCE6F2]' : 'text-ab-muted'}`}>{p.desc}</p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-8 rounded-2xl bg-ab-tint px-6 py-5 text-sm md:text-base">
-        <span className="font-black text-ab-cyan-ink mr-3">全プラン共通</span>
-        <span className="text-ab-navy">毎月バージョンアップ・悩みを聞いて次を提案・AIの進化に追いつく・保守・LINE相談</span>
-      </div>
-      <p className="mt-4 text-xs md:text-sm text-ab-muted">サーバー・AI利用料や、ご利用期間などの条件は、ご相談の際にご説明します。</p>
-    </Wrap>
-  </section>
-);
-
-/* ── プランの違い（独立 vs つながる） ─────────── */
-export const AbGrow = ({ no = '12' }: { no?: string }) => (
-  <section className="py-16 md:py-24 bg-ab-gray">
-    <Wrap>
-      <Eyebrow>{no} ｜ プランの違い</Eyebrow>
-      <H2 lead="ライトは画面もデータも別々に。スタンダードは1つの画面で、全部つながって育ちます。">続けるほど、会社の仕組みが育っていきます</H2>
-      <div className="space-y-5">
-        <div className="rounded-2xl bg-white p-5 md:p-6">
-          <p className="font-black text-ab-navy mb-4">ライト <span className="text-sm font-bold text-ab-muted ml-2">1つずつ、独立して</span></p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {['見積システム', '経理システム', '日報システム'].map((t) => (
-              <div key={t} className="rounded-xl border border-ab-line p-4">
-                <p className="font-bold text-ab-navy text-sm">{t}</p>
-                <p className="text-xs text-ab-muted mt-1">画面もデータも別</p>
-              </div>
-            ))}
-            <div className="rounded-xl bg-ab-gray p-4">
-              <p className="font-bold text-ab-navy text-sm">3つが別々に動く</p>
-              <p className="text-xs text-ab-muted mt-1">会社全体は見えないまま</p>
-            </div>
-          </div>
-        </div>
-        <div className="rounded-2xl bg-ab-tint p-5 md:p-6 border-2 border-ab-cyan">
-          <p className="font-black text-ab-navy mb-4">スタンダード <span className="text-sm font-bold text-ab-cyan-ink ml-2">全部つながる</span></p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              ['3つを、同時に作る', '見積・経理・日報'],
-              ['1つにつなぐ', '1つの画面で全部を管理'],
-              ['会社全体を分析', 'どこで利益が消えているか'],
-            ].map(([t, d]) => (
-              <div key={t} className="rounded-xl bg-white border border-ab-cyan p-4">
-                <p className="font-bold text-ab-navy text-sm">{t}</p>
-                <p className="text-xs text-ab-muted mt-1">{d}</p>
-              </div>
-            ))}
-            <div className="rounded-xl bg-ab-navy p-4">
-              <p className="font-bold text-white text-sm">育ち続ける</p>
-              <p className="text-xs text-[#C9D6E8] mt-1">「なぜ」が見え、AIの進化でできることも増える</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p className="mt-4 text-xs text-ab-muted">※見積・経理・日報は一例です。作る順番と期間は御社に合わせます。</p>
-    </Wrap>
-  </section>
-);
-
 /* ── よくある質問 ─────────────────────────── */
 export const abFaqs = [
   { q: 'AIのことが全く分かりません。それでも大丈夫ですか？', a: '大丈夫です。社長や社員さんに覚えていただく必要はありません。「ここが大変」と話していただければ、何をどう作るかはこちらで考えて形にします。' },
   { q: '何を頼めばいいか決まっていません。', a: '決まっていなくて大丈夫です。最初の60分で今の仕事の流れや困りごとを伺い、どこから作るとよいかを一緒に決めます。' },
-  { q: 'ライトとスタンダードは、何が違いますか？', a: 'ライトは仕事ごとに独立したシステムを1つずつ作ります。スタンダードは作ったものが全部つながり、1つの画面で管理でき、会社全体の数字まで分析できます。' },
+  { q: '料金はどう決まりますか？', a: '月15万円からです。作るものの数や、つなげる範囲によって変わります。最初のご相談で今の仕事を伺い、合う形をご説明します。' },
   { q: '受託開発（システム会社への発注）と何が違いますか？', a: 'まとまった開発費は要りません。月額の中で作り、作ったあとの手直しや保守も続けて引き受けます。' },
   { q: '遠方の会社でも頼めますか？', a: 'はい。打ち合わせはオンラインでも行えるので、全国どこからでもご利用いただけます。' },
 ];

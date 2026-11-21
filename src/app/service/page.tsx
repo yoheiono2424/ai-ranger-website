@@ -9,11 +9,9 @@ import {
   AbDept,
   AbFaq,
   AbFlow,
-  AbGrow,
   AbHandCheck,
   AbMarket,
   AbPain,
-  AbPlans,
   AbProof,
   AbSafety,
   CtaButton,
@@ -111,9 +109,7 @@ export default function ServicePage() {
       <AbFlow no="08" />
       <AbSafety no="09" />
       <AbMarket no="10" />
-      <AbPlans no="11" />
-      <AbGrow no="12" />
-      <AbFaq no="13" />
+      <AbFaq no="11" />
       <AbClosing href="/contact" button="無料で相談する" />
     </div>
   );
