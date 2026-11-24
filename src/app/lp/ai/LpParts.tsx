@@ -28,7 +28,7 @@ export const StickyCTA = () => {
         href="#form"
         className="flex w-full items-center justify-center py-3.5 bg-ab-cyan text-white font-bold rounded-lg"
       >
-        まず話してみる（無料）
+        無料で試作品を頼む
       </a>
     </div>
   );

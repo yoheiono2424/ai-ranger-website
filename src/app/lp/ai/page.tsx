@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { AbClosing, AbComplex, AbFaq, AbFlow, AbHandCheck, AbProof, Check, CtaButton, Eyebrow } from '@/components/sections/aibettan/AbParts';
+import { AbClosing, AbFaq, AbFlow, AbHandCheck, AbProof, Check, CtaButton, Eyebrow } from '@/components/sections/aibettan/AbParts';
 import { LpReadTracker, ShortForm, StickyCTA } from './LpParts';
 
 /**
@@ -10,19 +10,19 @@ import { LpReadTracker, ShortForm, StickyCTA } from './LpParts';
  */
 
 export const metadata: Metadata = {
-  title: 'AIは、社長が覚えなくていい｜社長のAI別班',
+  title: '人を雇わずに、会社が回る｜社長のAI別班',
   description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円から。開発費は月額に込み。試作までは無料です。',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://www.reharu.com/lp/ai' },
   openGraph: {
-    title: 'AIは、社長が覚えなくていい｜社長のAI別班',
+    title: '人を雇わずに、会社が回る｜社長のAI別班',
     description: '2時間の作業が、10分に。御社専用のAIエージェントシステムを、月15万円から。',
     url: 'https://www.reharu.com/lp/ai',
     images: ['/aibettan/cover.webp'],
   },
 };
 
-const CTA_LABEL = 'まず話してみる（無料）';
+const CTA_LABEL = '無料で試作品を頼む';
 
 const MidCta = ({ text }: { text: string }) => (
   <section className="bg-ab-cyan">
@@ -43,29 +43,33 @@ export default function LpAiPage() {
       {/* ① 最初の画面：結論と数字 */}
       <section className="bg-ab-navy">
         <div className="grid md:grid-cols-[1fr_1fr] items-stretch">
-          <div className="relative min-h-[240px] md:min-h-[660px] md:order-2">
+          <div className="relative min-h-[180px] md:min-h-[660px] order-2">
             <Image src="/aibettan/cover.webp" alt="タブレットを見る社長と、そのまわりに浮かぶAIの画面" fill priority sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
           </div>
-          <div className="px-5 md:px-12 py-10 md:py-20 flex items-center md:order-1">
+          <div className="px-5 md:px-12 pt-7 pb-8 md:py-20 flex items-center order-1">
             <div className="max-w-lg md:ml-auto w-full">
-              <p className="text-xs md:text-sm font-bold tracking-eyebrow text-[#7FDBF0] mb-4">社長のAI別班</p>
-              <h1 className="font-black text-white text-[1.85rem] leading-[1.3] md:text-[2.8rem] md:leading-[1.25] mb-5">
-                AIは、
+              <p className="text-xs md:text-sm font-bold tracking-eyebrow text-[#7FDBF0] mb-3">社長のAI別班</p>
+              <h1 className="font-black text-white text-[1.85rem] leading-[1.3] md:text-[2.8rem] md:leading-[1.25] mb-4">
+                人を雇わずに、
                 <br />
-                社長が覚えなくていい。
+                会社が回る。
               </h1>
-              <div className="rounded-2xl bg-white/10 border border-white/20 p-4 md:p-5 mb-6">
-                <p className="text-xs md:text-sm text-[#C9D6E8] mb-1">書類をまとめる仕事なら</p>
-                <p className="font-black text-white">
-                  <span className="text-2xl md:text-3xl text-[#9AA6B6] line-through decoration-2">2時間</span>
-                  <span className="mx-3 text-ab-cyan">→</span>
-                  <span className="text-4xl md:text-5xl">10分</span>
+              <div className="rounded-2xl bg-white/10 border border-white/20 p-4 md:p-5 mb-4">
+                <p className="text-sm md:text-base font-bold text-white leading-relaxed">
+                  私たちRe.haru自身が、
+                  <br />
+                  <span className="text-ab-cyan text-2xl md:text-3xl font-black">約20種類</span>
+                  のAIエージェントで会社を動かしています。
                 </p>
+                <p className="mt-2 text-xs md:text-sm text-[#C9D6E8]">営業・メール・広告・動画まで、毎日AIが回しています</p>
               </div>
-              <p className="text-sm md:text-base text-[#C9D6E8] leading-loose mb-7">
-                御社専用のAIエージェントシステムを、つくって、育て続けます。
+              <p className="text-sm md:text-base text-[#C9D6E8] leading-relaxed mb-4">
+                聞けば答えるAIではなく、仕事を自分で進めるAI。
                 <br />
-                人がやるのは「渡す」と「確かめる」だけ。
+                その仕組みを、御社専用に作ります。
+              </p>
+              <p className="inline-block rounded-full bg-ab-cyan text-white text-sm md:text-base font-bold px-4 py-1.5 mb-5">
+                まずは無料で、試作品をお見せします
               </p>
               <CtaButton href="#form">{CTA_LABEL}</CtaButton>
               <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs md:text-sm text-white">
@@ -81,8 +85,46 @@ export default function LpAiPage() {
         </div>
       </section>
 
-      {/* ② 悩み */}
-      <AbComplex no="01" />
+      {/* ② 違い：聞けば答えるAI と 仕事を進めるAI */}
+      <section className="py-16 md:py-24 bg-ab-gray">
+        <div className="container mx-auto px-5">
+          <div className="max-w-5xl mx-auto">
+            <Eyebrow>01 ｜ 何が違うのか</Eyebrow>
+            <h2 className="text-[1.6rem] leading-[1.5] md:text-[2.6rem] font-black text-ab-navy mb-4">
+              聞けば答えるAIと、
+              <br />
+              仕事を進めるAI
+            </h2>
+            <p className="text-sm md:text-base text-ab-muted leading-relaxed mb-8">
+              AIをもう使っている会社でも、多くは「AIに聞いて、答えを人が使う」ところまで。仕事そのものは、まだ人が回しています。
+            </p>
+            <div className="rounded-2xl overflow-hidden bg-white shadow-card text-sm md:text-base">
+              <div className="grid grid-cols-[5.5rem_1fr_1fr] md:grid-cols-[9rem_1fr_1fr] font-bold">
+                <div className="p-3 md:p-4" />
+                <div className="p-3 md:p-4 text-ab-muted">聞けば答えるAI</div>
+                <div className="p-3 md:p-4 bg-ab-navy text-white">AIエージェントシステム</div>
+              </div>
+              {[
+                ['使い方', '人が毎回質問する', '渡せば最後まで仕上げる。決まった仕事は自動で'],
+                ['御社のこと', '毎回説明が必要', 'やり方・書式を覚えている'],
+                ['つながり', '結果を人がコピーして使う', 'メール・LINE・表計算とつながる'],
+                ['誰のもの', 'みんな同じ道具', '御社だけの専用品'],
+              ].map(([k, a, b]) => (
+                <div key={k} className="grid grid-cols-[5.5rem_1fr_1fr] md:grid-cols-[9rem_1fr_1fr] border-t border-ab-gray">
+                  <div className="p-3 md:p-4 font-bold text-ab-navy">{k}</div>
+                  <div className="p-3 md:p-4 text-ab-muted">{a}</div>
+                  <div className="p-3 md:p-4 bg-ab-tint font-bold text-ab-navy">{b}</div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-base md:text-xl font-black text-ab-navy leading-relaxed">
+              Re.haruは、この「仕事を進めるAI」で会社を回しています。
+              <br className="hidden md:block" />
+              同じ仕組みを、御社専用に作ります。
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ③ 入れると、こうなる（数字） */}
       <section className="py-16 md:py-24 bg-white">
